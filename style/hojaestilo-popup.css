@@ -1,0 +1,149 @@
+#buscador {
+    position: absolute;
+    right: 7%;
+    width: 20%;
+    top: 40%;
+    border-radius: 5px;
+}
+
+#foto_perfil {
+    position: absolute;
+    right: 2%;
+    top: 25%;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+#musify_icono, #musify, #buscador, #foto_perfil {
+    display: inline-table;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    border-radius: 6px;
+    right: 1%;
+    top: 12%;
+    width: 25%;
+    height: 60%;
+    z-index: 3;
+}
+.container {
+    position: relative;
+    border-radius: 6px;
+    right: 1%;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+}
+
+.container:hover {
+    transform: scale(1.02);
+    cursor: pointer;
+}
+
+.cuenta, .perfil, .cerrar_sesion {
+    display: none;
+    position: relative;
+    border-radius: 6px;
+    font-size: large;
+    width: 90%;
+    height: 20%;
+    left: 5%;
+    background-color: rgb(128, 174, 115);
+    color: white;
+    text-align: center;
+    margin-bottom: 10%;
+}
+
+.cuenta:hover, .perfil:hover, .cerrar_sesion:hover {
+    transform: scale(1.02);
+    background-color: rgb(116, 201, 93);
+    cursor: pointer;
+}
+
+.mostrar {
+    display: block;
+    animation: aparecer 0.5s;
+}
+  
+@keyframes aparecer {
+    from {opacity: 0;} to {opacity:1 ;}
+}
+
+/* MEDIA QUERIES */
+
+/* Tablet */
+
+@media (min-width: 481px) and (max-width: 900px) {
+    #musify_icono {
+        top: 5%;
+        left: 4%;
+    }
+    
+    #buscador {
+        right: 15%;
+    }
+
+    #foto_perfil {
+        top: 25%;
+        right: 5%;
+    }
+
+    .popup {
+        width: 30%;
+        height: 40%;
+        top: 8%;
+    }
+
+    .container {
+        height: 50%;
+    }
+
+    .cuenta, .perfil, .cerrar_sesion {
+        height: 15%;
+    }
+}
+
+/* Movil */
+
+@media (max-width: 480px) {
+    #musify {
+        display: none;
+    }
+
+    #musify_icono {
+        top: 25%;
+        left: 5%;
+        width: 40px;
+        height: 40px;
+    }
+
+    #foto_perfil {
+        top: 25%;
+        right: 5%;
+        width: 40px;
+        height: 40px;
+    }
+
+    #buscador {
+        right: 20%;
+        top: 35%;
+    }
+
+    .popup {
+        width: 40%;
+        height: 40%;
+        top: 8%;
+    }
+
+    .container {
+        height: 60%;
+    }
+
+    .cuenta, .perfil, .cerrar_sesion {
+        height: 15%;
+    }
+}

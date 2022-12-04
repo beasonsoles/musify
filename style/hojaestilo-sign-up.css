@@ -1,0 +1,132 @@
+body {
+    overflow-x: hidden;
+    background: rgb(20, 133, 220);
+    height: 100%;
+    width: 100%;
+}
+
+.sign_up {
+    width: 50%;
+    position: relative;
+    left: 25%;
+    margin-top: 4%;
+    background-color: white;
+    border-radius: 25px;
+}
+
+#sign_up_form {
+    position: relative;
+    left: 12%;
+}
+
+#user_name, #pswd, #name, #surname1, #surname2, #user_email, #birthdate, #user_picture {
+    width: 70%;
+    padding: 2%;
+    margin-bottom: 5%;
+    border-radius: 5px;
+    font-size: x-large;
+}
+
+#condiciones {
+    margin-bottom: 5%;
+    width: 25px;
+    height: 25px;
+}
+
+p {
+    font-size: x-large;
+    overflow-wrap: break-word;
+    width: 80%;
+}
+
+p, #condiciones {
+    display: inline-block;
+}
+
+#enviar {
+    margin-bottom: 5%;
+    width: 35%; 
+    height: 50px;
+    color:white;
+    font-size: x-large;
+    background-color:rgb(20, 145, 241);
+}
+
+#resetear {
+    position: relative;
+    margin-bottom: 5%;
+    width: 35%; 
+    height: 50px;
+    color:white;
+    font-size: x-large;
+    background-color:rgb(238, 49, 49);
+    left: 5%;
+}
+
+#google, #facebook {
+    color:white;
+    font-size: x-large;
+    background-color:#808080;
+    border-radius: 10px;
+    padding: 2%;
+    width: 75%;
+    margin-bottom: 1%;
+}
+
+#facebook {
+    margin-bottom: 5%;
+}
+
+a {
+    position: relative;
+    left: 25%;
+    font-size: xx-large;
+}
+
+h1 {
+    position: relative;
+    padding: 3%;
+    font-size: 500%;
+    left: 20%;
+    top: 10%;
+    color: rgb(73, 180, 73);
+}
+
+h2 {
+    font-size: 300%;
+}
+
+/* MEDIA QUERIES */
+
+/* Tablet */
+
+@media (min-width: 481px) and (max-width: 900px) {
+    .sign_up {
+        width: 94%;
+        left: 2%;
+        margin-top: 5%;
+        margin-bottom: 10%;
+    }
+
+    a {
+        left: 25%;
+    }
+}
+
+/* Movil */
+
+@media (max-width: 480px) {
+    .sign_up {
+        width: 92%;
+        left: 2%;
+        margin-top: 10%;
+    }
+
+    #condiciones {
+        margin-bottom: 15%;
+    }
+
+    a {
+        left: 5%;
+    }
+}

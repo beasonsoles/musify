@@ -1,0 +1,364 @@
+body {
+    background: #3893e3;
+    overflow-x: hidden;
+} 
+
+.derecha {
+    float: right;
+    width: 75%;
+    position: relative;
+    top: 120px;
+}
+
+.izquierda {
+    float: left; 
+    width: 20%;
+    height: 100%;
+    position: fixed;
+    background-color: rgb(67, 102, 255);
+    top: 0px;
+    left: 0px;
+    z-index: 2;
+}
+
+#musify {
+    color: white;
+    position: relative;
+    top: 0;
+    left: 5%;
+    font-size: 150%;
+}
+
+#musify_icono{
+    position: relative;
+    top: 7%;
+    left: 2%;
+    width: 45px; 
+    height: 45px;
+}
+
+.menu {
+    position: relative;
+    left: 10%;
+    top: 20%;
+}
+
+[id*="opcion"] {
+    color: black;
+    font-size: 20px;
+    width: 200px;
+    border-radius: 5px;
+    transition-duration: 0.4s;
+    margin-left: 10px;
+    margin-bottom: 15px;
+}
+
+[id*="opcion"]:hover {
+    background-color: #e7e7e7;
+    width: 70%;
+    cursor: pointer;
+}
+
+#home_icono, #biblioteca_icono, #crear_icono, #favorito_icono, #ajustes_icono {
+    width: 25px;
+    height: 25px;
+}
+
+#home, #home_icono {
+    display: inline;
+    font-size: x-large;
+}
+
+#biblioteca, #biblioteca_icono {
+    display: inline;
+    font-size: x-large;
+}
+
+#crear, #crear_icono {
+    display: inline;
+    font-size: x-large;
+}
+
+#favorito, #favorito_icono {
+    display: inline;
+    font-size: x-large;
+}
+
+#ajustes, #ajustes_icono {
+    display: inline;
+    font-size: x-large;
+}
+
+#politicas {
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    height: 8%;
+    background-color: black;
+}
+
+.cabecera {
+    width: 100%;
+    position: fixed;
+    height: 15%;
+    right: 0;
+    top: 0;
+    background-color: black;
+    z-index: 2;
+}
+
+a {
+    color: white;
+}
+
+h2 {
+    color: white;
+    width: 100%;
+}
+
+#crear_playlist {
+    background-color: black;
+    border-radius: 6px;
+    width: 90%;
+    margin-bottom: 20%;
+}
+
+.editar {
+    background-color: rgb(63, 58, 58);
+    border-radius: 6px;
+    width: 80px; 
+    height: 80px;
+}
+
+#editar_icono {
+    filter: invert(100%) sepia(0%) saturate(7498%) hue-rotate(173deg) brightness(102%) contrast(101%);
+    position: relative;
+    left: 15%;
+    top: 15%;
+    width: 60px;
+    height: 60px;
+}
+
+#editar_icono:hover {
+    transform: scale(1.02);
+    cursor: pointer;
+}
+
+.editar, .nombre_playlist {
+    display: inline-block;
+    padding: 4%;
+    position: relative;
+    left: 4%;
+}
+
+#subir_foto {
+    display: none;
+} 
+
+.texto1 {
+    display: none;
+    position: relative;
+    left: 4%;
+    color: rgb(118, 218, 118);
+}
+
+.texto2 {
+    display: none;
+    position: relative;
+    left: 0;
+    color: rgb(118, 218, 118);
+}
+
+.mostrar {
+    display: block;
+}
+
+#nombre {
+    width: 100%; 
+    height: 40px;
+    border-radius: 5px;
+}
+
+#cancion_playlist {
+    position: relative;
+    width: 70%;
+    height: 50px;
+    border-radius: 5px;
+}
+
+#boton_anadir_cancion {
+    position: relative;
+    width: 10%;
+    left: 3%;
+    height: 30px;
+}
+
+.add {
+    left: 4%;
+    position: relative;
+    width: 100%;
+}
+
+#enviar {
+    margin-top: 3%;
+    margin-bottom: 2%;
+    width: 20%; 
+    height: 50px;
+    color:white;
+    background-color:rgb(20, 145, 241);
+    position: relative;
+    left: 30%;
+}
+
+#cancelar {
+    margin-top: 3%;
+    margin-bottom: 2%;
+    width: 20%; 
+    height: 50px;
+    color:white;
+    background-color:rgb(238, 49, 49);
+    position: relative;
+    left: 30%;
+}
+
+/* MEDIA QUERIES */
+
+/* Tablet */
+
+@media (min-width: 481px) and (max-width: 900px) {
+    .izquierda {
+        width: 30%;
+    }
+
+    .derecha {
+        display: flex;
+        flex-wrap: wrap;
+        overflow-y: scroll;
+        width: 65%;
+    }
+    
+    .cabecera {
+        z-index: 3;
+        height: 10%; 
+    }
+
+    .menu {
+        top: 15%;
+    }
+
+    #crear_playlist {
+        margin-top: 10%;
+        margin-bottom: 2%;
+    }
+
+    #boton_anadir_cancion {
+        width: 15%;
+    }
+
+    #enviar, #cancelar {
+        width: 30%; 
+        left: 20%;
+        margin-top: 10%;
+        margin-bottom: 5%;
+    }
+}
+
+/* Movil */
+
+@media (max-width: 480px) {
+    .izquierda {
+        width: 20%;
+    }
+
+    .derecha {
+        display: flex;
+        flex-wrap: wrap;
+        overflow-y: scroll;
+        width: 75%;
+        top: 60px;
+    }
+
+    .cabecera {
+        height: 10%;
+    }
+
+    .menu {
+        top: 15%;
+        left: 20%;
+        width: 35px;
+    }
+    
+    #home, #biblioteca, #crear, #favorito, #ajustes {
+        display: none;
+    }
+
+    [id*="opcion"] {
+        width: 30px;
+    }
+
+    #crear_playlist {
+        margin-top: 15%;
+        margin-bottom: 2%;
+    }
+
+    .editar {
+        left: 5%;
+        top: 3%;
+        padding: 2%;
+        width: 60px; 
+        height: 60px;
+    }
+
+    #editar_icono {
+        left: 10%;
+        top: 10%;
+        width: 50px;
+        height: 50px;
+    }
+
+    h2 {
+        font-size: small;
+    }
+
+    .nombre_playlist {
+        top: 5%;
+    }
+
+    #nombre {
+        height: 20px;
+        margin-bottom: 15%;
+    }
+
+    .texto1 {
+        font-size: x-small;
+    }
+
+    .texto2 {
+        font-size: x-small;
+    }
+
+    #cancion_playlist {
+        height: 20px;
+        width: 60%;
+    }
+
+    #boton_anadir_cancion {
+        height: 20px;
+        width: 20%;
+    }
+
+    #enviar, #cancelar {
+        width: 30%; 
+        height: 30px;
+        left: 20%;
+        margin-top: 10%;
+        margin-bottom: 10%;
+    }
+
+    .info {
+        position: fixed;
+        font-size: x-small;
+        padding: 2%; 
+    }
+}

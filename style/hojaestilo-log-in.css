@@ -1,0 +1,100 @@
+body {
+    overflow-x: hidden;
+    background: rgb(20, 133, 220);
+    height: 100%;
+    width: 100%;
+}
+
+.log_in {
+    width: 50%;
+    position: relative;
+    left: 25%;
+    margin-top: 4%;
+    background-color: white;
+    border-radius: 25px;
+}
+
+#log_in_form {
+    position: relative;
+    left: 12%;
+}
+
+#user_email, #user_name, #pswd {
+    width: 70%;
+    padding: 2%;
+    margin-bottom: 5%;
+    border-radius: 5px;
+    font-size: x-large;
+}
+
+#enviar {
+    width: 75%; 
+    height: 60px;
+    color:white;
+    font-size: x-large;
+    background-color:rgb(20, 145, 241);
+    margin-bottom: 5%;
+    margin-top: 5%;
+}
+
+#google, #facebook {
+    color:white;
+    font-size: x-large;
+    background-color:#808080;
+    border-radius: 10px;
+    padding: 2%;
+    width: 75%;
+    margin-bottom: 1%;
+}
+
+#facebook {
+    margin-bottom: 5%;
+}
+
+h1 {
+    position: relative;
+    padding: 3%;
+    font-size: 500%;
+    left: 20%;
+    top: 10%;
+    color: rgb(73, 180, 73);
+}
+
+h2 {
+    font-size: 300%;
+}
+
+a {
+    position: relative;
+    left: 20%;
+    font-size: xx-large;
+}
+/* MEDIA QUERIES */
+
+/* Tablet */
+
+@media (min-width: 481px) and (max-width: 900px) {
+    .log_in {
+        width: 94%;
+        left: 2%;
+        margin-top: 10%;
+    }
+
+    a {
+        left: 15%;
+    }
+}
+
+/* Movil */
+
+@media (max-width: 480px) {
+    .log_in {
+        width: 92%;
+        left: 2%;
+        margin-top: 10%;
+    }
+
+    a {
+        left: 5%;
+    }
+}
