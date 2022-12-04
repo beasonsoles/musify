@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <!-- Hoja de estilo usada de la pagina web -->  
+        <link rel="stylesheet" href="style/hojaestilo-biblioteca.css">
+        <link rel="stylesheet" href="style/hojaestilo-popup.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta charset="UTF-8" />
+        <meta name="Musify"  />
+        <meta lang="es-ES" />
+        <title>Musify</title>
+        
+    </head>
+
+    <body>
+        <!-- columna izquierda-->
+        <div class="izquierda">
+            <div class="menu">
+                <div id="opcion1">
+                    <img id="home_icono" src="images/home.png" alt="Home">
+                    <div id="home">Home</div>
+                </div><br>
+                <div id="opcion2">
+                    <img id="biblioteca_icono" src="images/biblioteca.png" alt="Biblioteca">
+                    <div id="biblioteca">Biblioteca</div>
+                </div><br>
+                <div id="opcion3">
+                    <img id="crear_icono" src="images/crear.png" alt="Crear">
+                    <div id="crear">Playlist</div>
+                </div><br>
+                <div id="opcion4">
+                    <img id="favorito_icono" src="images/favorito.png" alt="Favorito">
+                    <div id="favorito">Favoritos</div>
+                </div><br>
+                <div id="opcion5">
+                    <img id="ajustes_icono" src="images/ajustes.png" alt="Ajustes">
+                    <div id="ajustes">Ajustes</div>
+                </div><br>
+            </div>
+            <div id="politicas">
+                <div class="info"><a href="#">Politica de privacidad</a></div><br>
+                <div class="info"><a href="#">Politica de cookies</a></div>
+            </div>
+        </div>
+        
+        <!-- columna derecha-->
+        <div class="cabecera">
+            <img id="musify_icono" src="images/logo_musify.png" alt="Musify">
+            <div id="musify"><h1>Musify</h1></div>
+            <input type="search" placeholder="Buscar" id="buscador">
+            <img id="foto_perfil" src="images/perfil.jpeg" alt="Foto Perfil">
+        </div><br>
+        
+        <div class="popup" id="popup_perfil">
+            <div class="container" id="popup_container">
+                <br>
+                <button class="cuenta" id="cuenta_text">Cuenta</button><br>
+                <button class="perfil" id="perfil_text">Perfil</button><br>
+                <button class="cerrar_sesion" id="cerrar_sesion_text">Cerrar sesión</button>
+            </div>
+        </div>
+
+        <div class="derecha">
+            <h2 class="subtitulo">Tus playlists</h2>
+            <div id="tus_playlists"></div>
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="script/script_popup.js"></script>
+        <script src="script/script_menu.js"></script>
+        <script src="script/script_biblioteca.js"></script>
+        <script src="script/script_buscador.js"></script>
+    </body>
+</html>
