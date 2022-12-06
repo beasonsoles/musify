@@ -42,7 +42,7 @@ form.addEventListener("submit", function(e) {
     try {
         if (checkPassword(new_password) && checkEmail(new_email)) {
             deleteCookies(user_name, pswd, nombre, surname1, surname2, email, birthdate);
-            setCookie(new_user_name, new_password, new_name, new_surname1, new_surname2, new_email, new_birthdate);
+            setCookieaccount(new_user_name, new_password, new_name, new_surname1, new_surname2, new_email, new_birthdate);
             alert("Los cambios han sido guardados");
         }
     } catch (error) {
@@ -73,7 +73,7 @@ function checkEmail(email) {
 }
 
 /* Funciones para las cookies */
-function setCookie(user_name, pswd, name, surname1, surname2, user_email, birthdate) {
+function setCookieaccount(user_name, pswd, name, surname1, surname2, user_email, birthdate) {
     document.cookie = "username=" + user_name; document.cookie = "password=" + pswd; 
     document.cookie = "name=" + name; document.cookie = "surname1=" + surname1; 
     document.cookie = "surname2=" + surname2 ; document.cookie =  "email=" + user_email; 

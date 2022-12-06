@@ -5,6 +5,7 @@
         <!-- Hoja de estilo usada de la pagina web -->  
         <link rel="stylesheet" href="style/hojaestilo-perfil.css">
         <link rel="stylesheet" href="style/hojaestilo-popup.css">
+        <link rel="stylesheet" href="style/hojaestilo-boton-cambiar-tema.css">
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta charset="UTF-8" />
         <meta name="Musify"  />
@@ -15,7 +16,7 @@
 
     <body>
         <!-- columna izquierda-->
-        <div class="izquierda">
+        <div class="izquierda" id="menu_container">
             <div class="menu">
                 <div id="opcion1">
                     <img id="home_icono" src="images/home.png" alt="Home">
@@ -37,6 +38,15 @@
                     <img id="ajustes_icono" src="images/ajustes.png" alt="Ajustes">
                     <div id="ajustes">Ajustes</div>
                 </div><br>
+                <div class=popup_cambiar_tema id="cambiar_tema">
+                  <div class="container_oscuro" id="cambiar_tema_container"><br>
+                    <label class="interruptor" id="interruptor_modo_oscuro">
+                      <input type="checkbox">
+                      <span class="boton_deslizante circulo"></span>
+                    </label>
+                    <div class="tema_oscuro_texto">Tema oscuro</div>
+                  </div>
+                </div>
             </div>
             <div id="politicas">
                 <div class="info"><a href="#">Politica de privacidad</a></div><br>
@@ -67,31 +77,31 @@
               <div class="artista">
                 <img class="foto_artista" src="images/badbunny.jpeg" alt="Bad Bunny">
                 <div class="descripcion">
-                  <h3>Bad Bunny</h3>
+                  <h3 class="autor">Bad Bunny</h3>
                 </div>
               </div>
               <div class="artista">
                 <img class="foto_artista" src="images/ctangana.jpeg" alt="C. Tangana">
                 <div class="descripcion">
-                  <h3>C. Tangana</h3>
+                  <h3 class="autor">C. Tangana</h3>
                 </div>
               </div>
               <div class="artista">
                 <img class="foto_artista" src="images/queen.jpeg" alt="Queen">
                 <div class="descripcion">
-                  <h3>Queen</h3>
+                  <h3 class="autor">Queen</h3>
                 </div>
               </div>
               <div class="artista">
                 <img class="foto_artista" src="images/tim.jpeg" alt="Avicii">
                 <div class="descripcion">
-                  <h3>Avicii</h3>
+                  <h3 class="autor">Avicii</h3>
                 </div>
               </div>
               <div class="artista">
                 <img class="foto_artista" src="images/imaginedragons.jpeg" alt="Imagine Dragons">
                 <div class="descripcion">
-                  <h3>Imagine Dragons</h3>
+                  <h3 class="autor">Imagine Dragons</h3>
                 </div>
               </div>
             </div>
@@ -109,8 +119,8 @@
                   </div>
                 </div>
                 <div class="descripcion">
-                  <h3>Moscow mule</h3>
-                  <h4>Bad Bunny</h4>
+                  <h3 class="titulo">Moscow mule</h3>
+                  <h4 class="autor">Bad Bunny</h4>
                 </div>
               </div>
     
@@ -126,8 +136,8 @@
                   </div>
                 </div>
                 <div class="descripcion">
-                  <h3>Demasiadas mujeres</h3>
-                  <h4>C. Tangana</h4>
+                  <h3 class="titulo">Demasiadas mujeres</h3>
+                  <h4 class="autor">C. Tangana</h4>
                 </div>
               </div>
     
@@ -143,8 +153,8 @@
                   </div>
                 </div>
                 <div class="descripcion">
-                  <h3>Bohemian rhapsody</h3>
-                  <h4>Queen</h4>
+                  <h3 class="titulo">Bohemian rhapsody</h3>
+                  <h4 class="autor">Queen</h4>
                 </div>
               </div>
     
@@ -160,8 +170,8 @@
                   </div>
                 </div>
                 <div class="descripcion">
-                  <h3>Waiting for love</h3>
-                  <h4>Avicii</h4>
+                  <h3 class="titulo">Waiting for love</h3>
+                  <h4 class="autor">Avicii</h4>
                 </div>
               </div>
     
@@ -177,8 +187,8 @@
                   </div>
                 </div>
                 <div class="descripcion">
-                  <h3>Sucker for pain</h3>
-                  <h4>Lil Wayne e Imagine Dragons</h4>
+                  <h3 class="titulo">Sucker for pain</h3>
+                  <h4 class="autor">Lil Wayne e Imagine Dragons</h4>
                 </div>
               </div>
             </div>
@@ -395,6 +405,7 @@
         <script src="script/script_perfil.js"></script>
         <script src="script/script_popup.js"></script>
         <script src="script/script_menu.js"></script>
+        <script src="script/script_dark_mode.js"></script>
         <script src="script/script_buscador.js"></script>
     </body>
 </html>

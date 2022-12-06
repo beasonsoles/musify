@@ -15,7 +15,7 @@ foto.addEventListener("click", function() {
 cerrarSesion.addEventListener("click", function() {
     var response = confirm("¿Estás seguro de que deseas cerrar sesión?");
     if (response) {
-        window.open("home.html", "_self");
+        window.open("index.html", "_self");
     }
 });
 

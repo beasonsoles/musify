@@ -3,6 +3,7 @@ let home = document.getElementById("opcion1");
 let biblioteca = document.getElementById("opcion2");
 let playlist = document.getElementById("opcion3");
 let favoritos = document.getElementById("opcion4");
+let ajustes = document.getElementById("opcion5");
 
 home.addEventListener("click", function() {
     window.open("sesion_iniciada.html", "_self");
@@ -18,4 +19,9 @@ playlist.addEventListener("click", function() {
 
 favoritos.addEventListener("click", function() {
     window.open("favoritos.html", "_self");
+});
+
+ajustes.addEventListener("click", function() {
+    var popup = document.getElementById("cambiar_tema");
+    popup.classList.toggle("mostrar_popup_tema");
 });

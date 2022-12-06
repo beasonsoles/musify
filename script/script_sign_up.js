@@ -21,7 +21,7 @@ form.addEventListener("submit", function(e) {
 });
 
 function checkPassword(password) {
-    var pattern = /[0-9a-z]{8,}/;
+    var pattern = /[0-9a-zA-Z]{8,}/;
     if (pattern.test(password)) {
         return true;
     } else {

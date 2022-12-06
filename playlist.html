@@ -5,6 +5,7 @@
         <!-- Hoja de estilo usada de la pagina web -->  
         <link rel="stylesheet" href="style/hojaestilo-playlist.css">
         <link rel="stylesheet" href="style/hojaestilo-popup.css">
+        <link rel="stylesheet" href="style/hojaestilo-boton-cambiar-tema.css">
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta charset="UTF-8" />
         <meta name="Musify"  />
@@ -15,7 +16,7 @@
 
     <body>
         <!-- columna izquierda-->
-        <div class="izquierda">
+        <div class="izquierda" id="menu_container">
             <div class="menu">
                 <div id="opcion1">
                     <img id="home_icono" src="images/home.png" alt="Home">
@@ -37,6 +38,15 @@
                     <img id="ajustes_icono" src="images/ajustes.png" alt="Ajustes">
                     <div id="ajustes">Ajustes</div>
                 </div><br>
+                <div class=popup_cambiar_tema id="cambiar_tema">
+                    <div class="container_oscuro" id="cambiar_tema_container"><br>
+                      <label class="interruptor" id="interruptor_modo_oscuro">
+                        <input type="checkbox">
+                        <span class="boton_deslizante circulo"></span>
+                      </label>
+                      <div class="tema_oscuro_texto">Tema oscuro</div>
+                    </div>
+                </div>
             </div>
             <div id="politicas">
             <div class="info"><a href="#">Politica de privacidad</a></div><br>
@@ -290,6 +300,7 @@
         <script src="script/script_sesion_iniciada.js"></script>
         <script src="script/script_popup.js"></script>
         <script src="script/script_menu.js"></script>
+        <script src="script/script_dark_mode.js"></script>
         <script src="script/script_buscador.js"></script>
     </body>
 </html>

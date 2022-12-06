@@ -21,8 +21,8 @@ body {
 
 #user_name, #pswd, #name, #surname1, #surname2, #user_email, #birthdate, #user_picture {
     width: 70%;
-    padding: 2%;
-    margin-bottom: 5%;
+    padding: 1%;
+    margin-bottom: 1%;
     border-radius: 5px;
     font-size: x-large;
 }
@@ -80,20 +80,20 @@ p, #condiciones {
 a {
     position: relative;
     left: 25%;
-    font-size: xx-large;
+    font-size: x-large;
 }
 
 h1 {
     position: relative;
     padding: 3%;
-    font-size: 500%;
+    font-size: 300%;
     left: 20%;
     top: 10%;
     color: rgb(73, 180, 73);
 }
 
 h2 {
-    font-size: 300%;
+    font-size: 200%;
 }
 
 /* MEDIA QUERIES */
