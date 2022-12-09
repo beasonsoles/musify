@@ -19,7 +19,7 @@ input{
     font-family: 'Poppins', sans-serif;
 }
 
-.form-login{
+#main_container{
     width: 500px;
     height: 500px;
     background-color: #333333;

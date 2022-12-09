@@ -19,7 +19,7 @@ input{
     font-family: 'Poppins', sans-serif;
 }
 
-.form-register{
+#main_container{
     width: 500px;
     height: 850px;
     background-color: #333333;
@@ -80,7 +80,7 @@ input{
     font-weight: 500;
 }
 
-.form-register p{
+#main_container p{
     text-align: center;
     padding-bottom: 10px;
     padding-top: 10px;
@@ -90,9 +90,10 @@ input{
 
 #user_picture{
     color: white;
-    margin-left: 10%;
+    margin-left: 5%;
     
 }
+
 #condiciones{
     width: 20px;
     height: 20px;
