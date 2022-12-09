@@ -1,12 +1,5 @@
-/* Para mostrar las playlists que hayan sido creadas por el usuario */
-let nombre_playlist_anadida = getCookie("nombre_playlist");
-let foto_playlist_anadida = getCookie("foto_playlist");
-
-if (nombre_playlist_anadida != "" && !nombre_playlist_anadida.includes("expires") 
-    && foto_playlist_anadida != "" && !foto_playlist_anadida.includes("expires")) {
-    add_playlist("images/" + foto_playlist_anadida, nombre_playlist_anadida);
-}
-
+let contador_playlists = localStorage.getItem("contador_playlists");
+/* Para crear una playlist */
 function add_playlist(foto_playlist_anadida, nombre_playlist_anadida) {
     // crear los elementos de la canción
     playlist = document.createElement("div");
@@ -28,6 +21,16 @@ function add_playlist(foto_playlist_anadida, nombre_playlist_anadida) {
     nombre.innerHTML = nombre_playlist_anadida;
 }
 
+/* Para mostrar las playlists que hayan sido creadas por el usuario */
+for (let i = 1; i <= contador_playlists; i++) {
+    let nombre_playlist_anadida = localStorage.getItem("nombre_playlist"+i.toString());
+    let foto_playlist_anadida = localStorage.getItem("foto_playlist"+i.toString());
+    if (nombre_playlist_anadida != "" && foto_playlist_anadida != "") {
+        add_playlist("images/" + foto_playlist_anadida, nombre_playlist_anadida);
+    }
+}
+    
+
 let listas_de_reproduccion = document.querySelectorAll(".playlist");
 
 /* Para mostrar las canciones dentro de una playlist */
@@ -36,17 +39,3 @@ listas_de_reproduccion.forEach(function(lista) {
         window.open("playlist.html", "_self");
     });
 });
-
-
-/* Función para las cookies*/
-function getCookie(field_name) {
-    let value = field_name + "=";
-    let ca = document.cookie.split(';'); /* lista que guarda los campos de la cookie */
-    for(let i = 0; i < ca.length; i++) { 
-        let c = ca[i].trim();
-        if (c.indexOf(value) == 0) { /* el valor ha sido encontrado */
-            return c.substring(value.length, c.length); /* el valor de la cookie es devuelto */
-        }
-    }
-    return "";
-}

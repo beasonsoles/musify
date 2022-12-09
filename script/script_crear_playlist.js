@@ -1,9 +1,12 @@
 let titulos_base_datos = ["Moscow mule", "Demasiadas mujeres", "Bohemian rhapsody", "Waiting for love", "Sucker for pain", 
-"More than you know", "Kitt y los coches del pasado", "Boulevard of broken dreams", "Viva la vida", "Lagrimas de amor"]
+"More than you know", "Kitt y los coches del pasado", "Boulevard of broken dreams", "Viva la vida", "Lagrimas de amor"];
 
 /* Activar click si el usuario quiere subir una foto para la playlist */
 let image = document.getElementById("subir_foto");
 let form = document.getElementById("crear_playlist");
+if ((contador_playlists = localStorage.getItem("contador_playlists")) == undefined) {
+    contador_playlists = 0;
+}
 
 image.addEventListener("change", function(e) {
     var text = document.getElementById("confirmacion1");
@@ -22,7 +25,7 @@ boton_anadir.addEventListener("click", function(e) {
     for (var i=0; i < titulos_base_datos.length; i++) {
         if (cancion_buscada.value == titulos_base_datos[i]) {
             text2.classList.toggle("mostrar");
-            setSongCookie(cancion_buscada.value);
+            localStorage.setItem("titulo_cancion", cancion_buscada.value);
             return;
         }
     }
@@ -36,28 +39,26 @@ form.addEventListener("keydown", function(e) {
     }
 });
 
+/* Función para resetear los valores para crear una playlist */
+function resetear() {
+    var text1 = document.getElementById("confirmacion1");
+    var text2 = document.getElementById("confirmacion2");
+    text1.classList.remove("mostrar");
+    text1.classList.add("texto1");
+    text2.classList.remove("mostrar");
+    text2.classList.add("texto2");
+}
+
 /* Guardar la playlist creada */
 let enviar = document.getElementById("enviar");
 
 enviar.addEventListener("click", function(e) {
     e.preventDefault();
-    setPlaylistCokie(document.getElementById("subir_foto").files[0].name, document.getElementById("nombre").value, cancion_buscada.value);
+    contador_playlists++;
+    localStorage.setItem("contador_playlists", contador_playlists);
+    localStorage.setItem("foto_playlist"+contador_playlists.toString(), document.getElementById("subir_foto").files[0].name);
+    localStorage.setItem("nombre_playlist"+contador_playlists.toString(), document.getElementById("nombre").value);
+    localStorage.setItem("cancion_playlist"+contador_playlists.toString(), cancion_buscada.value);
     alert("¡Tu playlist ha sido creada! Accede a la biblioteca para verla");
+    resetear();
 });
-
-/* Resetear el mensaje de confirmación */
-form.addEventListener("reset", function() {
-    var text = document.getElementById("confirmacion");
-    text.classList.remove("mostrar");
-    text.classList.add("texto");
-});
-
-/* Función para las cookies */
-function setPlaylistCokie(foto_playlist, nombre_playlist, cancion_playlist) {
-    document.cookie = "foto_playlist=" + foto_playlist; document.cookie = "nombre_playlist=" + nombre_playlist;
-    document.cookie = "cancion_playlist=" + cancion_playlist;
-}
-
-function setSongCookie(titulo_cancion) {
-    document.cookie = "titulo_cancion=" + titulo_cancion;
-}

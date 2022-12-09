@@ -3,20 +3,39 @@
     <head>
 
         <!-- Hoja de estilo usada de la pagina web -->  
-        <link rel="stylesheet" href="style/hojaestilo-playlist.css">
-        <link rel="stylesheet" href="style/hojaestilo-popup.css">
-        <link rel="stylesheet" href="style/hojaestilo-boton-cambiar-tema.css">
+        <link rel="stylesheet" href="style/hojaestilo_regiones.css">
+        <link rel="stylesheet" href="style/hojaestilo_playlist.css">
+        <link rel="stylesheet" href="style/hojaestilo_popup.css">
+        <link rel="stylesheet" href="style/hojaestilo_boton_cambiar_tema.css">
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta charset="UTF-8" />
         <meta name="Musify"  />
-        <meta lang="es-ES" />
+        <html lang="es">
         <title>Musify</title>
         
     </head>
 
     <body>
+        <header>
+            <div class="cabecera">
+                <img id="musify_icono" src="images/logo_musify.png" alt="Musify Logo">
+                <div id="musify_texto"><h1>Musify</h1></div>
+                <input type="search" placeholder="Buscar" id="buscador">
+                <img id="foto_perfil" src="images/perfil.jpeg" alt="Foto Perfil">
+            </div><br>
+
+            <div class="popup" id="popup_perfil">
+                <div class="container" id="popup_container">
+                    <br>
+                    <button class="cuenta" id="cuenta_text">Cuenta</button><br>
+                    <button class="perfil" id="perfil_text">Perfil</button><br>
+                    <button class="cerrar_sesion" id="cerrar_sesion_text">Cerrar sesión</button>
+                </div>
+            </div>
+        </header>
+
         <!-- columna izquierda-->
-        <div class="izquierda" id="menu_container">
+        <nav class="izquierda" id="menu_container">
             <div class="menu">
                 <div id="opcion1">
                     <img id="home_icono" src="images/home.png" alt="Home">
@@ -37,270 +56,259 @@
                 <div id="opcion5">
                     <img id="ajustes_icono" src="images/ajustes.png" alt="Ajustes">
                     <div id="ajustes">Ajustes</div>
-                </div><br>
+                </div>
                 <div class=popup_cambiar_tema id="cambiar_tema">
-                    <div class="container_oscuro" id="cambiar_tema_container"><br>
-                      <label class="interruptor" id="interruptor_modo_oscuro">
+                    <div class="container_claro" id="cambiar_tema_container"><br>
+                    <label class="interruptor" id="interruptor_modo_oscuro">
                         <input type="checkbox">
                         <span class="boton_deslizante circulo"></span>
-                      </label>
-                      <div class="tema_oscuro_texto">Tema oscuro</div>
+                    </label>
+                    <div class="tema_claro_texto">Tema claro</div>
                     </div>
                 </div>
             </div>
-            <div id="politicas">
-            <div class="info"><a href="#">Politica de privacidad</a></div><br>
-            <div class="info"><a href="#">Politica de cookies</a></div>
-            </div>
-        </div>
+        </nav>
         
         <!-- columna derecha-->
-        <div class="cabecera">
-            <img id="musify_icono" src="images/logo_musify.png" alt="Musify">
-            <div id="musify"><h1>Musify</h1></div>
-            <input type="search" placeholder="Buscar" id="buscador">
-            <img id="foto_perfil" src="images/perfil.jpeg" alt="Foto Perfil">
-        </div><br>
+        <main class="derecha" id="main_container">
+            <div class="contenido">
+                <h2 class="subtitulo_cancion_playlist">Canciones en esta playlist</h2>
+                <div id="playlist">
+                    <div draggable="true" class="cancion">
+                        <div class="caratula">
+                            <img class="musica" src="images/album_uvst.jpg" alt="Un Verano Sin Ti"> 
+                            <div class="reproductor">
+                            <audio controls class="audio">
+                                <source src="audio/moscow_mule.mp3" type="audio/mpeg">
+                                <source src="audio/moscow_mule.ogg" type="audio/ogg">
+                                Your browser does not support the audio element.          
+                            </audio>
+                            </div>
+                        </div>
+                        <div class="descripcion">
+                            <h3 class="titulo_cancion_playlist">Moscow mule</h3>
+                            <h4 class="autor_cancion_playlist">Bad Bunny</h4>
+                        </div>
+                        <input class="borrar_cancion" type="button" value="Borrar">
+                    </div>
         
-        <div class="popup" id="popup_perfil">
-            <div class="container" id="popup_container">
-                <br>
-                <button class="cuenta" id="cuenta_text">Cuenta</button><br>
-                <button class="perfil" id="perfil_text">Perfil</button><br>
-                <button class="cerrar_sesion" id="cerrar_sesion_text">Cerrar sesión</button>
+                    <div draggable="true" class="cancion">
+                        <div class="caratula">
+                            <img class="musica" src="images/el_madrileño.jpeg" alt="El Madrileño">
+                            <div class="reproductor">
+                            <audio controls class="audio">
+                                <source src="audio/demasidas_mujeres.mp3" type="audio/mpeg">
+                                <source src="audio/demasidas_mujeres.ogg" type="audio/ogg">
+                                Your browser does not support the audio element.          
+                            </audio>
+                            </div>
+                        </div>
+                        <div class="descripcion">
+                            <h3 class="titulo_cancion_playlist">Demasiadas mujeres</h3>
+                            <h4 class="autor_cancion_playlist">C. Tangana</h4>
+                        </div>
+                        <input class="borrar_cancion" type="button" value="Borrar">
+                    </div>
+        
+                    <div draggable="true" class="cancion">
+                        <div class="caratula">
+                            <img class="musica" src="images/queen.jpg" alt="A Night at the Opera"> 
+                            <div class="reproductor">
+                            <audio controls class="audio">
+                                <source src="audio/bohemian_rhapsody.mp3" type="audio/mpeg">
+                                <source src="audio/bohemian_rhapsody.ogg" type="audio/ogg">
+                                Your browser does not support the audio element.          
+                            </audio>
+                            </div>
+                        </div>
+                        <div class="descripcion">
+                            <h3 class="titulo_cancion_playlist">Bohemian rhapsody</h3>
+                            <h4 class="autor_cancion_playlist">Queen</h4>
+                        </div>
+                        <input class="borrar_cancion" type="button" value="Borrar">
+                    </div>
+        
+                    <div draggable="true" class="cancion">
+                        <div class="caratula">
+                            <img class="musica" src="images/avicii.jpg" alt="The Nights"> 
+                            <div class="reproductor">
+                            <audio controls class="audio">
+                                <source src="audio/waiting_for_love.mp3" type="audio/mpeg">
+                                <source src="audio/waiting_for_love.ogg" type="audio/ogg">
+                                Your browser does not support the audio element.          
+                            </audio>
+                            </div>
+                        </div>
+                        <div class="descripcion">
+                            <h3 class="titulo_cancion_playlist">Waiting for love</h3>
+                            <h4 class="autor_cancion_playlist">Avicii</h4>
+                        </div>
+                        <input class="borrar_cancion" type="button" value="Borrar">
+                    </div>
+        
+                    <div draggable="true" class="cancion">
+                        <div class="caratula">
+                            <img class="musica" src="images/sucker_for_pain.jpg" alt="Suicide Squad: The Album"> 
+                            <div class="reproductor">
+                            <audio controls class="audio">
+                                <source src="audio/sucker_for_pain.mp3" type="audio/mpeg">
+                                <source src="audio/sucker_for_pain.ogg" type="audio/ogg">
+                                Your browser does not support the audio element.          
+                            </audio>
+                            </div>
+                        </div>
+                        <div class="descripcion">
+                            <h3 class="titulo_cancion_playlist">Sucker for pain</h3>
+                            <h4 class="autor_cancion_playlist">Lil Wayne e Imagine Dragons</h4>
+                        </div>
+                        <input class="borrar_cancion" type="button" value="Borrar">
+                    </div>
+                </div>
+                <!--segunda fila-->          
+                <div class="canciones_favoritas_segunda_fila">
+                    <div draggable="true" class="cancion">
+                        <div class="caratula">
+                            <img class="musica" src="images/more_than_you_know.jpg" alt="More Than You Know"> 
+                            <div class="reproductor">
+                            <audio controls class="audio">
+                                <source src="audio/more_than_you_know.mp3" type="audio/mpeg">
+                                <source src="audio/more_than_you_know.ogg" type="audio/ogg">
+                                Your browser does not support the audio element.          
+                            </audio>
+                            </div>
+                        </div>
+                        <div class="descripcion">
+                            <h3 class="titulo_cancion_playlist">More than you know</h3>
+                            <h4 class="autor_cancion_playlist">Axwell /\ Ingrosso</h4>
+                        </div>
+                        <input class="borrar_cancion" type="button" value="Borrar">
+                    </div>  
+        
+                    <div draggable="true" class="cancion">
+                        <div class="caratula">
+                            <img class="musica" src="images/kitt.jpg" alt="Kitt y los Coches del Pasado"> 
+                            <div class="reproductor">
+                            <audio controls class="audio">
+                                <source src="audio/coches_pasado.mp3" type="audio/mpeg">
+                                <source src="audio/coches_pasado.ogg" type="audio/ogg">
+                                Your browser does not support the audio element.          
+                            </audio>
+                            </div>
+                        </div>
+                        <div class="descripcion">
+                            <h3 class="titulo_cancion_playlist">Kitt y los coches del pasado</h3>
+                            <h4 class="autor_cancion_playlist">Ladilla Rusa</h4>
+                        </div>
+                        <input class="borrar_cancion" type="button" value="Borrar">
+                    </div>
+        
+                    <div draggable="true" class="cancion">
+                        <div class="caratula">
+                            <img class="musica" src="images/boulevard_of_broken_dreams.jpg" alt="Boulevard of Broken Dreams"> 
+                            <div class="reproductor">
+                            <audio controls class="audio">
+                                <source src="audio/broken_dreams.mp3" type="audio/mpeg">
+                                <source src="audio/broken_dreams.ogg" type="audio/ogg">
+                                Your browser does not support the audio element.          
+                            </audio>
+                            </div>
+                        </div>
+                        <div class="descripcion">
+                            <h3 class="titulo_cancion_playlist">Boulevard of broken dreams</h3>
+                            <h4 class="autor_cancion_playlist">Green Day</h4>
+                        </div>
+                        <input class="borrar_cancion" type="button" value="Borrar">
+                    </div>
+        
+                    <div draggable="true" class="cancion">
+                        <div class="caratula">
+                            <img class="musica" src="images/viva_la_vida.jpg" alt="Viva La Vida"> 
+                            <div class="reproductor">
+                            <audio controls class="audio">
+                                <source src="audio/viva_la_vida.mp3" type="audio/mpeg">
+                                <source src="audio/viva_la_vida.ogg" type="audio/ogg">
+                                Your browser does not support the audio element.          
+                            </audio>
+                            </div>
+                        </div>
+                        <div class="descripcion">
+                            <h3 class="titulo_cancion_playlist">Viva la vida</h3>
+                            <h4 class="autor_cancion_playlist">Coldplay</h4>
+                        </div>
+                        <input class="borrar_cancion" type="button" value="Borrar">
+                    </div>
+        
+                    <div draggable="true" class="cancion">
+                        <div class="caratula">
+                            <img class="musica" src="images/lagrimas_de_amor.jpg" alt="Lagrimas de Amor"> 
+                            <div class="reproductor">
+                            <audio controls class="audio">
+                                <source src="audio/lagrimas_amor.mp3" type="audio/mpeg">
+                                <source src="audio/lagrimas_amor.ogg" type="audio/ogg">
+                                Your browser does not support the audio element.          
+                            </audio>
+                            </div>
+                        </div>
+                        <div class="descripcion">
+                            <h3 class="titulo_cancion_playlist">Lágrimas de amor</h3>
+                            <h4 class="autor_cancion_playlist">Camela</h4>
+                        </div>
+                        <input class="borrar_cancion" type="button" value="Borrar">
+                    </div>
+                    <div draggable="true" class="cancion" id="cancion_fija">
+                        <div class="caratula">
+                            <img class="musica" src="images/grenade.jpeg" alt="Grenade"> 
+                            <div class="reproductor">
+                                <audio controls class="audio">
+                                    <source src="audio/grenade.mp3" type="audio/mpeg">
+                                    <source src="audio/grenade.ogg" type="audio/ogg">
+                                    Your browser does not support the audio element.          
+                                </audio>
+                            </div>
+                        </div>
+                        <div class="descripcion">
+                            <h3 class="titulo_cancion_playlist">Grenade</h3>
+                            <h4 class="autor_cancion_playlist">Bruno Mars</h4>
+                        </div>
+                        <input class="borrar_cancion" type="button" value="Borrar">
+                    </div>
+                    <div draggable="true" class="cancion"  id="cancion_fija">
+                        <div class="caratula">
+                            <img class="musica" src="images/anti_hero.jpeg" alt="Anti-Hero"> 
+                            <div class="reproductor">
+                                <audio controls class="audio">
+                                    <source src="audio/anti_hero.mp3" type="audio/mpeg">
+                                    <source src="audio/anti_hero.ogg" type="audio/ogg">
+                                    Your browser does not support the audio element.          
+                                </audio>
+                            </div>
+                        </div>
+                        <div class="descripcion">
+                            <h3 class="titulo_cancion_playlist">Anti-Hero</h3>
+                            <h4 class="autor_cancion_playlist">Taylor Swift</h4>
+                        </div>
+                        <input class="borrar_cancion" type="button" value="Borrar">
+                    </div>
+                    <input id="borrar_playlist" type="button" value="Eliminar playlist">
+                </div>
             </div>
-        </div>
+            <br>
+            <div id="panel_audio">
+            </div>
+        </main>
 
-        <div class="derecha">
-            <h2 class="subtitulo">Canciones en esta playlist</h2>
-            <div id="playlist">
-                <div draggable="true" class="cancion">
-                    <div class="caratula">
-                        <img class="musica" src="images/album_uvst.jpg" alt="Un Verano Sin Ti"> 
-                        <div class="reproductor">
-                        <audio controls class="audio">
-                            <source src="audio/moscow_mule.mp3" type="audio/mpeg">
-                            <source src="audio/moscow_mule.ogg" type="audio/ogg">
-                            Your browser does not support the audio element.          
-                        </audio>
-                        </div>
-                    </div>
-                    <div class="descripcion">
-                        <h3 class="titulo">Moscow mule</h3>
-                        <h4 class="autor">Bad Bunny</h4>
-                    </div>
-                    <input class="borrar_cancion" type="button" value="Borrar">
-                </div>
-    
-                <div draggable="true" class="cancion">
-                    <div class="caratula">
-                        <img class="musica" src="images/el_madrileño.jpeg" alt="El Madrileño">
-                        <div class="reproductor">
-                        <audio controls class="audio">
-                            <source src="audio/demasidas_mujeres.mp3" type="audio/mpeg">
-                            <source src="audio/demasidas_mujeres.ogg" type="audio/ogg">
-                            Your browser does not support the audio element.          
-                        </audio>
-                        </div>
-                    </div>
-                    <div class="descripcion">
-                        <h3 class="titulo">Demasiadas mujeres</h3>
-                        <h4 class="autor">C. Tangana</h4>
-                    </div>
-                    <input class="borrar_cancion" type="button" value="Borrar">
-                </div>
-    
-                <div draggable="true" class="cancion">
-                    <div class="caratula">
-                        <img class="musica" src="images/queen.jpg" alt="A Night at the Opera"> 
-                        <div class="reproductor">
-                        <audio controls class="audio">
-                            <source src="audio/bohemian_rhapsody.mp3" type="audio/mpeg">
-                            <source src="audio/bohemian_rhapsody.ogg" type="audio/ogg">
-                            Your browser does not support the audio element.          
-                        </audio>
-                        </div>
-                    </div>
-                    <div class="descripcion">
-                        <h3 class="titulo">Bohemian rhapsody</h3>
-                        <h4 class="autor">Queen</h4>
-                    </div>
-                    <input class="borrar_cancion" type="button" value="Borrar">
-                </div>
-    
-                <div draggable="true" class="cancion">
-                    <div class="caratula">
-                        <img class="musica" src="images/avicii.jpg" alt="The Nights"> 
-                        <div class="reproductor">
-                        <audio controls class="audio">
-                            <source src="audio/waiting_for_love.mp3" type="audio/mpeg">
-                            <source src="audio/waiting_for_love.ogg" type="audio/ogg">
-                            Your browser does not support the audio element.          
-                        </audio>
-                        </div>
-                    </div>
-                    <div class="descripcion">
-                        <h3 class="titulo">Waiting for love</h3>
-                        <h4 class="autor">Avicii</h4>
-                    </div>
-                    <input class="borrar_cancion" type="button" value="Borrar">
-                </div>
-    
-                <div draggable="true" class="cancion">
-                    <div class="caratula">
-                        <img class="musica" src="images/sucker_for_pain.jpg" alt="Sucker For Pain"> 
-                        <div class="reproductor">
-                        <audio controls class="audio">
-                            <source src="audio/sucker_for_pain.mp3" type="audio/mpeg">
-                            <source src="audio/sucker_for_pain.ogg" type="audio/ogg">
-                            Your browser does not support the audio element.          
-                        </audio>
-                        </div>
-                    </div>
-                    <div class="descripcion">
-                        <h3 class="titulo">Sucker for pain</h3>
-                        <h4 class="autor">Lil Wayne e Imagine Dragons</h4>
-                    </div>
-                    <input class="borrar_cancion" type="button" value="Borrar">
-                </div>
+        <footer>
+            <div id="politicas">
+                <div class="info"><a href="#">Politica de privacidad</a></div><br>
+                <div class="info"><a href="#">Politica de cookies</a></div>
             </div>
-            <!--segunda fila-->          
-            <div class="canciones_favoritas_segunda_fila">
-                <div draggable="true" class="cancion">
-                    <div class="caratula">
-                        <img class="musica" src="images/more_than_you_know.jpg" alt="More Than You Know"> 
-                        <div class="reproductor">
-                        <audio controls class="audio">
-                            <source src="audio/more_than_you_know.mp3" type="audio/mpeg">
-                            <source src="audio/more_than_you_know.ogg" type="audio/ogg">
-                            Your browser does not support the audio element.          
-                        </audio>
-                        </div>
-                    </div>
-                    <div class="descripcion">
-                        <h3 class="titulo">More than you know</h3>
-                        <h4 class="autor">Axwell /\ Ingrosso</h4>
-                    </div>
-                    <input class="borrar_cancion" type="button" value="Borrar">
-                </div>  
-    
-                <div draggable="true" class="cancion">
-                    <div class="caratula">
-                        <img class="musica" src="images/kitt.jpg" alt="Kitt y los Coches del Pasado"> 
-                        <div class="reproductor">
-                        <audio controls class="audio">
-                            <source src="audio/coches_pasado.mp3" type="audio/mpeg">
-                            <source src="audio/coches_pasado.ogg" type="audio/ogg">
-                            Your browser does not support the audio element.          
-                        </audio>
-                        </div>
-                    </div>
-                    <div class="descripcion">
-                        <h3 class="titulo">Kitt y los coches del pasado</h3>
-                        <h4 class="autor">Ladilla Rusa</h4>
-                    </div>
-                    <input class="borrar_cancion" type="button" value="Borrar">
-                </div>
-    
-                <div draggable="true" class="cancion">
-                    <div class="caratula">
-                        <img class="musica" src="images/boulevard_of_broken_dreams.jpg" alt="Boulevard of Broken Dreams"> 
-                        <div class="reproductor">
-                        <audio controls class="audio">
-                            <source src="audio/broken_dreams.mp3" type="audio/mpeg">
-                            <source src="audio/broken_dreams.ogg" type="audio/ogg">
-                            Your browser does not support the audio element.          
-                        </audio>
-                        </div>
-                    </div>
-                    <div class="descripcion">
-                        <h3 class="titulo">Boulevard of broken dreams</h3>
-                        <h4 class="autor">Green Day</h4>
-                    </div>
-                    <input class="borrar_cancion" type="button" value="Borrar">
-                </div>
-    
-                <div draggable="true" class="cancion">
-                    <div class="caratula">
-                        <img class="musica" src="images/viva_la_vida.jpg" alt="Viva La Vida"> 
-                        <div class="reproductor">
-                        <audio controls class="audio">
-                            <source src="audio/viva_la_vida.mp3" type="audio/mpeg">
-                            <source src="audio/viva_la_vida.ogg" type="audio/ogg">
-                            Your browser does not support the audio element.          
-                        </audio>
-                        </div>
-                    </div>
-                    <div class="descripcion">
-                        <h3 class="titulo">Viva la vida</h3>
-                        <h4 class="autor">Coldplay</h4>
-                    </div>
-                    <input class="borrar_cancion" type="button" value="Borrar">
-                </div>
-    
-                <div draggable="true" class="cancion">
-                    <div class="caratula">
-                        <img class="musica" src="images/lagrimas_de_amor.jpg" alt="Lagrimas de Amor"> 
-                        <div class="reproductor">
-                        <audio controls class="audio">
-                            <source src="audio/lagrimas_amor.mp3" type="audio/mpeg">
-                            <source src="audio/lagrimas_amor.ogg" type="audio/ogg">
-                            Your browser does not support the audio element.          
-                        </audio>
-                        </div>
-                    </div>
-                    <div class="descripcion">
-                        <h3 class="titulo">Lágrimas de amor</h3>
-                        <h4 class="autor">Camela</h4>
-                    </div>
-                    <input class="borrar_cancion" type="button" value="Borrar">
-                </div>
-                <div draggable="true" class="cancion" id="cancion_fija">
-                    <div class="caratula">
-                        <img class="musica" src="images/grenade.jpeg" alt="Grenade"> 
-                        <div class="reproductor">
-                            <audio controls class="audio">
-                                <source src="audio/grenade.mp3" type="audio/mpeg">
-                                <source src="audio/grenade.ogg" type="audio/ogg">
-                                Your browser does not support the audio element.          
-                            </audio>
-                        </div>
-                    </div>
-                    <div class="descripcion">
-                        <h3 class="titulo">Grenade</h3>
-                        <h4 class="autor">Bruno Mars</h4>
-                    </div>
-                    <input class="borrar_cancion" type="button" value="Borrar">
-                </div>
-                <div draggable="true" class="cancion"  id="cancion_fija">
-                    <div class="caratula">
-                        <img class="musica" src="images/anti_hero.jpeg" alt="Anti-Hero"> 
-                        <div class="reproductor">
-                            <audio controls class="audio">
-                                <source src="audio/anti_hero.mp3" type="audio/mpeg">
-                                <source src="audio/anti_hero.ogg" type="audio/ogg">
-                                Your browser does not support the audio element.          
-                            </audio>
-                        </div>
-                    </div>
-                    <div class="descripcion">
-                        <h3 class="titulo">Anti-Hero</h3>
-                        <h4 class="autor">Taylor Swift</h4>
-                    </div>
-                    <input class="borrar_cancion" type="button" value="Borrar">
-                </div>
-                <input id="borrar_playlist" type="button" value="Eliminar playlist">
-            </div>
-        </div>
-        <br>
-        <div id="panel_audio">
-        </div>
+        </footer>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <script src="script/script_playlist.js"></script>
         <script src="script/script_sesion_iniciada.js"></script>
         <script src="script/script_popup.js"></script>
         <script src="script/script_menu.js"></script>
-        <script src="script/script_dark_mode.js"></script>
         <script src="script/script_buscador.js"></script>
+        <script src="script/script_dark_mode.js"></script>
     </body>
 </html>

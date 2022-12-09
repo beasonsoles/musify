@@ -1,0 +1,219 @@
+.playlist {
+    position: relative;
+    z-index: 1;
+    height: 100%;
+    margin-bottom: 20%;
+}
+
+.subtitulo {
+    color: white;
+    font-size: 200%;
+    width: 100%;
+}
+
+.cancion {
+    cursor: move; /* especifica el tipo de cursor a mostrar*/
+    position: relative;
+    display: none;
+    width: 500px;
+    height: 170px;
+    background-color: black;
+    border-radius: 5px;
+    margin-bottom: 2%;
+}
+
+#cancion_fija {
+    display: block;
+}
+
+.musica {
+    position: relative;
+    border: 3px solid black;
+    border-radius: 10px;
+    width: 100px;
+    height: 100px;
+    margin: 4px;
+    z-index: 1;
+}
+
+.musica:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.descripcion, .caratula {
+    display: inline-block;
+    padding: 5%;
+}
+
+.descripcion {
+    position: absolute;
+    width: 100%;
+    margin-top: 2%;
+    overflow: visible;
+    color: white;
+}
+
+.caratula {
+    position: relative;
+    width: 100px;
+    height: 100px;
+}
+
+.caratula audio {
+    width: 90px;
+    position: relative;
+    top: 30%;
+    left: 10px;
+    z-index: 2;
+    display: none;
+}
+
+.caratula:hover audio {
+    display: inline;
+    cursor: pointer;
+}
+
+.reproductor {
+    position: absolute;
+    bottom: 8%;
+    width: 100%;
+    height: 70px;
+}
+
+.caratula, #borrar_cancion {
+    display: inline-block;
+}
+
+.borrar_cancion {
+    position: relative;
+    width: 20%;
+    height: 30px;
+    bottom: 50px;
+    left: 80%;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+}
+
+#borrar_playlist {
+    position: relative;
+    width: 20%;
+    padding: 2%;
+    left: 35%;
+    background-color: red;
+    color: white;
+    border-radius: 5px;
+    margin-top: 2%;
+    margin-bottom: 15%;
+}
+
+#panel_audio {
+    width: 100%;
+    position: fixed;
+    bottom: 3%;
+    left: 0;
+    height: 20%;
+    z-index: 3;
+}
+
+/* MEDIA QUERIES */
+
+/* Tablet */
+
+@media (min-width: 481px) and (max-width: 900px) {
+    .playlist {
+        margin-bottom: 20%;
+    }
+
+    .cancion {
+        width: 350px;
+        height: 170px;
+    }
+
+    .musica {
+        width: 130px;
+        height: 130px;
+        margin: 0;
+        top: 0;
+    }
+
+    .descripcion {
+        width: 140px;
+        right: 5%;
+    }
+
+    .caratula audio {
+        width: 130px;
+    }
+
+    .reproductor {
+        height: 30px;
+        left: 7%;
+    }
+
+    .borrar_cancion {
+        left: 75%;
+        bottom: 45%;
+    }
+    
+    #borrar_playlist {
+        width: 35%;
+        margin-top: 10%;
+        margin-bottom: 15%;
+        left: 50%;
+    }
+    
+}
+
+/* Movil */
+
+@media (max-width: 480px) {
+    .subtitulo {
+    color: white;
+        font-size: 100%;
+        width: 100%;
+    }
+
+    .cancion {
+        width: 110%;
+        height: 95px;
+        margin-bottom: 5%;
+    }
+
+    .musica {
+        width: 70px;
+        height: 70px;
+        margin: 0;
+        top: 0;
+    }
+
+    .descripcion {
+        width: 70px;
+        font-size: 50%;
+        right: 0;
+    }
+
+    .caratula audio {
+        width: 70px;
+    }
+
+    .reproductor {
+        height: 5px;
+        top: 35%;
+        left: 0;
+    }
+
+    .borrar_cancion {
+        left: 110%;
+        bottom: 85%;
+        width: 30%;
+    }
+    
+    #borrar_playlist {
+        width: 80%;
+        margin-top: 10%;
+        margin-bottom: 15%;
+        left: 40%;
+    }
+}

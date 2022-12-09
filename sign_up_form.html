@@ -2,41 +2,43 @@
 <html>
   <head>
     <!-- Hoja de estilo usada de la pagina web -->  
-    <link rel="stylesheet" href="style/hojaestilo-sign-up.css">
+    <link rel="stylesheet" href="style/hojaestilo_sign_up.css">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta charset="UTF-8" />
     <meta name="Musify"  />
-    <meta lang="es-ES" />
+    <html lang="es">
     <title>Sign Up to Musify</title>
   </head>
   <body>
-    <div class = "sign_up">
-      <h1>Sign Up to Musify</h1>
-      <form class="form" id="sign_up_form" action="cuenta.html" method="POST">
-        <h2>Nombre de usuario</h2>
-        <input type="text" id="user_name" required><br>
-        <h2>Contraseña</h2>
-        <input type="password" id="pswd" required><br>
-        <h2>Nombre</h2>
-        <input type="text" id="name" required><br>
-        <h2>Apellidos</h2>
-        <input type="text" id="surname1" required><br>
-        <input type="text" id="surname2" ><br>
-        <h2>Correo electrónico</h2>
-        <input type="email" id="user_email" required><br>
-        <h2>Fecha de nacimiento</h2>
-        <input type="date" id="birthdate" required><br>
-        <h2>Foto de perfil</h2>
-        <input type="file" id="user_picture" required><br>
-        <input type="checkbox" id="condiciones" required>
-        <p>He leído y acepto las Condiciones de uso</p><br>
-        <input type="submit" value="Enviar" id="enviar">
-        <input type="reset" value="Borrar" id="resetear"><br>             
-        <input type="button" value="Continúa con Google" id="google"><br>
-        <input type="button" value="Continúa con Facebook" id="facebook"><br>
-        <a href="log_in_form.html">¿Ya tienes una cuenta?</a>
-      </form><br>
-    </div>
+    <main class="derecha" id="main_container">
+      <div class = "sign_up">
+        <h1>Sign Up to Musify</h1>
+        <form class="form" id="sign_up_form" action="cuenta.html" method="POST">
+          <h2>Nombre de usuario</h2>
+          <input type="text" id="user_name" required><br>
+          <h2>Contraseña</h2>
+          <input type="password" id="pswd" required><br>
+          <h2>Nombre</h2>
+          <input type="text" id="name" required><br>
+          <h2>Apellidos</h2>
+          <input type="text" id="surname1" required><br>
+          <input type="text" id="surname2" ><br>
+          <h2>Correo electrónico</h2>
+          <input type="email" id="user_email" required><br>
+          <h2>Fecha de nacimiento</h2>
+          <input type="date" id="birthdate" required><br>
+          <h2>Foto de perfil</h2>
+          <input type="file" id="user_picture" required><br>
+          <input type="checkbox" id="condiciones" required>
+          <p>He leído y acepto las Condiciones de uso</p><br>
+          <input type="submit" value="Enviar" id="enviar">
+          <input type="reset" value="Borrar" id="resetear"><br>             
+          <input type="button" value="Continúa con Google" id="google"><br>
+          <input type="button" value="Continúa con Facebook" id="facebook"><br>
+          <a href="log_in_form.html">¿Ya tienes una cuenta?</a>
+        </form><br>
+      </div>
+    </main>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="script/script_sign_up.js"></script>
   </body>

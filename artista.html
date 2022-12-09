@@ -3,20 +3,39 @@
     <head>
 
         <!-- Hoja de estilo usada de la pagina web -->  
-        <link rel="stylesheet" href="style/hojaestilo-artista.css">
-        <link rel="stylesheet" href="style/hojaestilo-popup.css">
-        <link rel="stylesheet" href="style/hojaestilo-boton-cambiar-tema.css">
+        <link rel="stylesheet" href="style/hojaestilo_regiones.css">
+        <link rel="stylesheet" href="style/hojaestilo_artista.css">
+        <link rel="stylesheet" href="style/hojaestilo_popup.css">
+        <link rel="stylesheet" href="style/hojaestilo_boton_cambiar_tema.css">
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta charset="UTF-8" />
         <meta name="Musify"  />
-        <meta lang="es-ES" />
+        <html lang="es">
         <title>Musify</title>
         
     </head>
 
     <body>
+        <header>
+            <div class="cabecera">
+                <img id="musify_icono" src="images/logo_musify.png" alt="Musify Logo">
+                <div id="musify_texto"><h1>Musify</h1></div>
+                <input type="search" placeholder="Buscar" id="buscador">
+                <img id="foto_perfil" src="images/perfil.jpeg" alt="Foto Perfil">
+            </div><br>
+
+            <div class="popup" id="popup_perfil">
+                <div class="container" id="popup_container">
+                    <br>
+                    <button class="cuenta" id="cuenta_text">Cuenta</button><br>
+                    <button class="perfil" id="perfil_text">Perfil</button><br>
+                    <button class="cerrar_sesion" id="cerrar_sesion_text">Cerrar sesión</button>
+                </div>
+            </div>
+        </header>
+
         <!-- columna izquierda-->
-        <div class="izquierda" id="menu_container">
+        <nav class="izquierda" id="menu_container">
             <div class="menu">
                 <div id="opcion1">
                     <img id="home_icono" src="images/home.png" alt="Home">
@@ -37,178 +56,167 @@
                 <div id="opcion5">
                     <img id="ajustes_icono" src="images/ajustes.png" alt="Ajustes">
                     <div id="ajustes">Ajustes</div>
-                </div><br>
+                </div>
                 <div class=popup_cambiar_tema id="cambiar_tema">
-                    <div class="container_oscuro" id="cambiar_tema_container"><br>
-                      <label class="interruptor" id="interruptor_modo_oscuro">
+                    <div class="container_claro" id="cambiar_tema_container"><br>
+                    <label class="interruptor" id="interruptor_modo_oscuro">
                         <input type="checkbox">
                         <span class="boton_deslizante circulo"></span>
-                      </label>
-                      <div class="tema_oscuro_texto">Tema oscuro</div>
+                    </label>
+                    <div class="tema_claro_texto">Tema claro</div>
                     </div>
                 </div>
             </div>
-            <div id="politicas">
-            <div class="info"><a href="#">Politica de privacidad</a></div><br>
-            <div class="info"><a href="#">Politica de cookies</a></div>
-            </div>
-        </div>
+        </nav>
         
         <!-- columna derecha-->
-        <div class="cabecera">
-            <img id="musify_icono" src="images/logo_musify.png" alt="Musify">
-            <div id="musify"><h1>Musify</h1></div>
-            <input type="search" placeholder="Buscar" id="buscador">
-            <img id="foto_perfil" src="images/perfil.jpeg" alt="Foto Perfil">
-        </div><br>
+        <main class="derecha" id="main_container">
+            <div class="contenido">
+            <!--primera fila-->
+                <h2 class="subtitulo">Canciones del artista</h2>
+                <div class="canciones_artista">
+                    <div class="cancion">
+                        <div class="caratula">
+                            <img class="musica" src="images/album_uvst.jpg" alt="Un Verano Sin Ti"> 
+                            <div class="reproductor">
+                                <audio controls class="audio">
+                                    <source src="audio/moscow_mule.mp3" type="audio/mpeg">
+                                    <source src="audio/moscow_mule.ogg" type="audio/ogg">
+                                    Your browser does not support the audio element.          
+                                </audio>
+                            </div>
+                        </div>
+                        <div class="descripcion">
+                            <h3 class="titulo">Moscow mule</h3>
+                            <h4 class="autor">Bad Bunny</h4>
+                        </div>
+                    </div>
         
-        <div class="popup" id="popup_perfil">
-          <div class="container" id="popup_container">
-            <br>
-            <button class="cuenta" id="cuenta_text">Cuenta</button><br>
-            <button class="perfil" id="perfil_text">Perfil</button><br>
-            <button class="cerrar_sesion" id="cerrar_sesion_text">Cerrar sesión</button>
-          </div>
-        </div>
-
-        <div class="derecha">
-          <!--primera fila-->
-            <h2 class="subtitulo">Canciones del artista</h2>
-            <div class="canciones_artista">
-                <div class="cancion">
-                    <div class="caratula">
-                        <img class="musica" src="images/album_uvst.jpg" alt="Un Verano Sin Ti"> 
-                        <div class="reproductor">
-                            <audio controls class="audio">
-                                <source src="audio/moscow_mule.mp3" type="audio/mpeg">
-                                <source src="audio/moscow_mule.ogg" type="audio/ogg">
-                                Your browser does not support the audio element.          
-                            </audio>
+                    <div class="cancion">
+                        <div class="caratula">
+                            <img class="musica" src="images/el_madrileño.jpeg" alt="El Madrileño">
+                            <div class="reproductor">
+                                <audio controls class="audio">
+                                    <source src="audio/demasidas_mujeres.mp3" type="audio/mpeg">
+                                    <source src="audio/demasidas_mujeres.ogg" type="audio/ogg">
+                                    Your browser does not support the audio element.          
+                                </audio>
+                            </div>
+                        </div>
+                        <div class="descripcion">
+                            <h3 class="titulo">Demasiadas mujeres</h3>
+                            <h4 class="autor">C. Tangana</h4>
                         </div>
                     </div>
-                    <div class="descripcion">
-                        <h3 class="titulo">Moscow mule</h3>
-                        <h4 class="autor">Bad Bunny</h4>
-                    </div>
-                </div>
-    
-                <div class="cancion">
-                    <div class="caratula">
-                        <img class="musica" src="images/el_madrileño.jpeg" alt="El Madrileño">
-                        <div class="reproductor">
-                            <audio controls class="audio">
-                                <source src="audio/demasidas_mujeres.mp3" type="audio/mpeg">
-                                <source src="audio/demasidas_mujeres.ogg" type="audio/ogg">
-                                Your browser does not support the audio element.          
-                            </audio>
+        
+                    <div class="cancion">
+                        <div class="caratula">
+                            <img class="musica" src="images/queen.jpg" alt="A Night at the Opera"> 
+                            <div class="reproductor">
+                                <audio controls class="audio">
+                                    <source src="audio/bohemian_rhapsody.mp3" type="audio/mpeg">
+                                    <source src="audio/bohemian_rhapsody.ogg" type="audio/ogg">
+                                    Your browser does not support the audio element.          
+                                </audio>
+                            </div>
+                        </div>
+                        <div class="descripcion">
+                            <h3 class="titulo">Bohemian rhapsody</h3>
+                            <h4 class="autor">Queen</h4>
                         </div>
                     </div>
-                    <div class="descripcion">
-                        <h3 class="titulo">Demasiadas mujeres</h3>
-                        <h4 class="autor">C. Tangana</h4>
-                    </div>
-                </div>
-    
-                <div class="cancion">
-                    <div class="caratula">
-                        <img class="musica" src="images/queen.jpg" alt="A Night at the Opera"> 
-                        <div class="reproductor">
-                            <audio controls class="audio">
-                                <source src="audio/bohemian_rhapsody.mp3" type="audio/mpeg">
-                                <source src="audio/bohemian_rhapsody.ogg" type="audio/ogg">
-                                Your browser does not support the audio element.          
-                            </audio>
+        
+                    <div class="cancion">
+                        <div class="caratula">
+                            <img class="musica" src="images/avicii.jpg" alt="The Nights"> 
+                            <div class="reproductor">
+                                <audio controls class="audio">
+                                    <source src="audio/waiting_for_love.mp3" type="audio/mpeg">
+                                    <source src="audio/waiting_for_love.ogg" type="audio/ogg">
+                                    Your browser does not support the audio element.          
+                                </audio>
+                            </div>
+                        </div>
+                        <div class="descripcion">
+                            <h3 class="titulo">Waiting for love</h3>
+                            <h4 class="autor">Avicii</h4>
                         </div>
                     </div>
-                    <div class="descripcion">
-                        <h3 class="titulo">Bohemian rhapsody</h3>
-                        <h4 class="autor">Queen</h4>
-                    </div>
-                </div>
-    
-                <div class="cancion">
-                    <div class="caratula">
-                        <img class="musica" src="images/avicii.jpg" alt="The Nights"> 
-                        <div class="reproductor">
-                            <audio controls class="audio">
-                                <source src="audio/waiting_for_love.mp3" type="audio/mpeg">
-                                <source src="audio/waiting_for_love.ogg" type="audio/ogg">
-                                Your browser does not support the audio element.          
-                            </audio>
+        
+                    <div class="cancion">
+                        <div class="caratula">
+                            <img class="musica" src="images/sucker_for_pain.jpg" alt="Suicide Squad: The Album"> 
+                            <div class="reproductor">
+                                <audio controls class="audio">
+                                    <source src="audio/sucker_for_pain.mp3" type="audio/mpeg">
+                                    <source src="audio/sucker_for_pain.ogg" type="audio/ogg">
+                                    Your browser does not support the audio element.          
+                                </audio>
+                            </div>
+                        </div>
+                        <div class="descripcion">
+                            <h3 class="titulo">Sucker for pain</h3>
+                            <h4 class="autor">Lil Wayne e Imagine Dragons</h4>
                         </div>
                     </div>
-                    <div class="descripcion">
-                        <h3 class="titulo">Waiting for love</h3>
-                        <h4 class="autor">Avicii</h4>
-                    </div>
                 </div>
-    
-                <div class="cancion">
-                    <div class="caratula">
-                        <img class="musica" src="images/sucker_for_pain.jpg" alt="Sucker For Pain"> 
-                        <div class="reproductor">
-                            <audio controls class="audio">
-                                <source src="audio/sucker_for_pain.mp3" type="audio/mpeg">
-                                <source src="audio/sucker_for_pain.ogg" type="audio/ogg">
-                                Your browser does not support the audio element.          
-                            </audio>
+                <!--segunda fila-->
+            
+                <h2 class="subtitulo">Álbumes del artista</h2>
+                <div class="albumes_artista">
+                    <div class="cancion">
+                        <img class="musica" src="images/5sos5.jpg" alt="Álbum 5sos5"> 
+                        <div class="descripcion">
+                            <h3 class="titulo">5SOS5</h3>
                         </div>
                     </div>
-                    <div class="descripcion">
-                        <h3 class="titulo">Sucker for pain</h3>
-                        <h4 class="autor">Lil Wayne e Imagine Dragons</h4>
+            
+                    <div class="cancion">
+                        <img class="musica" src="images/30.jpg" alt="Álbum 30">
+                        <div class="descripcion">
+                            <h3 class="titulo">30</h3>
+                        </div>
                     </div>
-                </div>
+            
+                    <div class="cancion">
+                        <img class="musica" src="images/harrys_house.jpg" alt="Álbum Harry's House"> 
+                        <div class="descripcion">
+                            <h3 class="titulo">Harry's House</h3>
+                        </div>
+                    </div>
+            
+                    <div class="cancion">
+                        <img class="musica" src="images/album_uvst.jpg" alt="Álbum Un Verano Sin Ti"> 
+                        <div class="descripcion">
+                            <h3 class="titulo">Un Verano Sin Ti</h3>
+                        </div>
+                    </div>
+            
+                    <div class="cancion">
+                        <img class="musica" src="images/music_of_the_spheres.jpg" alt="Álbum Music of the Spheres"> 
+                        <div class="descripcion">
+                            <h3 class="titulo">Music of the spheres</h3>
+                        </div>
+                    </div>
+                </div> 
+                <br>
             </div>
-            <!--segunda fila-->
-          
-            <h2 class="subtitulo">Álbumes del artista</h2>
-            <div class="albumes_artista">
-                <div class="cancion">
-                    <img class="musica" src="images/5sos5.jpg" alt="Álbum 5sos5"> 
-                    <div class="descripcion">
-                        <h3>5SOS5</h3>
-                    </div>
-                </div>
-          
-                <div class="cancion">
-                    <img class="musica" src="images/30.jpg" alt="Álbum 30">
-                    <div class="descripcion">
-                        <h3>30</h3>
-                    </div>
-                </div>
-          
-                <div class="cancion">
-                    <img class="musica" src="images/harrys_house.jpg" alt="Álbum Harry's House"> 
-                    <div class="descripcion">
-                        <h3>Harry's House</h3>
-                    </div>
-                </div>
-          
-                <div class="cancion">
-                    <img class="musica" src="images/album_uvst.jpg" alt="Álbum Un Verano Sin Ti"> 
-                    <div class="descripcion">
-                        <h3>Un Verano Sin Ti</h3>
-                    </div>
-                </div>
-        
-                <div class="cancion">
-                    <img class="musica" src="images/music_of_the_spheres.jpg" alt="Álbum Music of the Spheres"> 
-                    <div class="descripcion">
-                        <h3>Music of the spheres</h3>
-                    </div>
-                </div>
-            </div> 
-            <br>
-        </div>
-        <div id="panel_audio">
-        </div>
+            <div id="panel_audio">
+            </div>
+        </main>
+
+        <footer>
+            <div id="politicas">
+                <div class="info"><a href="#">Politica de privacidad</a></div><br>
+                <div class="info"><a href="#">Politica de cookies</a></div>
+            </div>
+        </footer>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <script src="script/script_artista.js"></script>
         <script src="script/script_sesion_iniciada.js"></script>
         <script src="script/script_popup.js"></script>
         <script src="script/script_menu.js"></script>
-        <script src="script/script_dark_mode.js"></script>
         <script src="script/script_buscador.js"></script>
+        <script src="script/script_dark_mode.js"></script>
     </body>
 </html>

@@ -3,65 +3,27 @@
     <head>
 
         <!-- Hoja de estilo usada de la pagina web -->  
-        <link rel="stylesheet" href="style/hojaestilo-perfil.css">
-        <link rel="stylesheet" href="style/hojaestilo-popup.css">
-        <link rel="stylesheet" href="style/hojaestilo-boton-cambiar-tema.css">
+        <link rel="stylesheet" href="style/hojaestilo_regiones.css">
+        <link rel="stylesheet" href="style/hojaestilo_perfil.css">
+        <link rel="stylesheet" href="style/hojaestilo_popup.css">
+        <link rel="stylesheet" href="style/hojaestilo_boton_cambiar_tema.css">
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta charset="UTF-8" />
         <meta name="Musify"  />
-        <meta lang="es-ES" />
+        <html lang="es">
         <title>Musify</title>
         
     </head>
 
     <body>
-        <!-- columna izquierda-->
-        <div class="izquierda" id="menu_container">
-            <div class="menu">
-                <div id="opcion1">
-                    <img id="home_icono" src="images/home.png" alt="Home">
-                    <div id="home">Home</div>
-                </div><br>
-                <div id="opcion2">
-                    <img id="biblioteca_icono" src="images/biblioteca.png" alt="Biblioteca">
-                    <div id="biblioteca">Biblioteca</div>
-                </div><br>
-                <div id="opcion3">
-                    <img id="crear_icono" src="images/crear.png" alt="Crear">
-                    <div id="crear">Playlist</div>
-                </div><br>
-                <div id="opcion4">
-                    <img id="favorito_icono" src="images/favorito.png" alt="Favorito">
-                    <div id="favorito">Favoritos</div>
-                </div><br>
-                <div id="opcion5">
-                    <img id="ajustes_icono" src="images/ajustes.png" alt="Ajustes">
-                    <div id="ajustes">Ajustes</div>
-                </div><br>
-                <div class=popup_cambiar_tema id="cambiar_tema">
-                  <div class="container_oscuro" id="cambiar_tema_container"><br>
-                    <label class="interruptor" id="interruptor_modo_oscuro">
-                      <input type="checkbox">
-                      <span class="boton_deslizante circulo"></span>
-                    </label>
-                    <div class="tema_oscuro_texto">Tema oscuro</div>
-                  </div>
-                </div>
-            </div>
-            <div id="politicas">
-                <div class="info"><a href="#">Politica de privacidad</a></div><br>
-                <div class="info"><a href="#">Politica de cookies</a></div>
-            </div>
-        </div>
-        
-        <!-- columna derecha-->
+      <header>
         <div class="cabecera">
-            <img id="musify_icono" src="images/logo_musify.png" alt="Musify">
-            <div id="musify"><h1>Musify</h1></div>
+            <img id="musify_icono" src="images/logo_musify.png" alt="Musify Logo">
+            <div id="musify_texto"><h1>Musify</h1></div>
             <input type="search" placeholder="Buscar" id="buscador">
             <img id="foto_perfil" src="images/perfil.jpeg" alt="Foto Perfil">
         </div><br>
-        
+
         <div class="popup" id="popup_perfil">
             <div class="container" id="popup_container">
                 <br>
@@ -70,8 +32,46 @@
                 <button class="cerrar_sesion" id="cerrar_sesion_text">Cerrar sesión</button>
             </div>
         </div>
+      </header>
 
-        <div class="derecha">
+      <!-- columna izquierda-->
+      <nav class="izquierda" id="menu_container">
+        <div class="menu">
+            <div id="opcion1">
+                <img id="home_icono" src="images/home.png" alt="Home">
+                <div id="home">Home</div>
+            </div><br>
+            <div id="opcion2">
+                <img id="biblioteca_icono" src="images/biblioteca.png" alt="Biblioteca">
+                <div id="biblioteca">Biblioteca</div>
+            </div><br>
+            <div id="opcion3">
+                <img id="crear_icono" src="images/crear.png" alt="Crear">
+                <div id="crear">Playlist</div>
+            </div><br>
+            <div id="opcion4">
+                <img id="favorito_icono" src="images/favorito.png" alt="Favorito">
+                <div id="favorito">Favoritos</div>
+            </div><br>
+            <div id="opcion5">
+                <img id="ajustes_icono" src="images/ajustes.png" alt="Ajustes">
+                <div id="ajustes">Ajustes</div>
+            </div>
+            <div class=popup_cambiar_tema id="cambiar_tema">
+              <div class="container_claro" id="cambiar_tema_container"><br>
+                <label class="interruptor" id="interruptor_modo_oscuro">
+                  <input type="checkbox">
+                  <span class="boton_deslizante circulo"></span>
+                </label>
+                <div class="tema_claro_texto">Tema claro</div>
+              </div>
+            </div>
+        </div>
+      </nav>
+      
+      <!-- columna derecha-->
+      <main class="derecha" id="main_container">
+        <div class="contenido">
             <h2 class="subtitulo">Artistas más escuchados</h2>
             <div id="artistas_mas_escuchados">
               <div class="artista">
@@ -177,7 +177,7 @@
     
               <div class="cancion">
                 <div class="caratula">
-                  <img class="musica" src="images/sucker_for_pain.jpg" alt="Sucker For Pain"> 
+                  <img class="musica" src="images/sucker_for_pain.jpg" alt="Suicide Squad: The Album"> 
                   <div class="reproductor">
                     <audio controls class="audio">
                       <source src="audio/sucker_for_pain.mp3" type="audio/mpeg">
@@ -265,7 +265,7 @@
   
               <div class="cancion">
                   <div class="caratula">
-                      <img class="musica" src="images/sucker_for_pain.jpg" alt="Sucker For Pain"> 
+                      <img class="musica" src="images/sucker_for_pain.jpg" alt="Suicide Squad: The Album"> 
                       <div class="reproductor">
                         <audio controls class="audio">
                             <source src="audio/sucker_for_pain.mp3" type="audio/mpeg">
@@ -368,31 +368,31 @@
               <div class="usuario">
                 <img class="perfil_usuario" src="images/usuario1.jpg" alt="Usuario 1">
                 <div class="descripcion">
-                  <h3>Usuario 1</h3>
+                  <h3 class="nombre_usuario">Usuario 1</h3>
                 </div>
               </div>
               <div class="usuario">
                 <img class="perfil_usuario" src="images/usuario2.jpg" alt="Usuario 2">
                 <div class="descripcion">
-                  <h3>Usuario 2</h3>
+                  <h3 class="nombre_usuario">Usuario 2</h3>
                 </div>
               </div>
               <div class="usuario">
                 <img class="perfil_usuario" src="images/usuario3.jpg" alt="Usuario 3">
                 <div class="descripcion">
-                  <h3>Usuario 3</h3>
+                  <h3 class="nombre_usuario">Usuario 3</h3>
                 </div>
               </div>
               <div class="usuario">
                 <img class="perfil_usuario" src="images/usuario4.jpg" alt="Usuario 4">
                 <div class="descripcion">
-                  <h3>Usuario 4</h3>
+                  <h3 class="nombre_usuario">Usuario 4</h3>
                 </div>
               </div>
               <div class="usuario">
                 <img class="perfil_usuario" src="images/usuario5.jpg" alt="Usuario 5">
                 <div class="descripcion">
-                  <h3>Usuario 5</h3>
+                  <h3 class="nombre_usuario">Usuario 5</h3>
                 </div>
               </div>
             </div>
@@ -400,12 +400,21 @@
         <br>
         <div id="panel_audio">
         </div>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-        <script src="script/script_sesion_iniciada.js"></script>
-        <script src="script/script_perfil.js"></script>
-        <script src="script/script_popup.js"></script>
-        <script src="script/script_menu.js"></script>
-        <script src="script/script_dark_mode.js"></script>
-        <script src="script/script_buscador.js"></script>
+      </main>
+
+      <footer>
+        <div id="politicas">
+          <div class="info"><a href="#">Politica de privacidad</a></div><br>
+          <div class="info"><a href="#">Politica de cookies</a></div>
+        </div>
+      </footer>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+      <script src="script/script_sesion_iniciada.js"></script>
+      <script src="script/script_perfil.js"></script>
+      <script src="script/script_biblioteca.js"></script>
+      <script src="script/script_popup.js"></script>
+      <script src="script/script_menu.js"></script>
+      <script src="script_buscador.js"></script>
+      <script src="script/script_dark_mode.js"></script>
     </body>
 </html>

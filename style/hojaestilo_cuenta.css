@@ -1,0 +1,70 @@
+h2 {
+    color: white;
+    padding: 2%;
+}
+
+h3 {
+    color: white;
+    position: relative;
+    padding: 2%;
+    left: 17%;
+}
+
+.datos {
+    position: relative;
+    width: 95%;
+    background-color: black;
+    border-radius: 6px;
+    margin-bottom: 10%;
+}
+
+#user_name, #pswd, #name, #surname1, #surname2, #user_email, #birthdate, #user_picture {
+    position: relative;
+    left: 2%;
+    margin-bottom: 2%;
+    padding: 1%;
+    border-radius: 5px;
+    width: 90%;
+}
+
+#user_picture {
+    color: white;
+}
+
+#enviar {
+    position: relative;
+    margin-bottom: 5%;
+    width: 20%; 
+    height: 50px;
+    left: 40%;
+    color:white;
+    background-color:rgb(20, 145, 241);
+}
+
+
+/* MEDIA QUERIES */
+
+/* Tablet */
+
+@media (min-width: 481px) and (max-width: 900px) {
+    .datos {
+        margin-top: 5%;
+        margin-bottom: 30%;
+    }
+}
+
+/* Movil */
+
+@media (max-width: 480px) {
+    .datos {
+        margin-top: 15%;
+        margin-bottom: 40%;
+    }
+
+    #enviar, #resetear {
+        width: 30%; 
+        height: 30px;
+        left: 20%;
+        margin-top: 10%;
+    }
+}

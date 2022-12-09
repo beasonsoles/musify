@@ -3,20 +3,39 @@
     <head>
 
         <!-- Hoja de estilo usada de la pagina web -->  
-        <link rel="stylesheet" href="style/hojaestilo-biblioteca.css">
-        <link rel="stylesheet" href="style/hojaestilo-popup.css">
-        <link rel="stylesheet" href="style/hojaestilo-boton-cambiar-tema.css">
+        <link rel="stylesheet" href="style/hojaestilo_regiones.css">
+        <link rel="stylesheet" href="style/hojaestilo_biblioteca.css">
+        <link rel="stylesheet" href="style/hojaestilo_popup.css">
+        <link rel="stylesheet" href="style/hojaestilo_boton_cambiar_tema.css">
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta charset="UTF-8" />
         <meta name="Musify"  />
-        <meta lang="es-ES" />
+        <html lang="es">
         <title>Musify</title>
         
     </head>
 
     <body>
+        <header>
+            <div class="cabecera">
+                <img id="musify_icono" src="images/logo_musify.png" alt="Musify Logo">
+                <div id="musify_texto"><h1>Musify</h1></div>
+                <input type="search" placeholder="Buscar" id="buscador">
+                <img id="foto_perfil" src="images/perfil.jpeg" alt="Foto Perfil">
+            </div><br>
+
+            <div class="popup" id="popup_perfil">
+                <div class="container" id="popup_container">
+                    <br>
+                    <button class="cuenta" id="cuenta_text">Cuenta</button><br>
+                    <button class="perfil" id="perfil_text">Perfil</button><br>
+                    <button class="cerrar_sesion" id="cerrar_sesion_text">Cerrar sesión</button>
+                </div>
+            </div>
+        </header>
+
         <!-- columna izquierda-->
-        <div class="izquierda" id="menu_container">
+        <nav class="izquierda" id="menu_container">
             <div class="menu">
                 <div id="opcion1">
                     <img id="home_icono" src="images/home.png" alt="Home">
@@ -37,49 +56,38 @@
                 <div id="opcion5">
                     <img id="ajustes_icono" src="images/ajustes.png" alt="Ajustes">
                     <div id="ajustes">Ajustes</div>
-                </div><br>
+                </div>
                 <div class=popup_cambiar_tema id="cambiar_tema">
-                    <div class="container_oscuro" id="cambiar_tema_container"><br>
-                      <label class="interruptor" id="interruptor_modo_oscuro">
+                    <div class="container_claro" id="cambiar_tema_container"><br>
+                    <label class="interruptor" id="interruptor_modo_oscuro">
                         <input type="checkbox">
                         <span class="boton_deslizante circulo"></span>
-                      </label>
-                      <div class="tema_oscuro_texto">Tema oscuro</div>
+                    </label>
+                    <div class="tema_claro_texto">Tema claro</div>
                     </div>
                 </div>
             </div>
+        </nav>
+        
+        <!-- columna derecha-->
+        <main class="derecha" id="main_container">
+            <div class="contenido">
+                <h2 class="subtitulo">Tus playlists</h2>
+                <div id="tus_playlists"></div>
+            </div>
+        </main>
+
+        <footer>
             <div id="politicas">
                 <div class="info"><a href="#">Politica de privacidad</a></div><br>
                 <div class="info"><a href="#">Politica de cookies</a></div>
             </div>
-        </div>
-        
-        <!-- columna derecha-->
-        <div class="cabecera">
-            <img id="musify_icono" src="images/logo_musify.png" alt="Musify">
-            <div id="musify"><h1>Musify</h1></div>
-            <input type="search" placeholder="Buscar" id="buscador">
-            <img id="foto_perfil" src="images/perfil.jpeg" alt="Foto Perfil">
-        </div><br>
-        
-        <div class="popup" id="popup_perfil">
-            <div class="container" id="popup_container">
-                <br>
-                <button class="cuenta" id="cuenta_text">Cuenta</button><br>
-                <button class="perfil" id="perfil_text">Perfil</button><br>
-                <button class="cerrar_sesion" id="cerrar_sesion_text">Cerrar sesión</button>
-            </div>
-        </div>
-
-        <div class="derecha">
-            <h2 class="subtitulo">Tus playlists</h2>
-            <div id="tus_playlists"></div>
-        </div>
+        </footer>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <script src="script/script_popup.js"></script>
         <script src="script/script_menu.js"></script>
-        <script src="script/script_dark_mode.js"></script>
         <script src="script/script_biblioteca.js"></script>
         <script src="script/script_buscador.js"></script>
+        <script src="script/script_dark_mode.js"></script>
     </body>
 </html>

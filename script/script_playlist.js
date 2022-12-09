@@ -3,7 +3,7 @@ let botones_borrar_cancion = document.querySelectorAll(".borrar_cancion");
 let boton_borrar_playlist = document.getElementById("borrar_playlist");
 
 /* Para mostrar las canciones añadidas a la playlist */
-if ((titulo_cancion_buscada = getCookie("titulo_cancion")) != "") {
+if ((titulo_cancion_buscada = localStorage.getItem("titulo_cancion")) != "") {
     canciones_playlist.forEach(function(cancion) {
         titulo_cancion = cancion.querySelector(".descripcion").querySelector(".titulo");
         autor_cancion = cancion.querySelector(".descripcion").querySelector(".autor");
@@ -53,25 +53,8 @@ botones_borrar_cancion.forEach(function(boton) {
 boton_borrar_playlist.addEventListener("click", function() {
     if (confirm("Estás seguro de que deseas borrar la playlist?")) {
         document.getElementById("playlist").remove();
-        deleteCookie("nombre_playlist", getCookie("nombre_playlist"));
-        deleteCookie("foto_playlist", getCookie("foto_playlist"));
+        localStorage.removeItem("nombre_playlist", localStorage.getItem("nombre_playlist")); //REMOVE ITEM SOLO TIENE LA KEY (ARREGLAR)
+        localStorage.removeItem("foto_playlist", localStorage.getItem("foto_playlist")); //REMOVE ITEM SOLO TIENE LA KEY (ARREGLAR)
         window.open("biblioteca.html", "_self");
     }
 });
-
-/* Funciones para las cookies */
-function getCookie(field_name) {
-    let value = field_name + "=";
-    let ca = document.cookie.split(';'); /* lista que guarda los campos de la cookie */
-    for(let i = 0; i < ca.length; i++) { 
-        let c = ca[i].trim();
-        if (c.indexOf(value) == 0) { /* el valor ha sido encontrado */
-            return c.substring(value.length, c.length); /* el valor de la cookie es devuelto */
-        }
-    }
-    return "";
-}
-
-function deleteCookie(field, value) {
-    document.cookie = field + "=" + value + "expires=" + new Date(0).toUTCString();
-}

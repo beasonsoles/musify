@@ -3,103 +3,111 @@
     <head>
 
         <!-- Hoja de estilo usada de la pagina web -->  
-        <link rel="stylesheet" href="style/hojaestilo-cuenta.css">
-        <link rel="stylesheet" href="style/hojaestilo-popup.css">
-        <link rel="stylesheet" href="style/hojaestilo-boton-cambiar-tema.css">
+        <link rel="stylesheet" href="style/hojaestilo_regiones.css">
+        <link rel="stylesheet" href="style/hojaestilo_cuenta.css">
+        <link rel="stylesheet" href="style/hojaestilo_popup.css">
+        <link rel="stylesheet" href="style/hojaestilo_boton_cambiar_tema.css">
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta charset="UTF-8" />
         <meta name="Musify"  />
-        <meta lang="es-ES" />
+        <html lang="es">
         <title>Musify</title>
         
     </head>
 
     <body>
-        <!-- columna izquierda-->
-        <div class="izquierda" id="menu_container">
-          <div class="menu">
-              <div id="opcion1">
-                  <img id="home_icono" src="images/home.png" alt="Home">
-                  <div id="home">Home</div>
-              </div><br>
-              <div id="opcion2">
-                  <img id="biblioteca_icono" src="images/biblioteca.png" alt="Biblioteca">
-                  <div id="biblioteca">Biblioteca</div>
-              </div><br>
-              <div id="opcion3">
-                  <img id="crear_icono" src="images/crear.png" alt="Crear">
-                  <div id="crear">Playlist</div>
-              </div><br>
-              <div id="opcion4">
-                  <img id="favorito_icono" src="images/favorito.png" alt="Favorito">
-                  <div id="favorito">Favoritos</div>
-              </div><br>
-              <div id="opcion5">
-                  <img id="ajustes_icono" src="images/ajustes.png" alt="Ajustes">
-                  <div id="ajustes">Ajustes</div>
-              </div><br>
-              <div class=popup_cambiar_tema id="cambiar_tema">
-                <div class="container_oscuro" id="cambiar_tema_container"><br>
-                  <label class="interruptor" id="interruptor_modo_oscuro">
-                    <input type="checkbox">
-                    <span class="boton_deslizante circulo"></span>
-                  </label>
-                  <div class="tema_oscuro_texto">Tema oscuro</div>
+        <header>
+            <div class="cabecera">
+                <img id="musify_icono" src="images/logo_musify.png" alt="Musify Logo">
+                <div id="musify_texto"><h1>Musify</h1></div>
+                <input type="search" placeholder="Buscar" id="buscador">
+                <img id="foto_perfil" src="images/perfil.jpeg" alt="Foto Perfil">
+            </div><br>
+
+            <div class="popup" id="popup_perfil">
+                <div class="container" id="popup_container">
+                    <br>
+                    <button class="cuenta" id="cuenta_text">Cuenta</button><br>
+                    <button class="perfil" id="perfil_text">Perfil</button><br>
+                    <button class="cerrar_sesion" id="cerrar_sesion_text">Cerrar sesión</button>
                 </div>
-              </div>
-          </div>
-          <div id="politicas">
-              <div class="info"><a href="#">Politica de privacidad</a></div><br>
-              <div class="info"><a href="#">Politica de cookies</a></div>
-          </div>
-      </div>
+            </div>
+        </header>
+
+        <!-- columna izquierda-->
+        <nav class="izquierda" id="menu_container">
+            <div class="menu">
+                <div id="opcion1">
+                    <img id="home_icono" src="images/home.png" alt="Home">
+                    <div id="home">Home</div>
+                </div><br>
+                <div id="opcion2">
+                    <img id="biblioteca_icono" src="images/biblioteca.png" alt="Biblioteca">
+                    <div id="biblioteca">Biblioteca</div>
+                </div><br>
+                <div id="opcion3">
+                    <img id="crear_icono" src="images/crear.png" alt="Crear">
+                    <div id="crear">Playlist</div>
+                </div><br>
+                <div id="opcion4">
+                    <img id="favorito_icono" src="images/favorito.png" alt="Favorito">
+                    <div id="favorito">Favoritos</div>
+                </div><br>
+                <div id="opcion5">
+                    <img id="ajustes_icono" src="images/ajustes.png" alt="Ajustes">
+                    <div id="ajustes">Ajustes</div>
+                </div>
+                <div class=popup_cambiar_tema id="cambiar_tema">
+                    <div class="container_claro" id="cambiar_tema_container"><br>
+                        <label class="interruptor" id="interruptor_modo_oscuro">
+                            <input type="checkbox">
+                            <span class="boton_deslizante circulo"></span>
+                        </label>
+                        <div class="tema_claro_texto">Tema claro</div>
+                    </div>
+                </div>
+            </div>
+        </nav>
         
         <!-- columna derecha-->
-        <div class="cabecera">
-            <img id="musify_icono" src="images/logo_musify.png" alt="Musify">
-            <div id="musify"><h1>Musify</h1></div>
-            <input type="search" placeholder="Buscar" id="buscador">
-            <img id="foto_perfil" src="images/perfil.jpeg" alt="Foto Perfil">
-        </div><br>
-        
-        <div class="popup" id="popup_perfil">
-            <div class="container" id="popup_container">
+        <main class="derecha" id="main_container">
+            <div class="contenido">
+                <div class="datos">
+                <form name="form" id="cuenta_form" method="POST">
+                    <h2>Nombre de usuario</h2>
+                    <input type="text" id="user_name" required><br>
+                    <h2>Contraseña</h2>
+                    <input type="password" id="pswd" required><br>
+                    <h2>Nombre</h2>
+                    <input type="text" id="name" required><br>
+                    <h2>Apellidos</h2>
+                    <input type="text" id="surname1" required><br>
+                    <input type="text" id="surname2"><br>
+                    <h2>Correo electrónico</h2>
+                    <input type="email" id="user_email" required><br>
+                    <h2>Fecha de nacimiento</h2>
+                    <input type="date" id="birthdate" required><br>
+                    <h2>Foto de perfil</h2>
+                    <input type="file" id="user_picture"><br>
+                    <input type="submit" value="Guardar" id="enviar"><br>
+                </form>           
+                </div>
                 <br>
-                <button class="cuenta" id="cuenta_text">Cuenta</button><br>
-                <button class="perfil" id="perfil_text">Perfil</button><br>
-                <button class="cerrar_sesion" id="cerrar_sesion_text">Cerrar sesión</button>
             </div>
-        </div>
+        </main>
 
-        <div class="derecha">
-            <div class="datos">
-              <form name="form" id="cuenta_form" method="POST">
-                <h2>Nombre de usuario</h2>
-                <input type="text" id="user_name" required><br>
-                <h2>Contraseña</h2>
-                <input type="password" id="pswd" required><br>
-                <h2>Nombre</h2>
-                <input type="text" id="name" required><br>
-                <h2>Apellidos</h2>
-                <input type="text" id="surname1" required><br>
-                <input type="text" id="surname2"><br>
-                <h2>Correo electrónico</h2>
-                <input type="email" id="user_email" required><br>
-                <h2>Fecha de nacimiento</h2>
-                <input type="date" id="birthdate" required><br>
-                <h2>Foto de perfil</h2>
-                <input type="file" id="user_picture"><br>
-                <input type="submit" value="Guardar" id="enviar"><br>
-              </form>           
+        <footer>
+            <div id="politicas">
+                <div class="info"><a href="#">Politica de privacidad</a></div><br>
+                <div class="info"><a href="#">Politica de cookies</a></div>
             </div>
-            <br>
-        </div>
+        </footer>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <script src="script/script_cuenta.js"></script>
         <script src="script/script_popup.js"></script>
         <script src="script/script_menu.js"></script>
-        <script src="script/script_dark_mode.js"></script>
         <script src="script/script_buscador.js"></script>
+        <script src="script/script_dark_mode.js"></script>
 
     </body>
 </html>

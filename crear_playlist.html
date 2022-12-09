@@ -3,20 +3,39 @@
     <head>
 
         <!-- Hoja de estilo usada de la pagina web -->  
-        <link rel="stylesheet" href="style/hojaestilo-crear-playlist.css">
-        <link rel="stylesheet" href="style/hojaestilo-popup.css">
-        <link rel="stylesheet" href="style/hojaestilo-boton-cambiar-tema.css">
+        <link rel="stylesheet" href="style/hojaestilo_regiones.css">
+        <link rel="stylesheet" href="style/hojaestilo_crear_playlist.css">
+        <link rel="stylesheet" href="style/hojaestilo_popup.css">
+        <link rel="stylesheet" href="style/hojaestilo_boton_cambiar_tema.css">
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta charset="UTF-8" />
         <meta name="Musify"  />
-        <meta lang="es-ES" />
+        <html lang="es">
         <title>Musify</title>
         
     </head>
 
     <body>
+        <header>
+            <div class="cabecera">
+                <img id="musify_icono" src="images/logo_musify.png" alt="Musify Logo">
+                <div id="musify_texto"><h1>Musify</h1></div>
+                <input type="search" placeholder="Buscar" id="buscador">
+                <img id="foto_perfil" src="images/perfil.jpeg" alt="Foto Perfil">
+            </div><br>
+
+            <div class="popup" id="popup_perfil">
+                <div class="container" id="popup_container">
+                    <br>
+                    <button class="cuenta" id="cuenta_text">Cuenta</button><br>
+                    <button class="perfil" id="perfil_text">Perfil</button><br>
+                    <button class="cerrar_sesion" id="cerrar_sesion_text">Cerrar sesión</button>
+                </div>
+            </div>
+        </header>
+
         <!-- columna izquierda-->
-        <div class="izquierda" id="menu_container">
+        <nav class="izquierda" id="menu_container">
             <div class="menu">
                 <div id="opcion1">
                     <img id="home_icono" src="images/home.png" alt="Home">
@@ -37,66 +56,55 @@
                 <div id="opcion5">
                     <img id="ajustes_icono" src="images/ajustes.png" alt="Ajustes">
                     <div id="ajustes">Ajustes</div>
-                </div><br>
+                </div>
                 <div class=popup_cambiar_tema id="cambiar_tema">
-                    <div class="container_oscuro" id="cambiar_tema_container"><br>
-                      <label class="interruptor" id="interruptor_modo_oscuro">
+                    <div class="container_claro" id="cambiar_tema_container"><br>
+                    <label class="interruptor" id="interruptor_modo_oscuro">
                         <input type="checkbox">
                         <span class="boton_deslizante circulo"></span>
-                      </label>
-                      <div class="tema_oscuro_texto">Tema oscuro</div>
+                    </label>
+                    <div class="tema_claro_texto">Tema claro</div>
                     </div>
                 </div>
             </div>
+        </nav>
+        
+        <!-- columna derecha-->
+        <main class="derecha" id="main_container">
+            <div class="contenido">
+                <form id="crear_playlist">
+                    <input type="file" id="subir_foto">
+                    <label for="subir_foto" class="editar">
+                        <img src="images/editar.png" id="editar_icono" alt="Editar foto de la playlist">
+                    </label>
+                    <div class="nombre_playlist">
+                        <h2>Dale un nombre a tu playlist</h2><br>
+                        <input type="text" id="nombre" placeholder=" Mi Playlist" required>
+                    </div><br>
+                    <p class="texto1" id="confirmacion1">Tu foto ha sido guardada</p>
+                    <div class="add">
+                        <h2>Añade canciones</h2><br>
+                        <input type="text" placeholder="  Nombre de la canción" id="cancion_playlist">
+                        <input type="button" id="boton_anadir_cancion" value="Añadir">
+                        <p class="texto2" id="confirmacion2">La canción ha sido añadida</p>
+                    </div>
+                    <input type="submit" value="Guardar" id="enviar">
+                    <input type="reset" value="Cancelar" id="cancelar">          
+                </div>
+            </div>
+        </main>
+
+        <footer>
             <div id="politicas">
                 <div class="info"><a href="#">Politica de privacidad</a></div><br>
                 <div class="info"><a href="#">Politica de cookies</a></div>
             </div>
-        </div>
-        
-        <!-- columna derecha-->
-        <div class="cabecera">
-            <img id="musify_icono" src="images/logo_musify.png" alt="Musify">
-            <div id="musify"><h1>Musify</h1></div>
-            <input type="search" placeholder="Buscar" id="buscador">
-            <img id="foto_perfil" src="images/perfil.jpeg" alt="Foto Perfil">
-      </div><br>
-        
-        <div class="popup" id="popup_perfil">
-            <div class="container" id="popup_container">
-                <br>
-                <button class="cuenta" id="cuenta_text">Cuenta</button><br>
-                <button class="perfil" id="perfil_text">Perfil</button><br>
-                <button class="cerrar_sesion" id="cerrar_sesion_text">Cerrar sesión</button>
-            </div>
-        </div>
-
-        <div class="derecha">
-            <form id="crear_playlist">
-                <input type="file" id="subir_foto">
-                <label for="subir_foto" class="editar">
-                    <img src="images/editar.png" id="editar_icono" alt="Editar foto de la playlist">
-                </label>
-                <div class="nombre_playlist">
-                    <h2>Dale un nombre a tu playlist</h2><br>
-                    <input type="text" id="nombre" placeholder=" Mi Playlist" required>
-                </div><br>
-                <p class="texto1" id="confirmacion1">Tu foto ha sido guardada</p>
-                <div class="add">
-                    <h2>Añade canciones</h2><br>
-                    <input type="text" placeholder="  Nombre de la canción" id="cancion_playlist">
-                    <input type="button" id="boton_anadir_cancion" value="Añadir">
-                    <p class="texto2" id="confirmacion2">La canción ha sido añadida</p>
-                </div>
-                <input type="submit" value="Guardar" id="enviar">
-                <input type="reset" value="Cancelar" id="cancelar">          
-            </div>
-        </div>
+        </footer>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <script src="script/script_crear_playlist.js"></script>
         <script src="script/script_popup.js"></script>
         <script src="script/script_menu.js"></script>
-        <script src="script/script_dark_mode.js"></script>
         <script src="script/script_buscador.js"></script>
+        <script src="script/script_dark_mode.js"></script>
     </body>
 </html>
