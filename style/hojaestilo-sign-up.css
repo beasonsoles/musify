@@ -1,36 +1,103 @@
-body {
-    overflow-x: hidden;
-    background: rgb(43, 43, 43);
-    height: 100%;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #212121;
+    ;
+}
+
+input{
+    font-family: 'Poppins', sans-serif;
+}
+
+.form-register{
+    width: 500px;
+    height: 850px;
+    background-color: #333333;
+    margin: auto;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+    box-shadow: 7px 13px 37px #000;
+    padding: 10px 60px;
+    border-radius: 30px;
+}
+
+.title{
+    font-size: 2.2rem;
+    color: white;
+    text-align: center;
+}
+
+.input-field{
+    max-width: 380px;
     width: 100%;
-}
-
-.sign_up {
-    width: 50%;
+    background: rgb(48, 48, 48);
+    margin: 8px 0;
+    height: 55px;
+    border-radius: 55px;
+    display: grid;
+    grid-template-columns: 15% 85%;
+    padding: 0 0.4rem;
     position: relative;
-    left: 25%;
-    margin-top: 4%;
-    background-color: white;
-    border-radius: 25px;
 }
 
-#sign_up_form {
-    position: relative;
-    left: 12%;
+.input-field i{
+    text-align: center;
+    line-height: 55px;
+    color: #acacac;
+    transition: 0.5s;
+    font-size: 1.1rem;
+}
+.input-field i span{
+    text-align: center;
+    line-height: 55px;
+    color: #acacac;
+    transition: 0.5s;
+    font-size: 1.1rem;
 }
 
-#user_name, #pswd, #name, #surname1, #surname2, #user_email, #birthdate, #user_picture {
-    width: 70%;
-    padding: 1%;
-    margin-bottom: 1%;
-    border-radius: 5px;
-    font-size: x-large;
+.input-field input{
+    background: none;
+    outline: none;
+    border: none;
+    line-height: 1;
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #acacac;
 }
 
-#condiciones {
-    margin-bottom: 5%;
-    width: 25px;
-    height: 25px;
+.input-field input::placeholder{
+    color: #aaaaaa;
+    font-weight: 500;
+}
+
+.form-register p{
+    text-align: center;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    font-size: 0.9rem;
+    color: white;
+}
+
+#user_picture{
+    color: white;
+    margin-left: 10%;
+    
+}
+#condiciones{
+    width: 20px;
+    height: 20px;
+    margin-left: 5%;
+    margin-top: 10px;
 }
 
 p {
@@ -43,57 +110,91 @@ p, #condiciones {
     display: inline-block;
 }
 
-#enviar {
-    margin-bottom: 5%;
-    width: 35%; 
-    height: 50px;
-    color:white;
-    font-size: x-large;
-    background-color:rgb(20, 145, 241);
+.social-text{
+    text-align: center;
+    margin-left: 10%;
+    margin-right: 10%;
+
+    font-size: 1rem;
+    color: white;
 }
 
-#resetear {
-    position: relative;
-    margin-bottom: 5%;
-    width: 35%; 
-    height: 50px;
-    color:white;
-    font-size: x-large;
-    background-color:rgb(238, 49, 49);
-    left: 5%;
+.social-media{
+    display: flex;
+    justify-content: center;
 }
 
-#google, #facebook {
-    color:white;
-    font-size: x-large;
-    background-color:#808080;
-    border-radius: 10px;
-    padding: 2%;
-    width: 75%;
-    margin-bottom: 1%;
+.social-icon{
+    height: 46px;
+    width: 46px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 0.45rem;
+    color:#333333;
+    border-radius: 50%;
+    border: 1px solid #333333;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: 0.3;
+    
+}
+.social-icon img{
+    width: 40px;
+    height: 40px;
 }
 
-#facebook {
-    margin-bottom: 5%;
+.social-icon:hover{
+    color: #0f2a58;
+    border-color: #02122c;
 }
 
-a {
-    position: relative;
-    left: 25%;
-    font-size: x-large;
+.btn{
+    max-width: 380px;
+    width: 100%;
+    background: #0f2a58;
+    border: none;
+    outline: none;
+    height: 49px;
+    border-radius: 49px;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin: 10px 0;
+    cursor: pointer;
+    transition:0.5s;
+}
+.btnsolid2{
+    max-width: 380px;
+    width: 100%;
+    background: rgb(112, 21, 21);
+    border: none;
+    outline: none;
+    height: 49px;
+    border-radius: 49px;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin: 0 0;
+    cursor: pointer;
+    transition:0.5s;
 }
 
-h1 {
-    position: relative;
-    padding: 3%;
-    font-size: 300%;
-    left: 20%;
-    top: 10%;
-    color: black;
+.btn:hover{
+    background: #3766b8;
 }
 
-h2 {
-    font-size: 200%;
+.btnsolid2:hover{
+    background: rgb(193, 73, 73);
+}
+
+.txt{
+    padding-top: 20px;
+    text-align: center;
+}
+
+.txt a{
+    color: white;
 }
 
 /* MEDIA QUERIES */

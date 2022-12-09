@@ -12,7 +12,7 @@ body{
     background-image: url(/Resources/images/552010.png);
     background-repeat: no-repeat;
     background-size: cover;
-    background-color: #131313;
+    background-color: #212121;
 }
 
 input{
@@ -25,17 +25,6 @@ input{
     background-color: #333333;
     margin: auto;
     margin-top: 15vh;
-    box-shadow: 7px 13px 37px #000;
-    padding: 20px 60px;
-    border-radius: 30px;
-}
-
-.form-register{
-    width: 500px;
-    height: 740px;
-    background-color: #333333;
-    margin: auto;
-    margin-top: 10vh;
     box-shadow: 7px 13px 37px #000;
     padding: 20px 60px;
     border-radius: 30px;
