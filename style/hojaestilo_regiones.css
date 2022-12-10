@@ -36,8 +36,9 @@ body {
     position: absolute;
     right: 0;
     width: 80%;
-    height: 180%;
+    height: 200%;
     background-color: rgb(43, 43, 43);
+    background-size: contain;
 }
 
 .contenido {

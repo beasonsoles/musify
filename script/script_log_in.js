@@ -1,13 +1,36 @@
 let form = document.getElementById("log_in_form");
+let contador_usuarios = localStorage.getItem("contador_usuarios")
 
 form.addEventListener("submit", function(e) {
     e.preventDefault();
-    email = document.getElementById("user_email");
-    password = document.getElementById("pswd");
-    username = document.getElementById("user_name");
-    email_found = checkCookie("email", email.value);
-    password_found = checkCookie("password", password.value);
-    username_found = checkCookie("username", username.value);
+    var email = document.getElementById("useremail");
+    var password = document.getElementById("pswd");
+    var username = document.getElementById("username");
+    var email_found = false;
+    var password_found = false;
+    var username_found = false;
+
+    for (var i = 0; i < contador_usuarios; i++) {
+        if (localStorage.getItem("email_"+(i+1).toString()) == email.value) {
+            email_found = true;
+            return;
+        }
+    }
+
+    for (var i = 0; i < contador_usuarios; i++) {
+        if (localStorage.getItem("password_"+(i+1).toString()) == password.value) {
+            password_found = true;
+            return;
+        }
+    }
+
+    for (var i = 0; i < contador_usuarios; i++) {
+        if (localStorage.getItem("username_"+(i+1).toString()) == username.value) {
+            username_found = true;
+            return;
+        }
+    }
+
     if (!email_found) {
         alert("El email " + email.value + " no está dado de alta");
         return;
@@ -30,13 +53,13 @@ form.addEventListener("submit", function(e) {
 
 /* Funciones para las cookies */
   
-function getCookie(field_name) {
+/*function getCookie(field_name) {
     let value = field_name + "=";
-    let ca = document.cookie.split(";"); /* lista que guarda los campos de la cookie */
+    let ca = document.cookie.split(";"); /* lista que guarda los campos de la cookie 
     for(let i = 0; i < ca.length; i++) { 
         let c = ca[i].trim();
-        if (c.indexOf(value) == 0) { /* el valor ha sido encontrado */
-            return c.substring(value.length, c.length); /* el valor de la cookie es devuelto */
+        if (c.indexOf(value) == 0) { /* el valor ha sido encontrado 
+            return c.substring(value.length, c.length); /* el valor de la cookie es devuelto 
         }
     }
     return "";
@@ -48,4 +71,4 @@ function checkCookie(field, value) {
         return true;
     }
     return false;
-}
+}*/
