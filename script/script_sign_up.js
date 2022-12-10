@@ -9,8 +9,8 @@ form.addEventListener("submit", function(e) {
     email = document.getElementById("useremail");
     try {
         if (checkPassword(password.value) && checkEmail(email.value)) {
-            for (var i = 1; i <= contador_usuarios; i++) {
-                if (localStorage.getItem("email_"+i.toString()) == email.value) {
+            for (var i = 0; i < contador_usuarios; i++) {
+                if (localStorage.getItem("email_"+(i+1).toString()) == email.value) {
                     alert("Ya existe una cuenta asociada a la cuenta " + email.value);
                     return;
                 }
@@ -54,33 +54,3 @@ function checkEmail(email) {
     }
     return false;
 }
-
-/* Funciones para las cookies */
-/*function setCookie(user_name, pswd, name, surname1, surname2, user_email, birthdate) {
-    document.cookie = "username=" + user_name; document.cookie = "password=" + pswd; 
-    document.cookie = "name=" + name; document.cookie = "surname1=" + surname1; 
-    document.cookie = "surname2=" + surname2 ; document.cookie =  "email=" + user_email; 
-    document.cookie = "birthdate=" + birthdate;
-}
-  
-function getCookie(field_name) {
-    let value = field_name + "=";
-    let ca = document.cookie.split(';'); /* lista que guarda los campos de la cookie 
-    for(let i = 0; i < ca.length; i++) { 
-        let c = ca[i].trim();
-        if (c.indexOf(value) == 0) { /* el valor ha sido encontrado 
-            return c.substring(value.length, c.length); /* el valor de la cookie es devuelto 
-        }
-    }
-    return "";
-}
-
-function checkCookie(user_name, pswd, name, surname1, surname2, user_email, birthdate) {
-    if ((email = getCookie("email")) != "") {
-        return true;
-    } else {
-        setCookie(user_name, pswd, name, surname1, surname2, user_email, birthdate);
-
-    }
-    return false;
-}*/

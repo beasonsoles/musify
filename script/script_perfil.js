@@ -15,7 +15,7 @@ artistas.forEach(function(artista) {
 
 /* Para mostrar las canciones que hayan sido añadidas a favoritos */
 
-if ((titulo_anadido = getCookie("titulo")) != "" && (autor_anadido = getCookie("autor")) != "") {
+/*if ((titulo_anadido = getCookie("titulo")) != "" && (autor_anadido = getCookie("autor")) != "") {
     canciones.forEach(function(cancion) {
         titulo_cancion = cancion.querySelector(".descripcion").querySelector(".titulo");
         autor_cancion = cancion.querySelector(".descripcion").querySelector(".autor");
@@ -23,7 +23,7 @@ if ((titulo_anadido = getCookie("titulo")) != "" && (autor_anadido = getCookie("
             cancion.style.display = "block";
         }
     });
-}
+}*/
 
 
 /* Para redirigir al usuario a los perfiles de los usuarios que sigue */
@@ -35,14 +35,14 @@ usuarios.forEach(function(usuario) {
 
 
 /* Función para las cookies*/
-function getCookie(field_name) {
+/*function getCookie(field_name) {
     let value = field_name + "=";
-    let ca = document.cookie.split(';'); /* lista que guarda los campos de la cookie */
+    let ca = document.cookie.split(';'); /* lista que guarda los campos de la cookie 
     for(let i = 0; i < ca.length; i++) { 
         let c = ca[i].trim();
-        if (c.indexOf(value) == 0) { /* el valor ha sido encontrado */
-            return c.substring(value.length, c.length); /* el valor de la cookie es devuelto */
+        if (c.indexOf(value) == 0) { /* el valor ha sido encontrado 
+            return c.substring(value.length, c.length); /* el valor de la cookie es devuelto 
         }
     }
     return "";
-}
+}*/

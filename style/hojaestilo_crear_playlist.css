@@ -1,3 +1,7 @@
+#main_container {
+    height: 120%;
+}
+
 h2 {
     color: white;
     width: 100%;
@@ -136,6 +140,11 @@ h2 {
 /* Movil */
 
 @media (max-width: 480px) {
+    .contenido {
+        width: 90%;
+        margin-right: 3%;
+    }
+
     #crear_playlist {
         margin-top: 15%;
         margin-bottom: 2%;
@@ -163,9 +172,11 @@ h2 {
 
     .nombre_playlist {
         top: 5%;
+        padding: 2%;
     }
 
     #nombre {
+        width: 90%;
         height: 20px;
         margin-bottom: 15%;
     }

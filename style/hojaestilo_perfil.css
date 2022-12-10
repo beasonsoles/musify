@@ -1,3 +1,7 @@
+#main_container {
+    height: 300%;
+}
+
 #artistas_mas_escuchados, #canciones_mas_escuchadas, #canciones_favoritas, #tus_playlists, #usuarios_que_sigues, #canciones_favoritas_usuario {
     display: flex;
     flex-wrap: wrap;
@@ -7,7 +11,7 @@
 }
 
 #usuarios_que_sigues {
-    margin-bottom: 10%;
+    margin-bottom: 20%;
 }
 
 .subtitulo {
@@ -44,43 +48,6 @@
     cursor: pointer;
 }
 
-.descripcion {
-    width: 180px;
-    overflow: visible;
-    text-align: center;
-    color: white;
-}
-
-.caratula audio {
-    width: 170px;
-    position: absolute;
-    bottom: 10%;
-    left: 10px;
-    z-index: 2;
-    display: none;
-}
-
-.caratula:hover audio {
-    display: inline;
-    cursor: pointer;
-}
-
-.reproductor {
-    position: absolute;
-    bottom: 8%;
-    width: 100%;
-    height: 70px;
-}
-
-#panel_audio {
-    width: 100%;
-    position: fixed;
-    bottom: 3%;
-    left: 0;
-    height: 20%;
-    z-index: 3;
-}
-
 /* MEDIA QUERIES */
 
 /* Tablet */
@@ -93,18 +60,6 @@
     .foto_artista, .musica, .perfil_usuario {
         width: 140px;
         height: 140px;
-    }
-
-    .descripcion {
-        width: 140px;
-    }
-
-    .caratula audio {
-        width: 130px;
-    }  
-
-    .reproductor {
-        height: 30px;
     }
 }
 
@@ -124,19 +79,5 @@
     .foto_artista, .musica, .perfil_usuario {
         width: 110px;
         height: 110px;
-    }
-
-    .descripcion {
-        width: 110px;
-        font-size: 60%;
-    }
-
-    .caratula audio {
-        width: 110px;
-        left: 7px;
-    }
-
-    .reproductor {
-        height: 30px;
     }
 }

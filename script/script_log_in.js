@@ -13,21 +13,18 @@ form.addEventListener("submit", function(e) {
     for (var i = 0; i < contador_usuarios; i++) {
         if (localStorage.getItem("email_"+(i+1).toString()) == email.value) {
             email_found = true;
-            return;
         }
     }
 
     for (var i = 0; i < contador_usuarios; i++) {
         if (localStorage.getItem("password_"+(i+1).toString()) == password.value) {
             password_found = true;
-            return;
         }
     }
 
     for (var i = 0; i < contador_usuarios; i++) {
         if (localStorage.getItem("username_"+(i+1).toString()) == username.value) {
             username_found = true;
-            return;
         }
     }
 
@@ -50,25 +47,3 @@ form.addEventListener("submit", function(e) {
         window.open("sesion_iniciada.html", "_self");
     }
 });
-
-/* Funciones para las cookies */
-  
-/*function getCookie(field_name) {
-    let value = field_name + "=";
-    let ca = document.cookie.split(";"); /* lista que guarda los campos de la cookie 
-    for(let i = 0; i < ca.length; i++) { 
-        let c = ca[i].trim();
-        if (c.indexOf(value) == 0) { /* el valor ha sido encontrado 
-            return c.substring(value.length, c.length); /* el valor de la cookie es devuelto 
-        }
-    }
-    return "";
-}
-
-function checkCookie(field, value) {
-    let cookie_value = getCookie(field);
-    if (value == cookie_value) {
-        return true;
-    }
-    return false;
-}*/

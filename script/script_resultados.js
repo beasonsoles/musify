@@ -20,18 +20,33 @@ images.forEach(function(image) {
         titulo = image.parentElement.parentElement.parentElement.querySelector(".descripcion").querySelector(".titulo");
         autor = image.parentElement.parentElement.parentElement.querySelector(".descripcion").querySelector(".autor");
         if (image.src.match("images/favorito.png")) {
-            if (!checkCookie("titulo", titulo.innerText) && !checkCookie("autor", autor.innerText)) {
-                contador_favoritos++;
-                image.src = "images/favorito_relleno.png";
-                localStorage.setItem("contador_favoritos", contador_favoritos);
-                localStorage.setItem("titulo"+contador_favoritos.toString(), titulo.innerText); 
-                localStorage.setItem("autor"+contador_favoritos.toString(), autor.innerText);
+            for (var i = 0; i < contador_favoritos; i++) {
+                if (localStorage.getItem("titulo"+(i+1).toString()) == titulo.innerHTML && 
+                    localStorage.getItem("autor" +(i+1).toString()) == autor.innerHTML) {
+                        alert("Esta canción ya está en tu lista de favoritos");
+                        return;
+                }
             }
+            contador_favoritos++;
+            image.src = "images/favorito_relleno.png";
+            localStorage.setItem("contador_favoritos", contador_favoritos);
+            localStorage.setItem("titulo"+contador_favoritos.toString(), titulo.innerHTML); 
+            localStorage.setItem("autor"+contador_favoritos.toString(), autor.innerHTML);
         } else {
             image.src = "images/favorito.png";
-            // borrar la cookie
-            localStorage.removeItem("titulo", titulo.innerText); //REMOVE ITEM SOLO TIENE LA KEY (ARREGLAR)
-            deleteCookie("autor", autor.innerText);
+            //images_array = Array.prototype.slice.call(images);
+            //var index = 0;
+            for (var i = 0; i < contador_favoritos; i++) {
+                if (localStorage.getItem("titulo"+(i+1).toString()) == titulo.innerHTML && 
+                    localStorage.getItem("autor" +(i+1).toString()) == autor.innerHTML) {
+                        contador_favoritos--;
+                        localStorage.setItem("contador_favoritos", contador_favoritos);
+                        localStorage.removeItem("titulo"+(i+1).toString());
+                        localStorage.removeItem("autor"+(i+1).toString());
+                        return;
+                }
+            }
         }
+        localStorage.setItem("megusta"+contador_favoritos.toString(), image.src);
     });
 });
