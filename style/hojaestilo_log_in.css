@@ -187,10 +187,6 @@ input{
         position: absolute;    
     }
 
-    .title{
-        margin-left: %;
-    }
-
     #log_in_form{
         width: auto;
         margin-left: 5%;
@@ -203,10 +199,6 @@ input{
 
     .btn{
         max-width: 500px;
-    }
-
-    a {
-        left: 15%;
     }
 }
 
