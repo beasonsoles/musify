@@ -183,17 +183,21 @@ input{
     }
 
     .title{
-        margin-left: 10%;
+        margin-left: %;
     }
 
     #log_in_form{
         width: auto;
-       
+        margin-left: 5%;
+        position: relative;
     }
 
-    .social-media{
-        justify-content: left;
-        margin-left: 30%;
+    .input-field{
+        max-width: 500px;
+    }
+
+    .btn{
+        max-width: 500px;
     }
 
     a {
@@ -204,10 +208,14 @@ input{
 /* Movil */
 
 @media (max-width: 480px) {
+    body{
+        max-height: 90%
+    }
+
     #main_container_log_in{
-        width: 80%;
-        height: 100%;
-        margin-top: 2vh;
+        width: 90%;
+        height: 80%;
+        margin: auto;
         border-radius: 10px;
         box-shadow: none;
         padding: 20px 20px;
