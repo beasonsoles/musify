@@ -167,10 +167,33 @@ input{
 /* Tablet */
 
 @media (min-width: 481px) and (max-width: 900px) {
-    .log_in {
-        width: 94%;
-        left: 2%;
-        margin-top: 10%;
+    body{
+        background-color: #212121;
+    }
+
+    .title{
+        font-size: 2.2rem;
+    }
+
+    #main_container_log_in{
+        width: 80%;
+        height: 550px;
+        margin-top: 15vh;
+        margin-bottom: 15vh;        
+    }
+
+    .title{
+        margin-left: 10%;
+    }
+
+    #log_in_form{
+        width: auto;
+       
+    }
+
+    .social-media{
+        justify-content: left;
+        margin-left: 30%;
     }
 
     a {
@@ -181,10 +204,26 @@ input{
 /* Movil */
 
 @media (max-width: 480px) {
-    .log_in {
-        width: 92%;
-        left: 2%;
-        margin-top: 10%;
+    #main_container_log_in{
+        width: 80%;
+        height: 100%;
+        margin-top: 2vh;
+        border-radius: 10px;
+        box-shadow: none;
+        padding: 20px 20px;
+    }
+
+    .input-field{
+        max-width: 380px;
+        width: 100%;
+        background: rgb(48, 48, 48);
+        margin: 20px 0;
+        height: 55px;
+        border-radius: 55px;
+        display: grid;
+        grid-template-columns: 15% 85%;
+        padding: 0 0.4rem;
+        position: relative;
     }
 
     a {
