@@ -166,7 +166,7 @@ input{
 
 /* Tablet */
 
-@media (min-width: 1481px) and (max-width: 900px) {
+@media (min-width: 481px) and (max-width: 900px) {
     body{
         background-color: #212121;
     }
