@@ -41,7 +41,7 @@
     cursor: pointer;
 }
 
-.cuenta, .perfil, .cerrar_sesion {
+.cuenta, .perfil {
     display: none;
     position: relative;
     border-radius: 6px;
@@ -50,6 +50,20 @@
     height: 20%;
     left: 5%;
     background-color: rgb(128, 174, 115);
+    color: black;
+    text-align: center;
+    margin-bottom: 10%;
+}
+
+.cerrar_sesion {
+    display: none;
+    position: relative;
+    border-radius: 6px;
+    font-size: large;
+    width: 90%;
+    height: 20%;
+    left: 5%;
+    background-color: rgb(218, 30, 30);
     color: black;
     text-align: center;
     margin-bottom: 10%;
