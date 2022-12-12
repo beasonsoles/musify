@@ -1,48 +1,49 @@
-let form = document.getElementById("cuenta_form");
+let form_cuenta = document.getElementById("cuenta_form");
+let contador_usuarios = localStorage.getItem("contador_usuarios");
+let user_profile = document.getElementById("user_profile_picture");
+let new_file = document.getElementById("userpicture");
 
-if (user_name = getCookie("username")) {
-    document.form.user_name.value = user_name;
-}
+/* Mostrar los valores actuales */
+setInterval(function() {
+    document.form.username.value = localStorage.getItem("username_"+user_actual.toString());
+    document.form.pswd.value = localStorage.getItem("password_"+user_actual.toString());
+    document.form.name.value = localStorage.getItem("name_"+user_actual.toString());
+    document.form.surname1.value = localStorage.getItem("surname1_"+user_actual.toString());
+    document.form.surname2.value = localStorage.getItem("surname2_"+user_actual.toString());
+    document.form.useremail.value = localStorage.getItem("email_"+user_actual.toString());
+    document.form.birthdate.value = localStorage.getItem("birthdate_"+user_actual.toString());
+    user_profile.src = "images/"+localStorage.getItem("userpicture_"+user_actual.toString());
+}, 1);
 
-if (pswd = getCookie("password")) {
-    document.form.pswd.value = pswd;
-}
+/* Cambiar la foto de perfil si el usuario selecciona una nueva */
+new_file.addEventListener("change", function(e) {
+    foto_seleccionada = e.currentTarget.files.length;
+    if (foto_seleccionada != 0) {
+        localStorage.setItem("userpicture_"+user_actual.toString(), new_file.files[0].name);
+    }
+});
 
-if (nombre = getCookie("name")) {
-    document.form.name.value = nombre;
-}
-
-if (surname1 = getCookie("surname1")) {
-    document.form.surname1.value = surname1;
-}
-
-if (surname2 = getCookie("surname2")) {
-    document.form.surname2.value = surname2;
-}
-
-if (email = getCookie("email")) {
-    document.form.user_email.value = email;
-}
-
-if (birthdate = getCookie("birthdate")) {
-    document.form.birthdate.value = birthdate;
-}
-
-form.addEventListener("submit", function(e) {
+/* Verificar los cambios y guardarlos si son correctos */
+form_cuenta.addEventListener("submit", function(e) {
     e.preventDefault();
     // asegurarse de que los nuevos valores que intenta guardar el usuario son correctos
     new_password = document.getElementById("pswd").value;
-    new_email = document.getElementById("user_email").value;
+    new_email = document.getElementById("useremail").value;
     // guardar el resto de inputs
-    new_user_name = document.getElementById("user_name").value;
+    new_user_name = document.getElementById("username").value;
     new_name = document.getElementById("name").value;
     new_surname1 = document.getElementById("surname1").value;
     new_surname2 = document.getElementById("surname2").value;
     new_birthdate = document.getElementById("birthdate").value;
     try {
         if (checkPassword(new_password) && checkEmail(new_email)) {
-            deleteCookies(user_name, pswd, nombre, surname1, surname2, email, birthdate);
-            setCookieaccount(new_user_name, new_password, new_name, new_surname1, new_surname2, new_email, new_birthdate);
+            localStorage.setItem("username_"+user_actual.toString(), new_user_name);
+            localStorage.setItem("password_"+user_actual.toString(), new_password);
+            localStorage.setItem("name_"+user_actual.toString(), new_name);
+            localStorage.setItem("surname1_"+user_actual.toString(), new_surname1);
+            localStorage.setItem("surname2_"+user_actual.toString(), new_surname2);
+            localStorage.setItem("email_"+user_actual.toString(), new_email);
+            localStorage.setItem("birthdate_"+user_actual.toString(), new_birthdate);
             alert("Los cambios han sido guardados");
         }
     } catch (error) {
@@ -70,34 +71,4 @@ function checkEmail(email) {
     } else {
         alert("Introduca una email con el formato nombre@dominio.extensión");
     }
-}
-
-/* Funciones para las cookies */
-function setCookieaccount(user_name, pswd, name, surname1, surname2, user_email, birthdate) {
-    document.cookie = "username=" + user_name; document.cookie = "password=" + pswd; 
-    document.cookie = "name=" + name; document.cookie = "surname1=" + surname1; 
-    document.cookie = "surname2=" + surname2 ; document.cookie =  "email=" + user_email; 
-    document.cookie = "birthdate=" + birthdate;
-}
-  
-function getCookie(field_name) {
-    let value = field_name + "=";
-    let ca = document.cookie.split(';'); /* lista que guarda los campos de la cookie */
-    for(let i = 0; i < ca.length; i++) { 
-        let c = ca[i].trim();
-        if (c.indexOf(value) == 0) { /* el valor ha sido encontrado */
-            return c.substring(value.length, c.length); /* el valor de la cookie es devuelto */
-        }
-    }
-    return "";
-}
-
-function deleteCookies(user_name, pswd, name, surname1, surname2, user_email, birthdate) {
-    document.cookie = "username=" + user_name + "expires=" + new Date(0).toUTCString();
-    document.cookie = "password=" + pswd + "expires=" + new Date(0).toUTCString();
-    document.cookie = "name=" + name + "expires=" + new Date(0).toUTCString();
-    document.cookie = "surname1=" + surname1 + "expires=" + new Date(0).toUTCString(); 
-    document.cookie = "surname2=" + surname2 + "expires=" + new Date(0).toUTCString(); 
-    document.cookie =  "email=" + user_email + "expires=" + new Date(0).toUTCString(); 
-    document.cookie = "birthdate=" + birthdate + "expires=" + new Date(0).toUTCString();
 }

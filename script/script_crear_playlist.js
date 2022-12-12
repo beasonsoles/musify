@@ -1,31 +1,50 @@
 let titulos_base_datos = ["Moscow mule", "Demasiadas mujeres", "Bohemian rhapsody", "Waiting for love", "Sucker for pain", 
 "More than you know", "Kitt y los coches del pasado", "Boulevard of broken dreams", "Viva la vida", "Lagrimas de amor"];
-
-/* Activar click si el usuario quiere subir una foto para la playlist */
+let foto_seleccionada = 0; 
+let cancion_buscada = document.getElementById("cancion_playlist");
+let boton_anadir = document.getElementById("boton_anadir_cancion");
 let image = document.getElementById("subir_foto");
 let form = document.getElementById("crear_playlist");
 if ((contador_playlists = localStorage.getItem("contador_playlists")) == undefined) {
     contador_playlists = 0;
 }
+//-------------FINISH+------------- dictionary?????
+for (var i = 1; i <= contador_playlists; i++) {
+    if ((contador_canciones = localStorage.getItem("contador_canciones")) == undefined) {
+        contador_canciones = 0;
+    }
+}
 
+
+/* Mostrar un mensaje cuando el usuario sube una foto para la playlist */
 image.addEventListener("change", function(e) {
     var text = document.getElementById("confirmacion1");
-    if (e.currentTarget.files.length != 0) {
+    foto_seleccionada = e.currentTarget.files.length;
+    if (foto_seleccionada != 0) {
         text.classList.toggle("mostrar");
     }
 });
 
-/* Para asegurarse de que la cancion que se intenta añadir existe */
-let boton_anadir = document.getElementById("boton_anadir_cancion");
-let cancion_buscada = document.getElementById("cancion_playlist");
-
+/* Para asegurarse de que la cancion que se intenta añadir existe y no está ya en la playlist */
 boton_anadir.addEventListener("click", function(e) {
     e.preventDefault();
     var text2 = document.getElementById("confirmacion2");
     for (var i=0; i < titulos_base_datos.length; i++) {
+        // si la canción existe... 
         if (cancion_buscada.value == titulos_base_datos[i]) {
+            for (var j=1; j <= contador_canciones; j++) {
+                if (localStorage.getItem("cancion_playlist"+i.toString()+"_"+j.toString()) == cancion_buscada.value) {
+                    alert("La canción '"+cancion_buscada.value+"' ya está en la playlist");
+                    return;
+                }
+            }
+            // y no está ya en la playlist... 
+            contador_canciones++;
+            localStorage.setItem("contador_canciones", contador_canciones);
+            // mostar un mensaje al usuario indicando que se ha añadido
             text2.classList.toggle("mostrar");
-            localStorage.setItem("titulo_cancion", cancion_buscada.value);
+            // y añadir la canción
+            localStorage.setItem("cancion_playlist"+contador_playlists.toString()+"_"+contador_canciones.toString(), cancion_buscada.value);
             return;
         }
     }
@@ -50,15 +69,25 @@ function resetear() {
 }
 
 /* Guardar la playlist creada */
-let enviar = document.getElementById("enviar");
-
-enviar.addEventListener("click", function(e) {
+form.addEventListener("submit", function(e) {
+    nombre_playlist = document.getElementById("nombre").value;
     e.preventDefault();
+    // evitar que la misma playlist se cree dos veces
+    for (var i = 1; i <= contador_playlists; i++) { 
+        if (localStorage.getItem("nombre_playlist"+i.toString()) == nombre_playlist) {
+            alert("Ya existe una playlist con el nombre "+nombre_playlist);
+            return;
+        }
+    }
+    if (foto_seleccionada == 0) {
+        alert("No has añadido una foto para la playlist");
+        return;
+    }
     contador_playlists++;
     localStorage.setItem("contador_playlists", contador_playlists);
-    localStorage.setItem("foto_playlist"+contador_playlists.toString(), document.getElementById("subir_foto").files[0].name);
-    localStorage.setItem("nombre_playlist"+contador_playlists.toString(), document.getElementById("nombre").value);
-    localStorage.setItem("cancion_playlist"+contador_playlists.toString(), cancion_buscada.value);
+    localStorage.setItem("foto_playlist"+contador_playlists.toString(), image.files[0].name);
+    localStorage.setItem("nombre_playlist"+contador_playlists.toString(), nombre_playlist);
+    // añadir varias canciones a la playlist
     alert("¡Tu playlist ha sido creada! Accede a la biblioteca para verla");
     resetear();
 });

@@ -24,6 +24,7 @@ form.addEventListener("submit", function(e) {
             localStorage.setItem("surname2_"+contador_usuarios.toString(), document.getElementById("surname2").value); 
             localStorage.setItem("email_"+contador_usuarios.toString(), document.getElementById("useremail").value); 
             localStorage.setItem("birthdate_"+contador_usuarios.toString(), document.getElementById("birthdate").value);
+            localStorage.setItem("userpicture_"+contador_usuarios.toString(), document.getElementById("userpicture").files[0].name);
             window.open("log_in_form.html", "_self");
         }
     } catch (error) {

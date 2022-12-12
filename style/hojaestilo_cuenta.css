@@ -1,3 +1,7 @@
+#main_container {
+    height: 250%;
+}
+
 h2 {
     color: white;
     padding: 2%;
@@ -18,7 +22,7 @@ h3 {
     margin-bottom: 10%;
 }
 
-#user_name, #pswd, #name, #surname1, #surname2, #user_email, #birthdate, #user_picture {
+#username, #pswd, #name, #surname1, #surname2, #useremail, #birthdate, #userpicture {
     position: relative;
     left: 2%;
     margin-bottom: 2%;
@@ -27,8 +31,21 @@ h3 {
     width: 90%;
 }
 
-#user_picture {
-    color: white;
+#userpicture {
+    display: none;
+}
+
+#user_profile_picture {
+    position: relative;
+    border-radius: 50%;
+    left: 2%;
+    top: 15%;
+    width: 150px;
+    height: 150px;
+}
+
+#user_profile_picture:hover {
+    transform: scale(1.02);
 }
 
 #enviar {

@@ -1,5 +1,6 @@
 let form = document.getElementById("log_in_form");
-let contador_usuarios = localStorage.getItem("contador_usuarios")
+let contador_usuarios = localStorage.getItem("contador_usuarios");
+let user_actual = 0;
 
 form.addEventListener("submit", function(e) {
     e.preventDefault();
@@ -13,6 +14,7 @@ form.addEventListener("submit", function(e) {
     for (var i = 0; i < contador_usuarios; i++) {
         if (localStorage.getItem("email_"+(i+1).toString()) == email.value) {
             email_found = true;
+            user_actual = i+1;
         }
     }
 
@@ -44,6 +46,7 @@ form.addEventListener("submit", function(e) {
     }
     
     if (email_found && password_found && username_found) {
+        localStorage.setItem("user_actual", user_actual);
         window.open("sesion_iniciada.html", "_self");
     }
 });

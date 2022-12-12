@@ -25,12 +25,6 @@
     top: 40%;
 }
 
-.subtitulo {
-    color: white;
-    font-size: 200%;
-    width: 100%;
-}
-
 .resultados .cancion {
     display: none;
 }
@@ -50,11 +44,5 @@
 @media (max-width: 480px) {
     .alternativas {
         margin-bottom: 30%;
-    }
-
-    .subtitulo {
-    color: white;
-        font-size: 100%;
-        width: 100%;
     }
 }

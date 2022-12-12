@@ -6,28 +6,6 @@
     height: 100%;
 }
 
-/*.canciones_favoritas_segunda_fila {
-    margin-bottom: 10%;
-}*/
-
-.subtitulo {
-    color: white;
-    font-size: 200%;
-    width: 100%;
-}
-
 .cancion {
     display: none;
-}
-
-/* MEDIA QUERIES */
-
-/* Movil */
-
-@media (max-width: 480px) {
-    .subtitulo {
-    color: white;
-        font-size: 100%;
-        width: 100%;
-    }
 }

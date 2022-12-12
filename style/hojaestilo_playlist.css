@@ -5,12 +5,6 @@
     margin-bottom: 20%;
 }
 
-.subtitulo {
-    color: white;
-    font-size: 200%;
-    width: 100%;
-}
-
 .cancion {
     cursor: move; /* especifica el tipo de cursor a mostrar*/
     position: relative;
@@ -20,10 +14,6 @@
     background-color: black;
     border-radius: 5px;
     margin-bottom: 2%;
-}
-
-#cancion_fija {
-    display: block;
 }
 
 .musica {
@@ -169,12 +159,6 @@
 /* Movil */
 
 @media (max-width: 480px) {
-    .subtitulo {
-    color: white;
-        font-size: 100%;
-        width: 100%;
-    }
-
     .cancion {
         width: 110%;
         height: 95px;

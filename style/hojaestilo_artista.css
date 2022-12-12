@@ -10,12 +10,6 @@
     margin-bottom: 10%;
 }
 
-.subtitulo {
-    color: white;
-    font-size: 200%;
-    width: 100%;
-}
-
 /* MEDIA QUERIES */
 
 /* Tablet */
@@ -36,12 +30,6 @@
 @media (max-width: 480px) {
     .albumes_artista {
         margin-bottom: 30%;
-    }
-
-    .subtitulo {
-    color: white;
-        font-size: 100%;
-        width: 100%;
     }
 
     .foto_artista, .musica, .perfil_usuario {

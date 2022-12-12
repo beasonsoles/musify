@@ -125,6 +125,12 @@ body {
     z-index: 3;
 }
 
+.subtitulo {
+    color: white;
+    font-size: 200%;
+    width: 100%;
+}
+
 .info {
     position: fixed;
     left: 10px;
@@ -218,5 +224,11 @@ a {
         position: fixed;
         font-size: x-small;
         padding: 2%;
+    }
+
+    .subtitulo {
+        color: white;
+        font-size: 100%;
+        width: 100%;
     }
 }

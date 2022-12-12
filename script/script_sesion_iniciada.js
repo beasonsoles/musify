@@ -12,10 +12,15 @@ players.forEach(function(player) {
 caratulas.forEach(function(caratula) {
     caratula.addEventListener("click", function() {
         reprod_caratula = caratula.querySelector(".reproductor");
-        if (reproduciendo.length > 0) {
+        if (reproduciendo.length > 1) {
+            // parar reproductor grande
             reproduciendo[0].pause();
-            reproduciendo.pop();
+            // parar reproductor pequeño
+            reproduciendo[1].pause();
+            // vaciar la lista de reproducción
+            reproduciendo = [];
         }
+        // clon del reproductor pequeño
         reproductor = reprod_caratula.cloneNode(true);
         reprod_caratula.style.visibility = "hidden";
         document.getElementById("panel_audio").appendChild(reproductor);
@@ -25,8 +30,13 @@ caratulas.forEach(function(caratula) {
         audio = reproductor.querySelector(".audio");
         audio.style.width = "50%";
         audio.style.height = "70%";
+        // reproductor pequeño
+        audio_original = reprod_caratula.querySelector(".audio");
+        // iniciar los dos reproductores a la vez
         audio.play();
+        audio_original.play();
         reproduciendo.push(audio);
+        reproduciendo.push(audio_original);
     });
 });
 

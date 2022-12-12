@@ -14,11 +14,12 @@ h2 {
     margin-bottom: 20%;
 }
 
-.editar {
+#editar {
     background-color: rgb(63, 58, 58);
     border-radius: 6px;
     width: 80px; 
     height: 80px;
+    cursor: pointer;
 }
 
 #editar_icono {
@@ -32,10 +33,9 @@ h2 {
 
 #editar_icono:hover {
     transform: scale(1.02);
-    cursor: pointer;
 }
 
-.editar, .nombre_playlist {
+#editar, .nombre_playlist {
     display: inline-block;
     padding: 4%;
     position: relative;

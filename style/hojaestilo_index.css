@@ -22,69 +22,6 @@
     display: inline-table;
 }
 
-.subtitulo {
-    color: white;
-    font-size: 200%;
-    width: 100%;
-}
-
-.musica {
-    display: block;
-    position: relative;
-    border: 3px solid black;
-    border-radius: 10px;
-    width: 180px;
-    height: 180px;
-    margin: 4px;
-    z-index: 1;
-}
-
-.musica:hover {
-    transform: scale(1.05);
-    cursor: pointer;
-}
-
-.descripcion {
-    width: 180px;
-    overflow: visible;
-    text-align: center;
-    color: white;
-}
-
-.caratula {
-    position: relative;
-}
-
-.caratula audio {
-    width: 170px;
-    position: absolute;
-    bottom: 10%;
-    left: 10px;
-    z-index: 2;
-    display: none;
-}
-
-.caratula:hover audio {
-    display: inline;
-    cursor: pointer;
-}
-
-.reproductor {
-    position: absolute;
-    bottom: 8%;
-    width: 100%;
-    height: 70px;
-}
-
-#panel_audio {
-    width: 100%;
-    position: fixed;
-    bottom: 3%;
-    left: 0;
-    height: 20%;
-    z-index: 3;
-}
-
 .contador {
     background-color: black;
     position: relative;
@@ -146,12 +83,6 @@ footer {
 
     .novedades_albumes {
         margin-bottom: 40%;
-    }
-
-    .subtitulo {
-    color: white;
-        font-size: 100%;
-        width: 100%;
     }
 
     .musica {

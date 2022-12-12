@@ -14,12 +14,6 @@
     margin-bottom: 20%;
 }
 
-.subtitulo {
-    color: white;
-    font-size: 200%;
-    width: 100%;
-}
-
 #canciones_favoritas .cancion {
     display: none;
 }
@@ -68,12 +62,6 @@
 @media (max-width: 480px) {
     #usuarios_que_sigues {
         margin-bottom: 30%;
-    }
-
-    .subtitulo {
-    color: white;
-        font-size: 100%;
-        width: 100%;
     }
 
     .foto_artista, .musica, .perfil_usuario {

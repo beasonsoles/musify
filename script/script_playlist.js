@@ -3,6 +3,8 @@ let botones_borrar_cancion = document.querySelectorAll(".borrar_cancion");
 let boton_borrar_playlist = document.getElementById("borrar_playlist");
 
 /* Para mostrar las canciones añadidas a la playlist */
+//for ()
+//usar localstorage con cancion_playlist en vez de titulo_cancion
 if ((titulo_cancion_buscada = localStorage.getItem("titulo_cancion")) != "") {
     canciones_playlist.forEach(function(cancion) {
         titulo_cancion = cancion.querySelector(".descripcion").querySelector(".titulo");
@@ -39,7 +41,7 @@ canciones_playlist.forEach(function(cancion) {
     });
 });
 
-/* Para borrar una cancion */
+/* Para borrar una canción */
 botones_borrar_cancion.forEach(function(boton) {
     boton.addEventListener("click", function() {
         if (confirm("Estás seguro de que deseas borrar la canción?")) {

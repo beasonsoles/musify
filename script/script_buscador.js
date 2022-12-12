@@ -8,15 +8,12 @@ buscadores.forEach(function(buscador) {
             var busqueda = buscador.value;
             for (var i=0; i < titulos.length; i++) {
                 if (busqueda == titulos[i]) {
-                    setCookie(busqueda);
+                    localStorage.setItem("titulo_busqueda", busqueda);
                     window.open("resultados.html", "_self");
+                    return;
                 }
             }
             alert("Lo sentimos. Esa canción no está en nuestra base de datos");
         }
     });
 });
-
-function setCookie(titulo_busqueda) {
-    document.cookie = "titulo_busqueda=" + titulo_busqueda;
-}
