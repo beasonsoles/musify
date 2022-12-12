@@ -6,6 +6,7 @@ body {
     overflow-x: hidden;
 } 
 
+
 #musify_texto {
     color: white;
     position: relative;
@@ -40,7 +41,7 @@ body {
     position: absolute;
     right: 0;
     width: 80%;
-    height: 200%;
+    height: fit-content;
     background-color: rgb(43, 43, 43);
 }
 
@@ -115,16 +116,23 @@ body {
     font-size: x-large;
 }
 
-#politicas {
-    position: fixed;
-    bottom: 0px;
-    left: 0px;
+.bottom{
     width: 100%;
-    height: 8%;
+    position: fixed;
+    height: 10%;
+    right: 0;
+    bottom: 0;
     background-color: black;
     z-index: 3;
-    
 }
+
+#politicas{
+    position: fixed;
+    bottom:13%;
+    left: 5px;
+    z-index: 3;
+}
+
 
 .subtitulo {
     color: white;
@@ -147,7 +155,7 @@ a {
 
 @media (min-width: 481px) and (max-width: 900px) {
     #main_container {
-        height: 200%;
+        height: fit-content;
     }
 
     .izquierda {
@@ -181,7 +189,7 @@ a {
 
 @media (max-width: 480px) {
     #main_container {
-        height: 280%;
+        height:  fit-content;
     }
 
     .izquierda {

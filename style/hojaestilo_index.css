@@ -37,7 +37,7 @@ footer {
     position: fixed;
     bottom: 40px;
     left: 40%;
-    height: 7px;
+    height: 2.5vh;
     width: 100%;
     z-index: 3;
 }
