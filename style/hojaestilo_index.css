@@ -16,6 +16,7 @@
     position: relative;
     top: 30px;
     right: 20px;
+    cursor: pointer;
 }
 
 #musify_icono, #musify_texto, .inicio_sesion {
@@ -39,6 +40,10 @@ footer {
     height: 7px;
     width: 100%;
     z-index: 3;
+}
+
+.anuncio {
+    cursor: pointer;
 }
 
 /* MEDIA QUERIES */

@@ -1,6 +1,21 @@
 let form = document.getElementById("log_in_form");
+let facebook = document.getElementById("facebook-link");
+let google = document.getElementById("google-link");
+let sign_up = document.getElementById("go-to-sign-up");
 let contador_usuarios = localStorage.getItem("contador_usuarios");
 let user_actual = 0;
+
+facebook.addEventListener("click", function() {
+    window.open("http://www.facebook.com", "_self");
+});
+
+google.addEventListener("click", function() {
+    window.open("http://www.google.com", "_self");
+});
+
+sign_up.addEventListener("click", function() {
+    window.open("sign_up_form.html");
+});
 
 form.addEventListener("submit", function(e) {
     e.preventDefault();

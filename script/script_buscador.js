@@ -1,11 +1,15 @@
 let buscadores = document.querySelectorAll("#buscador", "#buscador_canciones_playlist");
 let titulos = ["Moscow mule", "Demasiadas mujeres", "Bohemian rhapsody", "Waiting for love", "Sucker for pain", 
-"More than you know", "Kitt y los coches del pasado", "Boulevard of broken dreams", "Viva la vida", "Lagrimas de amor"]
+"More than you know", "Kitt y los coches del pasado", "Boulevard of broken dreams", "Viva la vida", "Lagrimas de amor"];
+
+function capitalizeFirstLetter(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1).toLowerCase();
+}
 
 buscadores.forEach(function(buscador) {
     buscador.addEventListener("keyup", function(event) {
         if (event.code === "Enter" || event.code === "NumpadEnter") {
-            var busqueda = buscador.value;
+            var busqueda = capitalizeFirstLetter(buscador.value);
             for (var i=0; i < titulos.length; i++) {
                 if (busqueda == titulos[i]) {
                     localStorage.setItem("titulo_busqueda", busqueda);

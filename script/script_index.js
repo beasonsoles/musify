@@ -1,10 +1,20 @@
 /* Para avisar al usuario que debe iniciar sesión para acceder a las funciones del menu */
+let sign_up = document.getElementById("registrarse");
+let log_in = document.getElementById("iniciar");
 let home = document.getElementById("opcion1");
 let biblioteca = document.getElementById("opcion2");
 let playlist = document.getElementById("opcion3");
 let favoritos = document.getElementById("opcion4");
 let ajustes = document.getElementById("opcion5");
+let anuncio = document.getElementById("go-to-sign-up");
 
+sign_up.addEventListener("click", function() {
+    window.open("sign_up_form.html", "_self");
+})
+
+log_in.addEventListener("click", function() {
+    window.open("log_in_form.html", "_self");
+});
 
 home.addEventListener("click", function() {
     window.open("index.html", "_self");  //pulsar en home mantiene al usuario en la página principal
@@ -25,6 +35,10 @@ favoritos.addEventListener("click", function() {
 ajustes.addEventListener("click", function() {
   alert("Inicia sesión o regístrate para acceder a los ajustes");
 });
+
+anuncio.addEventListener("click", function() {
+    window.open("sign_up_form.html", "_self");
+})
 
 /* Para crear la cuenta atrás de cada una de las canciones */
 

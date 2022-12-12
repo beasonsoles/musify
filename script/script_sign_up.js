@@ -1,7 +1,22 @@
 let form = document.getElementById("sign_up_form");
+let facebook = document.getElementById("facebook-link");
+let google = document.getElementById("google-link");
+let log_in = document.getElementById("go-to-log-in");
 if ((contador_usuarios = localStorage.getItem("contador_usuarios")) == undefined) {
     contador_usuarios = 0;
 }
+
+facebook.addEventListener("click", function() {
+    window.open("http://www.facebook.com", "_self");
+});
+
+google.addEventListener("click", function() {
+    window.open("http://www.google.com", "_self");
+});
+
+log_in.addEventListener("click", function() {
+    window.open("log_in_form.html", "_self");
+});
 
 form.addEventListener("submit", function(e) {
     e.preventDefault();
