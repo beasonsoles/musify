@@ -51,10 +51,11 @@
 }
 
 .caratula audio {
-    width: 90px;
+    width: 100px;
+    height: 40px;
     position: relative;
     top: 30%;
-    left: 10px;
+    left: 7px;
     z-index: 2;
     display: none;
 }

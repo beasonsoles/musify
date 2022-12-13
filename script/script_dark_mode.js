@@ -7,20 +7,29 @@ var menu_contents = document.querySelectorAll("#home, #biblioteca, #crear, #favo
 var menu_images = document.querySelectorAll("#home_icono, #biblioteca_icono, #crear_icono, #favorito_icono, #ajustes_icono");
 var main = document.getElementById("main_container");
 var footer = document.getElementById("politicas");
+let circulo_deslizante = document.getElementById("circulo_deslizante");
+
+//var position = circulo_deslizante.getBoundingClientRect();
+//var x = position.left;
 
 interruptor.addEventListener("change", function (e) {
     if (e.target.checked) {
         var tema = "claro";
+        localStorage.setItem("circulo_deslizante_color", "rgb(78, 218, 39)");
     } else {
         var tema = "oscuro";
+        localStorage.setItem("circulo_deslizante_color", "rgb(134, 140, 133)");
     }
     localStorage.setItem("tema", tema);
+    var x = circulo_deslizante.style.transform;
+    localStorage.setItem("circulo_deslizante_x", x);
 });
 
 setInterval(function() {
     var tema_actual = localStorage.getItem("tema");
 
     if (tema_actual == "claro") {
+        // cambiar colores de la página
         musify_texto.style.color = "black";
         header.style.background = "rgb(117, 117, 117)";
         texts.forEach(function (text) {text.style.color = "black";});
@@ -29,7 +38,10 @@ setInterval(function() {
         menu_contents.forEach(function(option) {option.style.color = "black";});
         menu_images.forEach(function(image) {image.style.filter = "invert(0%)";});
         footer.style.background = "rgb(117, 117, 117)";
+        // cambiar el estado del interruptor
+
     } else {
+        // cambiar colores de la página
         musify_texto.style.color = "white";
         header.style.background = "black";
         texts.forEach(function (text) {text.style.color = "white";});
@@ -38,5 +50,6 @@ setInterval(function() {
         menu_contents.forEach(function(option) {option.style.color = "white";});
         menu_images.forEach(function(image) {image.style.filter = "invert(100%)";});
         footer.style.background = "black";
+        // cambiar el estado del interruptor
     }
 }, 1);

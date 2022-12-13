@@ -2,6 +2,7 @@
 let caratulas = document.querySelectorAll(".caratula");
 let players = document.querySelectorAll(".reproductor");
 let reproduciendo = [];
+let audio = "";
 
 players.forEach(function(player) {
     player.addEventListener("click", function() { 
@@ -50,3 +51,10 @@ caratulas.forEach(function(caratula) {
 setInterval(() => {
     document.getElementById("main_container").style.height = window.innerHeight;
 }, 1);
+
+/* Para poner una canción después de la otra */
+/*if (audio != "") {
+    audio.addEventListener("ended", function() {
+
+    });
+}*/
