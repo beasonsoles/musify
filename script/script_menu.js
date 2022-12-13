@@ -1,7 +1,7 @@
 /* Para redirigir al usuario dependiendo de la opción que elije en el menu */
 let home = document.getElementById("opcion1");
 let biblioteca = document.getElementById("opcion2");
-let playlist = document.getElementById("opcion3");
+let crear_playlist = document.getElementById("opcion3");
 let favoritos = document.getElementById("opcion4");
 let ajustes = document.getElementById("opcion5");
 
@@ -13,7 +13,7 @@ biblioteca.addEventListener("click", function() {
     window.open("biblioteca.html", "_self");
 });
 
-playlist.addEventListener("click", function() {
+crear_playlist.addEventListener("click", function() {
     window.open("crear_playlist.html", "_self");
 });
 

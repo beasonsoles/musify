@@ -96,6 +96,7 @@
     border-radius: 5px;
     margin-top: 2%;
     margin-bottom: 15%;
+    cursor: pointer;
 }
 
 #panel_audio {

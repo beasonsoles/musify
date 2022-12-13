@@ -41,7 +41,7 @@
     cursor: pointer;
 }
 
-.cuenta, .perfil {
+.cuenta, .perfil, .cerrar_sesion {
     display: none;
     position: relative;
     border-radius: 6px;
@@ -49,29 +49,28 @@
     width: 90%;
     height: 20%;
     left: 5%;
-    background-color: rgb(128, 174, 115);
     color: black;
     text-align: center;
     margin-bottom: 10%;
+}
+
+.cuenta, .perfil {
+    background-color: rgb(128, 174, 115);
 }
 
 .cerrar_sesion {
-    display: none;
-    position: relative;
-    border-radius: 6px;
-    font-size: large;
-    width: 90%;
-    height: 20%;
-    left: 5%;
-    background-color: rgb(218, 30, 30);
-    color: black;
-    text-align: center;
-    margin-bottom: 10%;
+    background-color: rgb(219, 95, 89);
 }
 
-.cuenta:hover, .perfil:hover, .cerrar_sesion:hover {
+.cuenta:hover, .perfil:hover {
     transform: scale(1.02);
     background-color: rgb(116, 201, 93);
+    cursor: pointer;
+}
+
+.cerrar_sesion:hover {
+    transform: scale(1.02);
+    background-color: rgb(236, 53, 53);
     cursor: pointer;
 }
 

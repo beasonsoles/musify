@@ -29,7 +29,7 @@
 
 .descripcion {
     width: 180px;
-    overflow: visible;
+    overflow-wrap: break-word;
     text-align: center;
     color: white;
 }

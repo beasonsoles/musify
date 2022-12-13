@@ -1,4 +1,4 @@
-let foto = document.getElementById("foto_perfil");
+let foto_perfil = document.getElementById("foto_perfil");
 let cerrar_sesion = document.getElementById("cerrar_sesion_text");
 let cuenta = document.getElementById("cuenta_text");
 let perfil = document.getElementById("perfil_text");
@@ -7,11 +7,11 @@ let user_actual = localStorage.getItem("user_actual");
 
 /* Para actualizar la foto de perfil si el usario la cambia */
 setInterval(function() {
-    foto.src = "images/"+localStorage.getItem("userpicture_"+user_actual.toString());
+    foto_perfil.src = "images/"+localStorage.getItem("userpicture_"+user_actual.toString());
 }, 1);
 
 /* Para mostrar el popup cuando el usuario clica en la foto de perfil */
-foto.addEventListener("click", function() {
+foto_perfil.addEventListener("click", function() {
     var popup = document.getElementById("popup_perfil");
     var contenidos_popup = document.querySelectorAll("#cuenta_text, #perfil_text, #cerrar_sesion_text");
     popup.classList.toggle("mostrar");

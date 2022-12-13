@@ -47,4 +47,6 @@ caratulas.forEach(function(caratula) {
     });
 });
 
-//audio.addEventListener("ended", playSound); --> para poner una canción después de la otra
+setInterval(() => {
+    document.getElementById("main_container").style.height = window.innerHeight;
+}, 1);
