@@ -1,5 +1,12 @@
 #main_container {
-    height: 120%;
+    height: 100%;
+}
+
+#main_container {
+    position: absolute;
+    right: 0;
+    width: 80%;
+    background-color: rgb(43, 43, 43);
 }
 
 h2 {
@@ -12,6 +19,7 @@ h2 {
     border-radius: 6px;
     width: 90%;
     margin-bottom: 20%;
+    margin-left: 7%;
 }
 
 #editar {

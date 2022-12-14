@@ -8,6 +8,7 @@
         <link rel="stylesheet" href="style/hojaestilo_canciones.css">
         <link rel="stylesheet" href="style/hojaestilo_popup.css">
         <link rel="stylesheet" href="style/hojaestilo_boton_cambiar_tema.css">
+        <link rel="stylesheet" href="style/hojaestilo_reproductor.css">
         <link rel="icon" type="image/x-icon" href="images/logo_musify.png">
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta charset="UTF-8" />
@@ -67,6 +68,10 @@
                         </label>
                         <div class="tema_claro_texto">Tema claro</div>
                     </div>
+                </div>
+                <div id="politicas">
+                    <div id="privacidad" class="info"><a>Politica de privacidad</a></div><br>
+                    <div id="cookies" class="info"><a>Politica de cookies</a></div>
                 </div>
             </div>
         </nav>
@@ -284,12 +289,42 @@
             </div>
         </main>
         
-        <footer>
-            <div id="politicas">
-                <div id="privacidad" class="info"><a>Politica de privacidad</a></div><br>
-                <div id="cookies" class="info"><a>Politica de cookies</a></div>
+        <div class="bottom">
+            <div id="player">
+              <footer>
+                <!--quitar link ycosas para probar cuando funcione-->          
+                <img src="images/el_madrileño.jpeg" class="cover" id="art" />
+                <div class="trackinfo">
+                    <p id="title">Demasiadas mujeres</p>
+                    <p id="artist">C. Tangana</p>
+                </div>
+    
+                <div id="track">
+                  <div id="progress"></div>
+                  <div id="handler"></div>
+                </div>
+    
+                <div class="cont">
+                  <button id="prev" class="nav">
+                    <img src="images/prev.png" />
+                </button>
+                <button id="play" class="nav">
+                    <img class="pad" src="images/play.png" />
+                </button>
+                <button id="next" class="nav">
+                    <img src="images/next.png" />
+                </button>                
+                </div>
+    
+                <div class="volumen">
+                  Vol: 
+                  <i class="fas fa-volume-down"></i> 
+                  <input type="range" name="volumen" id="volumen" min="0" max="1" step="0.01" value="0.75"> 
+                  <i class="fas fa-volume-up"></i>
+                </div>
+              </footer>
             </div>
-        </footer>
+          </div>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <script src="script/script_favoritos.js"></script>
         <script src="script/script_sesion_iniciada.js"></script>

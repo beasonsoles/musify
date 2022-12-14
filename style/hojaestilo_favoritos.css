@@ -15,15 +15,7 @@
     position: absolute;
     right: 0;
     width: 80%;
-  
+    height: 100%;
     background-color: rgb(43, 43, 43);
 }
 
-.contenido {
-    float: right;
-    width: 100%;
-    position: relative;
-    top: 120px;
-    height: 75%;
-    background-color: rgb(43, 43, 43);
-}

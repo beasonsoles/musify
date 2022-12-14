@@ -1,9 +1,18 @@
-.playlist {
+#playlist {
     position: relative;
     z-index: 1;
     height: 100%;
     margin-bottom: 20%;
+    margin-left: 7%;
 }
+#main_container {
+    position: absolute;
+    right: 0;
+    width: 80%;
+    height: 100%;
+    background-color: rgb(43, 43, 43);
+}
+
 
 .cancion {
     cursor: move; /* especifica el tipo de cursor a mostrar*/
