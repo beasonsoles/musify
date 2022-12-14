@@ -4,8 +4,26 @@
     position: relative;
     z-index: 1;
     height: 100%;
+    margin-left: 7%;
 }
 
 .cancion {
     display: none;
+}
+
+#main_container {
+    position: absolute;
+    right: 0;
+    width: 80%;
+  
+    background-color: rgb(43, 43, 43);
+}
+
+.contenido {
+    float: right;
+    width: 100%;
+    position: relative;
+    top: 120px;
+    height: 75%;
+    background-color: rgb(43, 43, 43);
 }
