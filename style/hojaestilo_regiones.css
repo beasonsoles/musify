@@ -126,7 +126,7 @@ body {
 
 }
 
-#politicas, footer{
+#politicas {
     position: fixed;
     bottom: 13%;
     left: 5px;
