@@ -1,11 +1,11 @@
 let artistas = document.querySelectorAll(".artista");
 let usuarios = document.querySelectorAll(".usuario");
 
-
 /* Para mostrar las playlists y álbumes de un artista */
 artistas.forEach(function(artista) {
     artista.addEventListener("click", function() {
         window.open("artista.html", "_self");
+        localStorage.setItem("artista_actual", artista.querySelector(".autor").innerHTML);
     });
 });
 
@@ -15,3 +15,4 @@ usuarios.forEach(function(usuario) {
         window.open("otro_perfil.html", "_self");
     });
 });
+

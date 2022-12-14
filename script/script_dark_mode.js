@@ -7,27 +7,26 @@ var menu_contents = document.querySelectorAll("#home, #biblioteca, #crear, #favo
 var menu_images = document.querySelectorAll("#home_icono, #biblioteca_icono, #crear_icono, #favorito_icono, #ajustes_icono");
 var main = document.getElementById("main_container");
 var footer = document.getElementById("politicas");
-let circulo_deslizante = document.getElementById("circulo_deslizante");
+let boton_deslizante = document.getElementsByClassName("boton_deslizante")[0];
+let circulo_deslizante = document.getElementById("circulo");
 
-//var position = circulo_deslizante.getBoundingClientRect();
-//var x = position.left;
 
 interruptor.addEventListener("change", function (e) {
     if (e.target.checked) {
         var tema = "claro";
-        localStorage.setItem("circulo_deslizante_color", "rgb(78, 218, 39)");
     } else {
         var tema = "oscuro";
-        localStorage.setItem("circulo_deslizante_color", "rgb(134, 140, 133)");
     }
     localStorage.setItem("tema", tema);
-    var x = circulo_deslizante.style.transform;
-    localStorage.setItem("circulo_deslizante_x", x);
 });
 
 setInterval(function() {
     var tema_actual = localStorage.getItem("tema");
-
+    // cambiar offset del botón del interruptor según el tamaño de la ventana
+    var x = 0;
+    if (481 < window.innerWidth && window.innerWidth < 900) { x = 19;} // tablet
+    else if (window.innerWidth < 480) { x = 12;} // móvil
+    else { x = 20;} // ordenador
     if (tema_actual == "claro") {
         // cambiar colores de la página
         musify_texto.style.color = "black";
@@ -39,7 +38,11 @@ setInterval(function() {
         menu_images.forEach(function(image) {image.style.filter = "invert(0%)";});
         footer.style.background = "rgb(117, 117, 117)";
         // cambiar el estado del interruptor
-
+        if (boton_deslizante != null && circulo_deslizante != null) {
+            boton_deslizante.style.background = "rgb(78, 218, 39)";
+            circulo_deslizante.style.background = "black";
+            circulo_deslizante.style.transform = "translateX("+x.toString()+"px)";
+        }
     } else {
         // cambiar colores de la página
         musify_texto.style.color = "white";
@@ -51,5 +54,10 @@ setInterval(function() {
         menu_images.forEach(function(image) {image.style.filter = "invert(100%)";});
         footer.style.background = "black";
         // cambiar el estado del interruptor
+        if (boton_deslizante != null && circulo_deslizante != null) {
+            boton_deslizante.style.background = "rgb(134, 140, 133)";
+            circulo_deslizante.style.background = "white";
+            circulo_deslizante.style.transform = "translateX(0px)";
+        }
     }
 }, 1);

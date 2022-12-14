@@ -48,16 +48,17 @@ boton_anadir.addEventListener("click", function(e) {
     var text2 = document.getElementById("confirmacion2");
     for (var i=0; i < titulos_base_datos.length; i++) {
         // si la canción existe... 
-        if (cancion_buscada.value == titulos_base_datos[i]) {
+        var titulo_cancion_buscada = capitalizeFirstLetter(cancion_buscada.value);
+        if (titulo_cancion_buscada == titulos_base_datos[i]) {
             var canciones = playlist_json.canciones_playlist;
             for (var i = 0; i < canciones.length; i++) {
-                if (canciones[i] == cancion_buscada.value) {
-                    alert("La canción '"+cancion_buscada.value+"' ya está en la playlist");
+                if (canciones[i] == titulo_cancion_buscada) {
+                    alert("La canción '"+titulo_cancion_buscada+"' ya está en la playlist");
                     return;
                 }
             }
             // ...y no está ya en la playlist, añadir la canción a la playlist 
-            playlist_json.canciones_playlist.push(cancion_buscada.value);            
+            playlist_json.canciones_playlist.push(titulo_cancion_buscada);            
             // mostar un mensaje al usuario indicando que se ha añadido
             text2.classList.toggle("mostrar");
             cancion_buscada.value = "";

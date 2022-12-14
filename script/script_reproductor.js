@@ -1,4 +1,4 @@
-var holding = false;
+/*var holding = false;
 var track = document.getElementById("track");
 var progress = document.getElementById("progress");
 var play = document.getElementById("play");
@@ -128,4 +128,4 @@ const volumen= document.getElementById("volumen");
 volumen.oninput= (e) =>{
 	const vol = e.target.value
 	player.volume =vol
-}
+}*/

@@ -2,9 +2,7 @@
     display: none;
 }
 
-body, html{
-    width:100%;
-    height:100%;
+body {
     overflow-x: hidden;
 } 
 
@@ -42,15 +40,15 @@ body, html{
     position: absolute;
     right: 0;
     width: 80%;
+    height: fit-content;
     background-color: rgb(43, 43, 43);
 }
 
 .contenido {
     float: right;
-    width: 100%;
+    width: 93%;
     position: relative;
     top: 120px;
-    height: 75%;
 }
 
 #menu_container {
@@ -139,7 +137,6 @@ body, html{
     color: white;
     font-size: 200%;
     width: 100%;
-    margin-left: 7%;
 }
 
 .info {
