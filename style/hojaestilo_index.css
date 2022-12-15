@@ -4,18 +4,19 @@
     position: relative;
     z-index: 1;
     height: 100%;
+    margin-left: 7%;
 }
 
 .novedades_albumes {
-    margin-bottom: 15%;
+    margin-bottom: 10%;
 }
 
 .inicio_sesion {
     float: right;
     padding: 8px;
     position: relative;
-    top: 30px;
-    right: 20px;
+    top: 25%;
+    right: 2%;
     cursor: pointer;
 }
 

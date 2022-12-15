@@ -9,17 +9,17 @@ body {
 #musify_texto {
     color: white;
     position: relative;
-    top: 0;
+    top: 3%;
     left: 5%;
-    font-size: 150%;
+    width: 3%;
 }
 
 #musify_icono {
     position: relative;
-    top: 7%;
-    left: 2%;
-    width: 45px; 
-    height: 45px;
+    top: 3%;
+    left: 1%;
+    width: 3%;
+    padding-top: 1%;
 }
 
 #musify_icono, #musify_texto, #buscador, #foto_perfil {
@@ -29,7 +29,7 @@ body {
 .cabecera {
     width: 100%;
     position: fixed;
-    height: 15%;
+    height: 10%;
     right: 0;
     top: 0;
     background-color: black;
@@ -42,13 +42,14 @@ body {
     width: 80%;
     height: fit-content;
     background-color: rgb(43, 43, 43);
+    top: 10%;
 }
 
 .contenido {
     float: right;
-    width: 93%;
+    width: 100%;
     position: relative;
-    top: 120px;
+    top: 10%;
 }
 
 #menu_container {
@@ -65,7 +66,7 @@ body {
 .menu {
     position: relative;
     left: 10%;
-    top: 20%;
+    top: 12%;
 }
 
 [id*="opcion"] {
@@ -118,7 +119,7 @@ body {
 .bottom{
     width: 100%;
     position: fixed;
-    height: 13%;
+    height: 10%;
     right: 0;
     bottom: 0;
     background-color: black;
@@ -137,6 +138,7 @@ body {
     color: white;
     font-size: 200%;
     width: 100%;
+    margin-left: 7%;
 }
 
 .info {
