@@ -11,7 +11,6 @@
 
 .musica:hover {
     transform: scale(1.05);
-    opacity: 0.6;
     cursor: pointer;
 }
 
@@ -26,35 +25,60 @@
     position: relative;
 }
 
-.caratula audio {
+/*.caratula audio {
     width: 170px;
     position: absolute;
     top: 30%;
     left: 10px;
     z-index: 2;
     display: none;
-}
-
-.caratula:hover audio {
-    display: inline;
-    cursor: pointer;
-}
+}*/
 
 .reproductor {
+    margin-bottom: 20%;
     position: absolute;
     bottom: 8%;
     width: 100%;
     height: 70px;
+    z-index: 5;
 }
 
-#panel_audio {
+.boton_reproducir {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    margin-left: 35%;
+    background-color: white;
+    border: 2px solid #A6A7A9;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+    z-index: 5;
+}
+
+.boton_reproducir img {
+    height: 20px;
+    vertical-align: middle;
+}
+
+.boton_reproducir:hover {
+    display: block;
+}
+
+/*.caratula:hover audio {
+    display: inline;
+    cursor: pointer;
+}*/
+
+
+/*#panel_audio {
     width: 100%;
     position: fixed;
     bottom: 3%;
     left: 0;
     height: 20%;
     z-index: 3;
-}
+}*/
 
 .overlay {
     position: absolute;

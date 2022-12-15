@@ -2,7 +2,7 @@
 let caratulas = document.querySelectorAll(".caratula");
 let players = document.querySelectorAll(".reproductor");
 let reproduciendo = [];
-let audio = "";
+//let audio = "";
 
 players.forEach(function(player) {
     player.addEventListener("click", function() { 
@@ -10,7 +10,7 @@ players.forEach(function(player) {
     });
 });
 
-caratulas.forEach(function(caratula) {
+/*caratulas.forEach(function(caratula) {
     caratula.addEventListener("click", function() {
         reprod_caratula = caratula.querySelector(".reproductor");
         if (reproduciendo.length > 1) {
@@ -46,15 +46,17 @@ caratulas.forEach(function(caratula) {
         reprod_caratula = caratula.querySelector(".reproductor");
         if (reprod_caratula.style.visibility == "hidden") {reprod_caratula.style.visibility = "visible";}
     });
-});
+});*/
 
-setInterval(() => {
+
+
+
+
+
+
+
+
+
+/*setInterval(() => {
     document.getElementById("main_container").style.height = window.innerHeight;
-}, 1);
-
-/* Para poner una canción después de la otra */
-/*if (audio != "") {
-    audio.addEventListener("ended", function() {
-
-    });
-}*/
+}, 1);*/

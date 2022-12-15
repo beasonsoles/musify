@@ -87,6 +87,9 @@
                 </div>
                 <img class="musica" src="images/album_uvst.jpg" alt="Un Verano Sin Ti"> 
                 <div class="reproductor">
+                  <button class="boton_reproducir">
+                    <img class="reproducir" src="images/play.png">
+                  </button>
                   <audio controls class="audio">
                     <source src="audio/moscow_mule.mp3" type="audio/mpeg">
                     <source src="audio/moscow_mule.ogg" type="audio/ogg">
@@ -184,35 +187,35 @@
           <!--segunda fila-->
           <h2 class="subtitulo">Top playlists</h2>
           <div class="top_playlists">
-            <div class="cancion">
+            <div class="playlist">
               <img class="musica" src="images/playlist1.jpg" alt="Playlist 1"> 
               <div class="descripcion">
                 <h3 class="titulo">Playlist 1</h3>
               </div>
             </div>
   
-            <div class="cancion">
+            <div class="playlist">
               <img class="musica" src="images/playlist2.jpg" alt="Playlist 2"> 
               <div class="descripcion">
                 <h3 class="titulo">Playlist 2</h3>
               </div>
             </div>
   
-            <div class="cancion">
+            <div class="playlist">
               <img class="musica" src="images/playlist3.jpg" alt="Playlist 3"> 
               <div class="descripcion">
                 <h3 class="titulo">Playlist 3</h3>
               </div>
             </div>
   
-            <div class="cancion">
+            <div class="playlist">
               <img class="musica" src="images/playlist4.jpg" alt="Playlist 4"> 
               <div class="descripcion">
                 <h3 class="titulo">Playlist 4</h3>
               </div>
             </div>
   
-            <div class="cancion">
+            <div class="playlist">
               <img class="musica" src="images/playlist5.jpg" alt="Playlist 5"> 
               <div class="descripcion">
                 <h3 class="titulo">Playlist 5</h3>
@@ -324,40 +327,36 @@
             </div>
           </div>  
         </div>
-        <br>
-        <div id="panel_audio">
-        </div>
       </main>
 
       <div class="bottom">
         <div id="player">
           <footer>
             <!--quitar link ycosas para probar cuando funcione-->          
-            <img src="images/el_madrileño.jpeg" class="cover" id="art" />
-            <div class="trackinfo">
-                <p id="title">Demasiadas mujeres</p>
-                <p id="artist">C. Tangana</p>
+            <img src="images/perfil_vacio.png" class="cover" id="caratula_cancion">
+            <div class="info_cancion">
+                <p id="info_titulo_cancion"></p>
+                <p id="info_artista_cancion"></p>
             </div>
 
             <div id="track">
-              <div id="progress"></div>
-              <div id="handler"></div>
+              <div id="progreso"></div>
+              <div id="circulo_progreso"></div>
             </div>
 
-            <div class="cont">
-              <button id="prev" class="nav">
-                <img src="images/prev.png" />
+            <div class="control_audio">
+              <button id="anterior" class="control">
+                <img src="images/prev.png">
             </button>
-            <button id="play" class="nav">
-                <img class="pad" src="images/play.png" />
+            <button id="play" class="control">
+                <img src="images/play.png" id="imagen_play">
             </button>
-            <button id="next" class="nav">
-                <img src="images/next.png" />
+            <button id="siguiente" class="control">
+                <img src="images/next.png">
             </button>                
             </div>
 
             <div class="volumen">
-              Vol: 
               <i class="fas fa-volume-down"></i> 
               <input type="range" name="volumen" id="volumen" min="0" max="1" step="0.01" value="0.75"> 
               <i class="fas fa-volume-up"></i>
