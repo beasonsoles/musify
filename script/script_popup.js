@@ -7,7 +7,7 @@ let user_actual = localStorage.getItem("user_actual");
 
 /* Para actualizar la foto de perfil si el usario la cambia */
 setInterval(function() {
-    foto_perfil.src = "images/"+localStorage.getItem("userpicture_"+user_actual.toString());
+    foto_perfil.src = localStorage.getItem("userpicture_"+user_actual.toString());
 }, 1);
 
 /* Para mostrar el popup cuando el usuario clica en la foto de perfil */

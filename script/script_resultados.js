@@ -1,10 +1,13 @@
-let canciones = document.querySelectorAll(".cancion");
+let canciones = document.querySelectorAll(".cancion_resultado");
 let canciones_alternativas = document.querySelectorAll(".cancion_alternativa");
 let images = document.querySelectorAll(".me_gusta");
 let titulo_buscado = localStorage.getItem("titulo_busqueda");
 let imagen_fuente = "images/favorito.png";
 if ((contador_favoritos = localStorage.getItem("contador_favoritos")) == undefined) {
     contador_favoritos = 0;
+}
+if ((contador_maximo_favoritos = localStorage.getItem("contador_maximo_favoritos")) == undefined) {
+    contador_maximo_favoritos = 0;
 }
 
 /* Para mostrar la canción que se ha buscado */
@@ -36,8 +39,10 @@ images.forEach(function(image) {
         // si no estaba añadida a favoritos
         if (image.src.match("images/favorito.png")) {
             contador_favoritos++;
+            contador_maximo_favoritos++;
             imagen_fuente = "images/favorito_relleno.png";
             localStorage.setItem("contador_favoritos", contador_favoritos);
+            localStorage.setItem("contador_maximo_favoritos", contador_maximo_favoritos);
             localStorage.setItem("titulo"+contador_favoritos.toString(), titulo); 
             localStorage.setItem("autor"+contador_favoritos.toString(), autor);
             localStorage.setItem(titulo, imagen_fuente);
@@ -45,7 +50,7 @@ images.forEach(function(image) {
         } else {
             // quitar de favoritos
             imagen_fuente = "images/favorito.png";
-            for (var i = 0; i < contador_favoritos; i++) {
+            for (var i = 0; i < contador_maximo_favoritos; i++) {
                 if (localStorage.getItem("titulo"+(i+1).toString()) == titulo && 
                     localStorage.getItem("autor" +(i+1).toString()) == autor) {
                         contador_favoritos--;

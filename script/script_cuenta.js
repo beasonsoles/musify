@@ -2,6 +2,7 @@ let form_cuenta = document.getElementById("cuenta_form");
 let contador_usuarios = localStorage.getItem("contador_usuarios");
 let user_profile = document.getElementById("user_profile_picture");
 let new_file = document.getElementById("userpicture");
+let reader = new FileReader();
 
 /* Mostrar los valores actuales */
 setInterval(function() {
@@ -12,14 +13,17 @@ setInterval(function() {
     document.form.surname2.value = localStorage.getItem("surname2_"+user_actual.toString());
     document.form.useremail.value = localStorage.getItem("email_"+user_actual.toString());
     document.form.birthdate.value = localStorage.getItem("birthdate_"+user_actual.toString());
-    user_profile.src = "images/"+localStorage.getItem("userpicture_"+user_actual.toString());
+    user_profile.src = localStorage.getItem("userpicture_"+user_actual.toString());
 }, 1);
 
 /* Cambiar la foto de perfil si el usuario selecciona una nueva */
 new_file.addEventListener("change", function(e) {
     foto_seleccionada = e.currentTarget.files.length;
     if (foto_seleccionada != 0) {
-        localStorage.setItem("userpicture_"+user_actual.toString(), new_file.files[0].name);
+        reader.addEventListener("load", function(e) {
+            localStorage.setItem("userpicture_"+user_actual.toString(), e.target.result);
+        });
+        reader.readAsDataURL(new_file.files[0]);
     }
 });
 
