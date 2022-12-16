@@ -20,10 +20,6 @@
     cursor: pointer;
 }
 
-#musify_icono, #musify_texto, .inicio_sesion {
-    display: inline-table;
-}
-
 .contador {
     background-color: black;
     position: relative;

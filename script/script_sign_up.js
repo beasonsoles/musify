@@ -2,6 +2,8 @@ let form = document.getElementById("sign_up_form");
 let facebook = document.getElementById("facebook-link");
 let google = document.getElementById("google-link");
 let log_in = document.getElementById("go-to-log-in");
+let new_file = document.getElementById("userpicture");
+let reader = new FileReader();
 if ((contador_usuarios = localStorage.getItem("contador_usuarios")) == undefined) {
     contador_usuarios = 0;
 }
@@ -16,6 +18,16 @@ google.addEventListener("click", function() {
 
 log_in.addEventListener("click", function() {
     window.open("log_in_form.html", "_self");
+});
+
+new_file.addEventListener("change", function(e) {
+    foto_seleccionada = e.currentTarget.files.length;
+    if (foto_seleccionada != 0) {
+        reader.addEventListener("load", function(e) {
+            localStorage.setItem("userpicture_"+(parseInt(contador_usuarios)+1).toString(), e.target.result);
+        });
+        reader.readAsDataURL(new_file.files[0]);
+    }
 });
 
 form.addEventListener("submit", function(e) {
@@ -39,7 +51,7 @@ form.addEventListener("submit", function(e) {
             localStorage.setItem("surname2_"+contador_usuarios.toString(), document.getElementById("surname2").value); 
             localStorage.setItem("email_"+contador_usuarios.toString(), document.getElementById("useremail").value); 
             localStorage.setItem("birthdate_"+contador_usuarios.toString(), document.getElementById("birthdate").value);
-            localStorage.setItem("userpicture_"+contador_usuarios.toString(), document.getElementById("userpicture").files[0].name);
+            //localStorage.setItem("userpicture_"+contador_usuarios.toString(), document.getElementById("userpicture").files[0].name);
             window.open("log_in_form.html", "_self");
         }
     } catch (error) {

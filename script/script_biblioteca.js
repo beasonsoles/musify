@@ -28,7 +28,7 @@ for (let i = 1; i <= contador_playlists; i++) {
     var nombre_playlist_anadida = playlist_json.nombre_playlist;
     var foto_playlist_anadida = playlist_json.foto_playlist;
     if (nombre_playlist_anadida != "" && foto_playlist_anadida != "") {
-        add_playlist("images/" + foto_playlist_anadida, nombre_playlist_anadida);
+        add_playlist(foto_playlist_anadida, nombre_playlist_anadida);
     }
 }
     

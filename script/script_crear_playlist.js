@@ -7,6 +7,7 @@ let image = document.getElementById("subir_foto");
 let form = document.getElementById("crear_playlist");
 let text1 = document.getElementById("confirmacion1");
 let text2 = document.getElementById("confirmacion2");
+let reader_playlist = new FileReader();
 if ((contador_playlists = localStorage.getItem("contador_playlists")) == undefined) {
     contador_playlists = 0;
 }
@@ -35,6 +36,11 @@ image.addEventListener("change", function(e) {
     foto_seleccionada = e.currentTarget.files.length;
     if (foto_seleccionada != 0) {
         text1.classList.toggle("mostrar");
+        reader_playlist.addEventListener("load", function(e) {
+            playlist_json.foto_playlist = e.target.result;
+            //localStorage.setItem("playlistpicture_"+(parseInt(contador_playlists)+1).toString(), e.target.result);
+        });
+        reader_playlist.readAsDataURL(image.files[0]);
     }
 });
 
@@ -95,7 +101,6 @@ form.addEventListener("submit", function(e) {
     contador_playlists++;
     localStorage.setItem("contador_playlists", contador_playlists);
     playlist_json.nombre_playlist = nombre_playlist;
-    playlist_json.foto_playlist = image.files[0].name;
     var json_text = JSON.stringify(playlist_json);
     localStorage.setItem("playlist"+contador_playlists.toString(), json_text);
     alert("¡Tu playlist ha sido creada! Accede a la biblioteca para verla");

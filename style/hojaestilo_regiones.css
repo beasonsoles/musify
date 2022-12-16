@@ -26,6 +26,10 @@ body {
     display: inline-table;
 }
 
+#musify_icono, #musify_texto, .inicio_sesion {
+    display: inline-table;
+}
+
 .cabecera {
     width: 100%;
     position: fixed;
@@ -220,6 +224,10 @@ a {
         left: 5%;
         width: 40px;
         height: 40px;
+    }
+
+    #musify_icono, #buscador, #foto_perfil {
+        display: inline-table;
     }
     
     #musify_texto, #home, #biblioteca, #crear, #favorito, #ajustes {
