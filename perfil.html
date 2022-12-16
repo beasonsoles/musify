@@ -4,6 +4,7 @@
 
         <!-- Hoja de estilo usada de la pagina web -->  
         <link rel="stylesheet" href="style/hojaestilo_regiones.css">
+        <link rel="stylesheet" href="style/hojaestilo_reproductor.css">
         <link rel="stylesheet" href="style/hojaestilo_perfil.css">
         <link rel="stylesheet" href="style/hojaestilo_canciones.css">
         <link rel="stylesheet" href="style/hojaestilo_popup.css">
@@ -70,8 +71,8 @@
             </div>
         </div>
         <div id="politicas">
-          <div id="privacidad" class="info"><a>Politica de privacidad</a></div><br>
-          <div id="cookies" class="info"><a>Politica de cookies</a></div>
+          <div id="privacidad" class="info"><a id="privacidad_texto">Politica de privacidad</a></div><br>
+          <div id="cookies" class="info"><a id="cookies_texto">Politica de cookies</a></div>
         </div>
       </nav>
       
@@ -113,6 +114,30 @@
             </div>
             <h2 class="subtitulo">Canciones más escuchadas</h2>
             <div id="canciones_mas_escuchadas">
+              <div class="cancion_escuchada">
+                <div class="caratula">
+                    <div class="overlay">
+                        <img class="me_gusta" src="images/favorito.png" alt="Corazon vacio">
+                    </div>
+                    <img class="musica" src="images/anti_hero.jpeg" alt="Anti-Hero"> 
+                    <div class="reproducir">
+                        <button class="boton_reproducir">
+                          <img src="images/play.png" alt="Boton de play">
+                        </button>
+                      </div>
+                    <div class="reproductor">
+                        <audio controls class="audio">
+                            <source src="audio/anti_hero.mp3" type="audio/mpeg">
+                            <source src="audio/anti_hero.ogg" type="audio/ogg">
+                            Your browser does not support the audio element.          
+                        </audio>
+                    </div>
+                </div>
+                <div class="descripcion">
+                    <h3 class="titulo">Anti-Hero</h3>
+                    <h4 class="autor">Taylor Swift</h4>
+                </div>
+              </div>
               <div class="cancion_escuchada">
                 <div class="caratula">
                   <div class="overlay">
@@ -210,31 +235,6 @@
                 <div class="descripcion">
                   <h3 class="titulo">Waiting for love</h3>
                   <h4 class="autor">Avicii</h4>
-                </div>
-              </div>
-    
-              <div class="cancion_escuchada">
-                <div class="caratula">
-                  <div class="overlay">
-                    <img class="me_gusta" src="images/favorito.png" alt="Corazon vacio">
-                  </div>
-                  <img class="musica" src="images/sucker_for_pain.jpg" alt="Suicide Squad: The Album"> 
-                  <div class="reproducir">
-                    <button class="boton_reproducir">
-                      <img src="images/play.png" alt="Boton de play">
-                    </button>
-                  </div>
-                  <div class="reproductor">
-                    <audio controls class="audio">
-                      <source src="audio/sucker_for_pain.mp3" type="audio/mpeg">
-                      <source src="audio/sucker_for_pain.ogg" type="audio/ogg">
-                      Your browser does not support the audio element.          
-                    </audio>
-                  </div>
-                </div>
-                <div class="descripcion">
-                  <h3 class="titulo">Sucker for pain</h3>
-                  <h4 class="autor">Lil Wayne e Imagine Dragons</h4>
                 </div>
               </div>
             </div>
@@ -362,7 +362,7 @@
                   </div>
                   <div class="descripcion">
                       <h3 class="titulo">Sucker for pain</h3>
-                      <h4 class="autor">Lil Wayne e Imagine Dragons</h4>
+                      <h4 class="autor"> Imagine Dragons</h4>
                   </div>
               </div>
               <!--segunda fila-->
@@ -486,6 +486,30 @@
                       <h4 class="autor">Camela</h4>
                   </div>
               </div>
+              <div class="cancion">
+                <div class="caratula">
+                    <div class="overlay">
+                        <img class="me_gusta" src="images/favorito.png" alt="Corazon vacio">
+                    </div>
+                    <img class="musica" src="images/anti_hero.jpeg" alt="Anti-Hero"> 
+                    <div class="reproducir">
+                        <button class="boton_reproducir">
+                          <img src="images/play.png" alt="Boton de play">
+                        </button>
+                      </div>
+                    <div class="reproductor">
+                        <audio controls class="audio">
+                            <source src="audio/anti_hero.mp3" type="audio/mpeg">
+                            <source src="audio/anti_hero.ogg" type="audio/ogg">
+                            Your browser does not support the audio element.          
+                        </audio>
+                    </div>
+                </div>
+                <div class="descripcion">
+                    <h3 class="titulo">Anti-Hero</h3>
+                    <h4 class="autor">Taylor Swift</h4>
+                </div>
+              </div>
             </div>
             <h2 class="subtitulo">Tus playlists</h2>
             <div id="tus_playlists"></div>
@@ -525,7 +549,7 @@
         </div>
       </main>
 
-      <div class="bottom">
+      <div class="bottom" id="footer">
             <div id="player">
                 <footer>
                     <img src="images/perfil_vacio.png" class="cover" id="caratula_cancion">
@@ -561,12 +585,14 @@
         </div>
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
       <script src="script/script_sesion_iniciada.js"></script>
-      <script src="script/script_perfil.js"></script>
+      
       <script src="script/script_biblioteca.js"></script>
       <script src="script/script_favoritos.js"></script>
       <script src="script/script_popup.js"></script>
       <script src="script/script_menu.js"></script>
+      <script src="script/script_perfil.js"></script>
       <script src="script/script_resultados.js"></script>
+      <script src="script/script_reproductor.js"></script>
       <script src="script/script_buscador.js"></script>
       <script src="script/script_dark_mode.js"></script>
     </body>

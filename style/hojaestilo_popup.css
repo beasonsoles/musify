@@ -90,6 +90,7 @@
 @media (min-width: 481px) and (max-width: 900px) {
     #buscador {
         right: 15%;
+        width: 40%;
     }
 
     #foto_perfil {
@@ -125,6 +126,7 @@
     #buscador {
         right: 20%;
         top: 35%;
+        width: 40%;
     }
 
     .popup {

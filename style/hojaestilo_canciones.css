@@ -1,3 +1,11 @@
+.cancion, .cancion_escuchada, .cancion_alternativa {
+    display: block;
+}
+
+.cancion_resultado {
+    display: none;
+}
+
 .musica {
     display: block;
     position: relative;
@@ -68,21 +76,6 @@
 .caratula:hover .boton_reproducir {
     visibility: visible;
 }
-
-/*.caratula:hover audio {
-    display: inline;
-    cursor: pointer;
-}*/
-
-
-/*#panel_audio {
-    width: 100%;
-    position: fixed;
-    bottom: 3%;
-    left: 0;
-    height: 20%;
-    z-index: 3;
-}*/
 
 .overlay {
     position: absolute;

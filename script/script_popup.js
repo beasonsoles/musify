@@ -5,6 +5,7 @@ let perfil = document.getElementById("perfil_text");
 let user_actual = localStorage.getItem("user_actual");
 
 
+
 /* Para actualizar la foto de perfil si el usario la cambia */
 setInterval(function() {
     foto_perfil.src = localStorage.getItem("userpicture_"+user_actual.toString());

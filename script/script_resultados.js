@@ -26,6 +26,8 @@ canciones_alternativas.forEach(function(alternativa) {
     titulo = alternativa.querySelector(".descripcion").querySelector(".titulo");
     if (titulo.innerHTML == titulo_buscado) {
         alternativa.style.display = "none";
+    } else {
+        alternativa.style.display = "block";
     }
 });
 

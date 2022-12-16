@@ -69,34 +69,34 @@
                 </div>
             </div>
             <div id="politicas">
-                <div id="privacidad" class="info"><a>Politica de privacidad</a></div><br>
-                <div id="cookies" class="info"><a>Politica de cookies</a></div>
+                <div id="privacidad" class="info"><a id="privacidad_texto">Politica de privacidad</a></div><br>
+                <div id="cookies" class="info"><a id="cookies_texto">Politica de cookies</a></div>
             </div>
         </nav>
         
         <!-- columna derecha-->
         <main class="derecha" id="main_container">
             <div class="contenido">
-                <div class="datos">
+                <div class="datos" id="container_datos">
                 <form name="form" id="cuenta_form" method="POST">
-                    <h2>Nombre de usuario</h2>
-                    <input type="text" id="username" required><br>
-                    <h2>Contraseña</h2>
-                    <input type="password" id="pswd" required><br>
-                    <h2>Nombre</h2>
-                    <input type="text" id="name" required><br>
-                    <h2>Apellidos</h2>
-                    <input type="text" id="surname1" required><br>
-                    <input type="text" id="surname2"><br>
-                    <h2>Correo electrónico</h2>
-                    <input type="email" id="useremail" required><br>
-                    <h2>Fecha de nacimiento</h2>
-                    <input type="date" id="birthdate" required><br>
-                    <h2>Foto de perfil</h2>
+                    <h2 class="subtitulos">Foto de perfil</h2>
                     <input type="file" id="userpicture" accept=".jpg, .jpeg, .png">
                     <label for="userpicture" id="user_picture_label">
                         <img src="" id="user_profile_picture" alt="Foto de perfil del usuario">
                     </label><br>
+                    <h2 class="subtitulos">Nombre de usuario</h2>
+                    <input type="text" id="username" required><br>
+                    <h2 class="subtitulos">Contraseña</h2>
+                    <input type="password" id="pswd" required><br>
+                    <h2 class="subtitulos">Nombre</h2>
+                    <input type="text" id="name" required><br>
+                    <h2 class="subtitulos">Apellidos</h2>
+                    <input type="text" id="surname1" required><br>
+                    <input type="text" id="surname2"><br>
+                    <h2 class="subtitulos">Correo electrónico</h2>
+                    <input type="email" id="useremail" required><br>
+                    <h2 class="subtitulos">Fecha de nacimiento</h2>
+                    <input type="date" id="birthdate" required><br>
                     <input type="submit" value="Guardar" id="enviar"><br>
                 </form>           
                 </div>

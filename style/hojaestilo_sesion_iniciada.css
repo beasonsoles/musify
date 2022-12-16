@@ -11,6 +11,13 @@
     margin-bottom: 10%;
 }
 
+#politicas {
+    position: fixed;
+    bottom: 15%;
+    left: 1%;
+    z-index: 3;
+}
+
 /* MEDIA QUERIES */
 
 /* Tablet */
@@ -26,5 +33,9 @@
 @media (max-width: 480px) {
     .top_escuchados {
         margin-bottom: 30%;
+    }
+
+    #politicas {
+        display:none;
     }
 }

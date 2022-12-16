@@ -1,5 +1,11 @@
 let artista_actual = localStorage.getItem("artista_actual");
 let artistas = document.querySelectorAll(".autor");
+let canciones_artista = document.querySelectorAll(".cancion");
+
+/* Para ocultar todas las canciones originalmente*/
+canciones_artista.forEach(cancion => {
+    cancion.style.display = "none";
+});
 
 /* Cambiar los títulos para que muestren el nombre del artista en el que se ha clicado */
 document.getElementById("nombre_artista").innerHTML = "Canciones de "+artista_actual;
@@ -10,5 +16,5 @@ for (var i=0; i < artistas.length; i++) {
     var cancion_artista = artistas[i].parentElement.parentElement;
     if (artistas[i].innerHTML.includes(artista_actual)) {
         cancion_artista.style.display = "block";
-    } else {cancion_artista.style.display = "none";}
+    }
 }

@@ -1,13 +1,10 @@
-#main_container {
-    height: 300%;
-}
-
 #artistas_mas_escuchados, #canciones_mas_escuchadas, #canciones_favoritas, #tus_playlists, #usuarios_que_sigues, #canciones_favoritas_usuario {
     display: flex;
     flex-wrap: wrap;
     position: relative;
     z-index: 1;
     height: 100%;
+    margin-left: 7%;
 }
 
 #usuarios_que_sigues {
@@ -42,6 +39,13 @@
     cursor: pointer;
 }
 
+#politicas {
+    position: fixed;
+    bottom: 15%;
+    left: 1%;
+    z-index: 3;
+}
+
 /* MEDIA QUERIES */
 
 /* Tablet */
@@ -67,5 +71,9 @@
     .foto_artista, .musica, .perfil_usuario {
         width: 110px;
         height: 110px;
+    }
+
+    #politicas {
+        display:none;
     }
 }

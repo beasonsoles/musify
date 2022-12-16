@@ -238,4 +238,8 @@ input{
     a {
         left: 5%;
     }
+
+    #politicas {
+        display:none;
+    }
 }

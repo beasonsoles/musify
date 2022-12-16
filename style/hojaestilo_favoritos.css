@@ -4,8 +4,33 @@
     position: relative;
     z-index: 1;
     height: 100%;
+    margin-left: 7%;
 }
 
 .cancion {
     display: none;
+}
+
+#politicas {
+    position: fixed;
+    bottom: 15%;
+    left: 1%;
+    z-index: 3;
+}
+
+/* MEDIA QUERIES */
+
+/* Tablet */
+
+@media (min-width: 481px) and (max-width: 900px) {
+    
+}
+
+/* Movil */
+
+@media (max-width: 480px) {
+
+    #politicas {
+        display:none;
+    }
 }

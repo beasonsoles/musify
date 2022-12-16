@@ -43,6 +43,13 @@ footer {
     cursor: pointer;
 }
 
+#politicas {
+    position: fixed;
+    bottom: 15%;
+    left: 1%;
+    z-index: 3;
+}
+
 /* MEDIA QUERIES */
 
 /* Tablet */
@@ -111,5 +118,9 @@ footer {
         position: relative;
         font-size: medium;
         right: 50px;
+    }
+
+    #politicas {
+        display:none;
     }
 }

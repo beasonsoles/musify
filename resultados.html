@@ -4,8 +4,9 @@
 
         <!-- Hoja de estilo usada de la pagina web -->  
         <link rel="stylesheet" href="style/hojaestilo_regiones.css">
-        <link rel="stylesheet" href="style/hojaestilo_resultados.css">
         <link rel="stylesheet" href="style/hojaestilo_canciones.css">
+        <link rel="stylesheet" href="style/hojaestilo_resultados.css">
+        <link rel="stylesheet" href="style/hojaestilo_reproductor.css">
         <link rel="stylesheet" href="style/hojaestilo_popup.css">
         <link rel="stylesheet" href="style/hojaestilo_boton_cambiar_tema.css">
         <link rel="icon" type="image/x-icon" href="images/logo_musify.png">
@@ -71,8 +72,8 @@
             </div>
             
             <div id="politicas">
-                <div id="privacidad" class="info"><a>Politica de privacidad</a></div><br>
-                <div id="cookies" class="info"><a>Politica de cookies</a></div>
+                <div id="privacidad" class="info"><a id="privacidad_texto">Politica de privacidad</a></div><br>
+                <div id="cookies" class="info"><a id="cookies_texto">Politica de cookies</a></div>
             </div>
         </nav>
 
@@ -204,7 +205,7 @@
                         </div>
                         <div class="descripcion">
                             <h3 class="titulo">Sucker for pain</h3>
-                            <h4 class="autor">Lil Wayne e Imagine Dragons</h4>
+                            <h4 class="autor"> Imagine Dragons</h4>
                         </div>
                     </div>
                     <!--segunda fila-->
@@ -454,7 +455,7 @@
                         </div>
                         <div class="descripcion">
                             <h3 class="titulo">Sucker for pain</h3>
-                            <h4 class="autor">Lil Wayne e Imagine Dragons</h4>
+                            <h4 class="autor"> Imagine Dragons</h4>
                         </div>
                     </div>
                     
@@ -612,12 +613,44 @@
             </div>
         </main>
 
-        <footer>
-            
-        </footer>
+        <div class="bottom" id="footer">
+            <div id="player">
+                <footer>
+                    <img src="images/perfil_vacio.png" class="cover" id="caratula_cancion">
+                    <div class="info_cancion">
+                        <p id="info_titulo_cancion"></p>
+                        <p id="info_artista_cancion"></p>
+                    </div>
+        
+                    <div id="track">
+                    <div id="progreso"></div>
+                    <div id="circulo_progreso"></div>
+                    </div>
+        
+                    <div class="control_audio">
+                    <button id="anterior" class="control">
+                        <img src="images/prev.png">
+                    </button>
+                    <button id="play" class="control">
+                        <img src="images/play.png" id="imagen_play">
+                    </button>
+                    <button id="siguiente" class="control">
+                        <img src="images/next.png">
+                    </button>                
+                    </div>
+        
+                    <div class="volumen">
+                    <i class="fas fa-volume-down"></i> 
+                    <input type="range" name="volumen" id="volumen" min="0" max="1" step="0.01" value="0.75"> 
+                    <i class="fas fa-volume-up"></i>
+                    </div>
+                </footer>
+            </div>
+          </div>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <script src="script/script_resultados.js"></script>
         <script src="script/script_sesion_iniciada.js"></script>
+        <script src="script/script_reproductor.js"></script>
         <script src="script/script_popup.js"></script>
         <script src="script/script_menu.js"></script>
         <script src="script/script_buscador.js"></script>

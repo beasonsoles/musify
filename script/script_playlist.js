@@ -1,4 +1,4 @@
-let canciones_base_datos = document.querySelectorAll(".cancion");
+let canciones_base_datos = document.querySelectorAll(".cancion_playlist");
 let contador_playlists = localStorage.getItem("contador_playlists");
 let botones_borrar_cancion = document.querySelectorAll(".borrar_cancion");
 let boton_borrar_playlist = document.getElementById("borrar_playlist");

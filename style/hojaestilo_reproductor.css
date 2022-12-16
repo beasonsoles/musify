@@ -9,12 +9,12 @@
 
 .info_cancion{
     position: absolute;
-    left: 14vh;
-    bottom: 0.5vh;
+    left: 13vh;
+    bottom: 1vh;
     z-index: 5;
     width: 15%;
     color: white;
-    font-size: 2.5vh;
+    font-size: 2.2vh;
     overflow-wrap: break-word;
 }
 
@@ -22,11 +22,12 @@
     width: 60%;
     position: absolute;
     background-color: #A6A7A9;
-    bottom: 3vh;
-    left: 22%;
+    bottom: 2vh;
+    left: 20%;
     z-index: 10;
     cursor: pointer;
 }
+
 #progreso {
     float: left;
     height: 5px;
@@ -52,8 +53,8 @@
 .control_audio {
     position: absolute;
     width: auto;
-    left: 47.5%;
-    top: 0.75vh;
+    left: 43.5%;
+    bottom: 3vh;
 }
 
 .control {
@@ -90,8 +91,102 @@
 
 .volumen{
 	position: absolute;
-	bottom: 7vh;
-	right: 1vh;
+	bottom: 6vh;
+	right: 7vh;
 	text-align: right;
 	float: left;
+}
+
+/* MEDIA QUERIES */
+
+/* Tablet */
+
+@media (min-width: 481px) and (max-width: 900px) {
+    .volumen{
+        bottom: 8vh;
+        right: 3vh;
+    }
+
+    .control{
+        width: 60px;
+        height: 60px;
+    }
+
+    .control_audio{
+        left: 40%;
+        bottom: 45%;
+    }
+
+    #track{
+        left: 24%;
+        bottom: 4.5vh;
+    }
+
+    #caratula_cancion{
+        width: 15%;
+    }
+
+    .info_cancion{
+        width:fit-content;
+        top:46%;
+        left: 30%;
+    }
+
+    .info_rep{
+        float: right;
+        position: relative;
+        cursor: pointer;
+    }
+
+    #info_titulo_cancion{
+        left: 10%;
+    }
+
+}
+
+/* Movil */
+
+@media (max-width: 480px) {
+    .volumen{
+        visibility: hidden;
+    }
+
+    .control_audio{
+        top: 0%;
+        left: 36%;
+    }
+
+    .control{
+        width: 47px;
+        height: 47px;
+    }
+
+    #caratula_cancion{
+        width: 19%;
+        bottom: 6%;
+        left: 1%;
+    }
+
+    #track{
+        left: 28%;
+        bottom: 3.5vh;
+    }
+
+    .info_cancion{
+        width:fit-content;
+        top: 65%;
+        left: 30%;
+        font-size: 80%;
+    }
+
+    .info_rep{
+        float: right;
+        position: relative;
+        cursor: pointer;
+    }
+
+    #info_titulo_cancion{
+        left: 10%;
+    }
+
 }

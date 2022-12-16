@@ -4,11 +4,20 @@
     position: relative;
     z-index: 1;
     height: 100%;
+    margin-left: 7%;
 }
 
 .albumes_artista {
     margin-bottom: 10%;
 }
+
+#politicas {
+    position: fixed;
+    bottom: 15%;
+    left: 1%;
+    z-index: 3;
+}
+
 
 /* MEDIA QUERIES */
 
@@ -35,5 +44,9 @@
     .foto_artista, .musica, .perfil_usuario {
         width: 110px;
         height: 110px;
+    }
+
+    #politicas {
+        display:none;
     }
 }

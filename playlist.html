@@ -4,6 +4,7 @@
 
         <!-- Hoja de estilo usada de la pagina web -->  
         <link rel="stylesheet" href="style/hojaestilo_regiones.css">
+        <link rel="stylesheet" href="style/hojaestilo_reproductor.css">
         <link rel="stylesheet" href="style/hojaestilo_playlist.css">
         <link rel="stylesheet" href="style/hojaestilo_popup.css">
         <link rel="stylesheet" href="style/hojaestilo_boton_cambiar_tema.css">
@@ -78,12 +79,8 @@
                 </div>
             </div>
             <div id="politicas">
-                <div id="privacidad" class="info"><a>Politica de privacidad</a></div><br>
-                <div id="cookies" class="info"><a>Politica de cookies</a></div>
-            </div>
-            <div id="politicas">
-                <div id="privacidad" class="info"><a>Politica de privacidad</a></div><br>
-                <div id="cookies" class="info"><a>Politica de cookies</a></div>
+                <div id="privacidad" class="info"><a id="privacidad_texto">Politica de privacidad</a></div><br>
+                <div id="cookies" class="info"><a id="cookies_texto">Politica de cookies</a></div>
             </div>
         </nav>
         
@@ -92,7 +89,7 @@
             <div class="contenido">
                 <h2 class="subtitulo" id="nombre_lista_de_reproduccion"></h2>
                 <div id="playlist">
-                    <div draggable="true" class="cancion">
+                    <div draggable="true" class="cancion_playlist">
                         <div class="caratula">
                             <img class="musica" src="images/album_uvst.jpg" alt="Un Verano Sin Ti"> 
                             <div class="reproducir">
@@ -115,7 +112,7 @@
                         <input class="borrar_cancion" type="button" value="Borrar">
                     </div>
         
-                    <div draggable="true" class="cancion">
+                    <div draggable="true" class="cancion_playlist">
                         <div class="caratula">
                             <img class="musica" src="images/el_madrileño.jpeg" alt="El Madrileño">
                             <div class="reproducir">
@@ -138,7 +135,7 @@
                         <input class="borrar_cancion" type="button" value="Borrar">
                     </div>
         
-                    <div draggable="true" class="cancion">
+                    <div draggable="true" class="cancion_playlist">
                         <div class="caratula">
                             <img class="musica" src="images/queen.jpg" alt="A Night at the Opera"> 
                             <div class="reproducir">
@@ -161,7 +158,7 @@
                         <input class="borrar_cancion" type="button" value="Borrar">
                     </div>
         
-                    <div draggable="true" class="cancion">
+                    <div draggable="true" class="cancion_playlist">
                         <div class="caratula">
                             <img class="musica" src="images/avicii.jpg" alt="The Nights"> 
                             <div class="reproducir">
@@ -184,7 +181,7 @@
                         <input class="borrar_cancion" type="button" value="Borrar">
                     </div>
         
-                    <div draggable="true" class="cancion">
+                    <div draggable="true" class="cancion_playlist">
                         <div class="caratula">
                             <img class="musica" src="images/sucker_for_pain.jpg" alt="Suicide Squad: The Album"> 
                             <div class="reproducir">
@@ -202,12 +199,12 @@
                         </div>
                         <div class="descripcion">
                             <h3 class="titulo_cancion_playlist">Sucker for pain</h3>
-                            <h4 class="autor_cancion_playlist">Lil Wayne e Imagine Dragons</h4>
+                            <h4 class="autor_cancion_playlist"> Imagine Dragons</h4>
                         </div>
                         <input class="borrar_cancion" type="button" value="Borrar">
                     </div>
                 
-                    <div draggable="true" class="cancion">
+                    <div draggable="true" class="cancion_playlist">
                         <div class="caratula">
                             <img class="musica" src="images/more_than_you_know.jpg" alt="More Than You Know"> 
                             <div class="reproducir">
@@ -230,7 +227,7 @@
                         <input class="borrar_cancion" type="button" value="Borrar">
                     </div>  
         
-                    <div draggable="true" class="cancion">
+                    <div draggable="true" class="cancion_playlist">
                         <div class="caratula">
                             <img class="musica" src="images/kitt.jpg" alt="Kitt y los Coches del Pasado"> 
                             <div class="reproducir">
@@ -253,7 +250,7 @@
                         <input class="borrar_cancion" type="button" value="Borrar">
                     </div>
         
-                    <div draggable="true" class="cancion">
+                    <div draggable="true" class="cancion_playlist">
                         <div class="caratula">
                             <img class="musica" src="images/boulevard_of_broken_dreams.jpg" alt="Boulevard of Broken Dreams"> 
                             <div class="reproducir">
@@ -276,7 +273,7 @@
                         <input class="borrar_cancion" type="button" value="Borrar">
                     </div>
         
-                    <div draggable="true" class="cancion">
+                    <div draggable="true" class="cancion_playlist">
                         <div class="caratula">
                             <img class="musica" src="images/viva_la_vida.jpg" alt="Viva La Vida"> 
                             <div class="reproducir">
@@ -299,7 +296,7 @@
                         <input class="borrar_cancion" type="button" value="Borrar">
                     </div>
         
-                    <div draggable="true" class="cancion">
+                    <div draggable="true" class="cancion_playlist">
                         <div class="caratula">
                             <img class="musica" src="images/lagrimas_de_amor.jpg" alt="Lagrimas de Amor"> 
                             <div class="reproducir">
@@ -322,7 +319,11 @@
                         <input class="borrar_cancion" type="button" value="Borrar">
                     </div>
                     <input id="borrar_playlist" type="button" value="Eliminar playlist">
-        <div class="bottom">
+                </div>
+            </div>
+        </main>
+
+        <div class="bottom" id="footer">
             <div id="player">
                 <footer>
                     <img src="images/perfil_vacio.png" class="cover" id="caratula_cancion">
@@ -359,6 +360,7 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <script src="script/script_playlist.js"></script>
         <script src="script/script_sesion_iniciada.js"></script>
+        <script src="script/script_reproductor.js"></script>
         <script src="script/script_popup.js"></script>
         <script src="script/script_menu.js"></script>
         <script src="script/script_buscador.js"></script>

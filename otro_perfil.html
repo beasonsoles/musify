@@ -4,6 +4,7 @@
 
         <!-- Hoja de estilo usada de la pagina web -->  
         <link rel="stylesheet" href="style/hojaestilo_regiones.css">
+        <link rel="stylesheet" href="style/hojaestilo_reproductor.css">
         <link rel="stylesheet" href="style/hojaestilo_perfil.css">
         <link rel="stylesheet" href="style/hojaestilo_canciones.css">
         <link rel="stylesheet" href="style/hojaestilo_popup.css">
@@ -70,8 +71,8 @@
               </div>
           </div>
           <div id="politicas">
-            <div id="privacidad" class="info"><a>Politica de privacidad</a></div><br>
-            <div id="cookies" class="info"><a>Politica de cookies</a></div>
+            <div id="privacidad" class="info"><a id="privacidad_texto">Politica de privacidad</a></div><br>
+            <div id="cookies" class="info"><a id="cookies_texto">Politica de cookies</a></div>
           </div>
       </nav>
 
@@ -361,41 +362,41 @@
                 </div>
                 <div class="descripcion">
                   <h3 class="titulo">Sucker for pain</h3>
-                  <h4 class="autor">Lil Wayne e Imagine Dragons</h4>
+                  <h4 class="autor"> Imagine Dragons</h4>
                 </div>
               </div>
             </div>
             <h2 class="subtitulo">Playlists del usuario</h2>
             <div id="tus_playlists">
-                <div class="cancion_escuchada">
+                <div class="playlist_escuchada">
                   <img class="musica" src="images/playlist1.jpg" alt="Playlist 1"> 
                   <div class="descripcion">
                     <h3 class="nombre_playlist">Playlist 1</h3>
                   </div>
                 </div>
         
-                <div class="cancion_escuchada">
+                <div class="playlist_escuchada">
                   <img class="musica" src="images/playlist2.jpg" alt="Playlist 2"> 
                   <div class="descripcion">
                     <h3 class="nombre_playlist">Playlist 2</h3>
                   </div>
                 </div>
         
-                <div class="cancion_escuchada">
+                <div class="playlist_escuchada">
                   <img class="musica" src="images/playlist3.jpg" alt="Playlist 3"> 
                   <div class="descripcion">
                     <h3 class="nombre_playlist">Playlist 3</h3>
                   </div>
                 </div>
         
-                <div class="cancion_escuchada">
+                <div class="playlist_escuchada">
                   <img class="musica" src="images/playlist4.jpg" alt="Playlist 4"> 
                   <div class="descripcion">
                     <h3 class="nombre_playlist">Playlist 4</h3>
                   </div>
                 </div>
         
-                <div class="cancion_escuchada">
+                <div class="playlist_escuchada">
                   <img class="musica" src="images/playlist5.jpg" alt="Playlist 5"> 
                   <div class="descripcion">
                     <h3 class="nombre_playlist">Playlist 5</h3>
@@ -438,7 +439,7 @@
         </div>
       </main>
 
-      <div class="bottom">
+      <div class="bottom" id="footer">
             <div id="player">
                 <footer>
                     <img src="images/perfil_vacio.png" class="cover" id="caratula_cancion">
@@ -480,6 +481,7 @@
       <script src="script/script_resultados.js"></script>
       <script src="script/script_buscador.js"></script>
       <script src="script/script_perfil.js"></script>
+      <script src="script/script_reproductor.js"></script>
       <script src="script/script_dark_mode.js"></script>
     </body>
 </html>
