@@ -16,7 +16,7 @@ El html que hay que abrir en el navegador es "**index.html**". En esta página s
     - **Acceder a la cuenta**, donde se muestran los datos introducidos por el usuario al registrarse y permite cambiarlos
     - **Acceder al perfil** del usuario, donde se pueden ver los **artistas más escuchados**, las **canciones más escuchadas**, las
 **canciones que le gustan al usuario**, las **playlists creadas por el usuario**, y el listado de otros **usuarios a los que se está siguiendo**. Al pulsar en cualquiera de los artistas, se abre una página que muestra las canciones y los álbumes del artista. Al pulsar en cualquiera de los usuarios seguidos, se abre una página que contiene la información del perfil de ese usuario
-    - **Cerrar sesión**. Esta opción devuelve al usuario a la página inicial ("index.html)
+    - **Cerrar sesión**. Esta opción devuelve al usuario a la página inicial ("index.html")
 
 ***
 ***En todas las páginas se puede escuchar las canciones que se muestran, pasar a la siguiente canción o volver a la anterior, subir o bajar el volumen de la canción, y añadir o quitar una canción de favoritos.***
