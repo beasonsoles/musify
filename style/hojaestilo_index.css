@@ -32,8 +32,8 @@
 footer {
     font-size: x-large;
     position: fixed;
-    bottom: 40px;
-    left: 40%;
+    bottom: 6%;
+    left: 35%;
     height: 2.5vh;
     width: 100%;
     z-index: 3;
@@ -69,9 +69,10 @@ footer {
         height: 30px;
     }
 
-    .footer {
-        left: 10%;
-    }   
+    footer{
+        left: 30%;
+        bottom: 5%;
+    }
 }
 
 /* Movil */
